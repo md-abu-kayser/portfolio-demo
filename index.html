@@ -2,90 +2,150 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kawser Web Developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Kawser | Web Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
   </head>
-  <body>
-    <section class="top-banner">
-      <div class="half-width">
-        <h1>Welcome To</h1>
-        <h1><span class="orange-highlight">Peter Parker</span> World</h1>
-        <h3>Build Climber and Train Stopper</h3>
-        <p>
-          We may expect a new iPhone with a completely full-screen display in
-          the year 2024, according to Ming-Chi Kuo, a well-known Apple expert.
-          Apple may shift both the front-facing camera and Face ID under the
-          screen for its high-end handsets by then, according to Kuo. The iPhone
-          16 Pro is the most likely candidate for such an upgrade.
-        </p>
-        <a target="_blank" class="link-button" href="https://www.youtube.com/"
-          >HIRE ME</a
-        >
+  <body class="bg-gray-50 text-gray-900">
+    <!-- Navbar -->
+    <header class="bg-white shadow-md fixed w-full z-10">
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-bold text-orange-500">Kawser</h1>
+        <nav class="space-x-6 font-medium">
+          <a href="#about" class="hover:text-orange-500">About</a>
+          <a href="#skills" class="hover:text-orange-500">Skills</a>
+          <a href="#experience" class="hover:text-orange-500">Experience</a>
+          <a href="#contact" class="hover:text-orange-500">Contact</a>
+        </nav>
       </div>
-      <div class="half-width">
-        <img src="images/jhankar.png" alt="" />
-      </div>
-    </section>
-    <section class="dream-area">
-      <div class="half-width">
-        <img src="images/jhankar2.png" alt="" />
-      </div>
-      <div class="half-width">
-        <h2>Dream Big</h2>
-        <h3>Become a Web Developer</h3>
-        <p>
-          We may expect a new iPhone with a completely full-screen display in
-          the year 2024, according to Ming-Chi Kuo, a well-known Apple expert.
-          Apple may shift both the front-facing camera and Face ID under the
-          screen for its high-end handsets by then, according to Kuo. The iPhone
-          16 Pro is the most likely candidate for such an upgrade.
-        </p>
-        <a target="_blank" class="link-button" href="https://www.youtube.com/"
-          >DOWNLOAD RESUME</a
-        >
-      </div>
-    </section>
-    <section class="experience-area">
-      <h2>Experiences</h2>
-      <div id="Full-Stack" class="half-width single-experience">
-        <h2>Full Stack Web Developer</h2>
-        <h3 class="orange-highlight">
-          2021 - Present | Pro Level Web Developer
-        </h3>
-        <p>
-          We may expect a new iPhone with a completely full-screen display in
-          the year 2024, according to Ming-Chi Kuo, a well-known Apple expert.
-          Apple may shift both the front-facing camera and Face ID under the
-          screen for its high-end handsets by then, according to Kuo. The iPhone
-          16 Pro is the most likely candidate for such an upgrade.
-        </p>
-      </div>
-      <div id="Baby-Web" class="half-width single-experience">
-        <h2>Baby Web Developer</h2>
-        <h3 class="orange-highlight">
-          2020 - Present | Low Level Web Developer
-        </h3>
-        <p>
-          We may expect a new iPhone with a completely full-screen display in
-          the year 2024, according to Ming-Chi Kuo, a well-known Apple expert.
-          Apple may shift both the front-facing camera and Face ID under the
-          screen for its high-end handsets by then, according to Kuo. The iPhone
-          16 Pro is the most likely candidate for such an upgrade.
-        </p>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="bg-gradient-to-r from-orange-400 to-red-500 text-white min-h-screen flex items-center pt-20"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center"
+      >
+        <div>
+          <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+            Hi, I'm <span class="text-yellow-200">Kawser</span><br />
+            A Web Developer
+          </h2>
+          <p class="mt-4 text-lg">
+            I build modern, scalable, and user-friendly websites & web apps with
+            the latest technologies.
+          </p>
+          <div class="mt-6 space-x-4">
+            <a
+              href="https://www.youtube.com/"
+              target="_blank"
+              class="bg-white text-orange-500 px-5 py-3 rounded-lg font-semibold shadow hover:bg-gray-100"
+              >Hire Me</a
+            >
+            <a
+              href="#contact"
+              class="bg-yellow-400 text-gray-900 px-5 py-3 rounded-lg font-semibold shadow hover:bg-yellow-300"
+              >Contact</a
+            >
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <img
+            src="images/jhankar.png"
+            alt="Developer"
+            class="rounded-xl shadow-lg"
+          />
+        </div>
       </div>
     </section>
-    <footer>
-      <div class="footer">
-        <p>@ Peter Parker 2021, Programming Hero Initiative.</p>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div
+        class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <img
+          src="images/jhankar2.png"
+          alt="About me"
+          class="rounded-xl shadow-lg"
+        />
+        <div>
+          <h2 class="text-3xl font-bold text-gray-800">Dream Big</h2>
+          <p class="mt-4 text-lg text-gray-600">
+            I am passionate about becoming a top-class web developer. I
+            specialize in building responsive websites and modern web
+            applications using React, Next.js, Node.js, and more.
+          </p>
+          <a
+            href="resume.pdf"
+            class="inline-block mt-6 bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-orange-600"
+            >Download Resume</a
+          >
+        </div>
       </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-100">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-gray-800">Experience</h2>
+        <div class="grid md:grid-cols-2 gap-8 mt-10">
+          <div
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg border-l-4 border-orange-500"
+          >
+            <h3 class="text-xl font-semibold">Full Stack Web Developer</h3>
+            <p class="text-sm text-gray-500">2021 - Present</p>
+            <p class="mt-3 text-gray-600">
+              Building and maintaining professional web applications using
+              modern stacks like React, Node.js, and databases (SQL/NoSQL).
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow hover:shadow-lg border-l-4 border-blue-500"
+          >
+            <h3 class="text-xl font-semibold">Frontend Developer</h3>
+            <p class="text-sm text-gray-500">2020 - 2021</p>
+            <p class="mt-3 text-gray-600">
+              Learned and implemented core frontend technologies like HTML, CSS,
+              JavaScript, and React to build responsive websites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-gray-800">Contact Me</h2>
+        <p class="mt-4 text-gray-600">
+          Have a project idea or want to work together? Let’s connect!
+        </p>
+        <div class="mt-6">
+          <a
+            href="mailto:kawser@example.com"
+            class="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-orange-600"
+            >Send Email</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-6 text-center">
+      <p>&copy; 2025 Kawser. All rights reserved.</p>
     </footer>
   </body>
 </html>
