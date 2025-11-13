@@ -1,10 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
+    <!-- SEO Meta Tags: Optimized for Google/LinkedIn discoverability - Keywords target remote jobs US/CA/EU -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kawser | Web Developer</title>
+    <title>
+      Md Abu Kayser - Full-Stack Engineer | React Next.js Node.js Go | Remote US
+      CA EU
+    </title>
+    <meta
+      name="description"
+      content="Experienced Full-Stack Developer building scalable apps with TypeScript, Prisma, Docker. Open to remote roles in US, Canada, EU. Portfolio with live demos and open-source contributions."
+    />
+    <meta
+      name="keywords"
+      content="full stack engineer, remote developer jobs, React Next.js portfolio, Node.js Go API, TypeScript blockchain, Web3 developer, AWS Docker Vercel, Upwork freelancer, Fiverr gigs"
+    />
+    <meta name="author" content="Md Abu Kayser" />
+    <meta name="robots" content="index, follow" />
+    <meta name="canonical" content="https://kayser.dev" />
+    <!-- OpenGraph for Social Sharing - Improves LinkedIn trending -->
+    <meta property="og:title" content="Md Abu Kayser - Full-Stack Engineer" />
+    <meta
+      property="og:description"
+      content="Building modern web apps. Open to remote opportunities in US, Canada, EU."
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80"
+    />
+    <meta property="og:url" content="https://kayser.dev" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Md Abu Kayser Portfolio" />
+    <!-- Twitter Cards for X Sharing -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Md Abu Kayser - Full-Stack Engineer" />
+    <meta
+      name="twitter:description"
+      content="Full-Stack Developer | Remote Ready | React Node Go Blockchain"
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80"
+    />
+    <!-- Favicon Set: Multi-size for All Devices - Generated via favicon.io -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Tailwind CSS CDN - Core Styling -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- DaisyUI CDN - Themes & Components: Light, Dark, Cupcak, Forest, Luxury -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Google Fonts: Poppins - Sans-serif for Modern Look -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome 6 - Icons for Socials, Skills, Timeline -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Heroicons: Inline SVGs for Perf - Used in JS for Dynamic Icons -->
+    <!-- Custom Styles: Transitions, Transforms, Animations, Hovers -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Tailwind Config Inline: Custom Colors, Animations, Keyframes -->
     <script>
       tailwind.config = {
         theme: {
@@ -21,1105 +87,2371 @@
                 700: "#c2410c",
                 800: "#9a3412",
                 900: "#7c2d12",
+                950: "#451a03",
+              },
+              secondary: {
+                50: "#f0fdfa",
+                100: "#ccfbf1",
+                200: "#99f6e4",
+                300: "#5eead4",
+                400: "#36d7b7",
+                500: "#14b8a6",
+                600: "#0d9488",
+                700: "#0f766e",
+                800: "#115e59",
+                900: "#134e4a",
+                950: "#042f2e",
               },
             },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
             animation: {
+              "fade-in": "fadeIn 0.8s ease-out",
+              typewriter: "typewriter 3.5s steps(40, end)",
+              blink: "blinkCaret 0.75s step-end infinite",
               float: "float 6s ease-in-out infinite",
+              "pulse-slow": "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              "slide-in-right": "slideInRight 0.5s ease-out",
+              "scale-up": "scaleUp 0.3s ease",
             },
             keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0", transform: "translateY(30px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              typewriter: {
+                "0%": { width: "0" },
+                "100%": { width: "100%" },
+              },
+              blinkCaret: {
+                "0%, 100%": { borderColor: "transparent" },
+                "50%": { borderColor: "#f97316" },
+              },
               float: {
-                "0%, 100%": { transform: "translateY(0)" },
+                "0%, 100%": { transform: "translateY(0px)" },
                 "50%": { transform: "translateY(-10px)" },
+              },
+              slideInRight: {
+                "0%": { transform: "translateX(100%)" },
+                "100%": { transform: "translateX(0)" },
+              },
+              scaleUp: {
+                "0%": { transform: "scale(1)" },
+                "100%": { transform: "scale(1.05)" },
               },
             },
           },
         },
+        plugins: [require("daisyui")],
+        daisyui: {
+          themes: ["light", "dark", "cupcak", "forest", "luxury"],
+          darkTheme: "dark",
+        },
       };
     </script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-        scroll-behavior: smooth;
-      }
-      .gradient-bg {
-        background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
-      }
-      .card-hover {
-        transition: all 0.3s ease;
-      }
-      .card-hover:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-          0 10px 10px -5px rgba(0, 0, 0, 0.04);
-      }
-      .skill-bar {
-        transition: width 1.5s ease-in-out;
-      }
-      .typewriter h2 {
-        overflow: hidden;
-        border-right: 0.15em solid #f97316;
-        white-space: nowrap;
-        margin: 0 auto;
-        letter-spacing: 0.05em;
-        animation: typing 3.5s steps(40, end),
-          blink-caret 0.75s step-end infinite;
-      }
-      @keyframes typing {
-        from {
-          width: 0;
-        }
-        to {
-          width: 100%;
-        }
-      }
-      @keyframes blink-caret {
-        from,
-        to {
-          border-color: transparent;
-        }
-        50% {
-          border-color: #f97316;
-        }
-      }
-    </style>
+    <!-- Google Analytics Placeholder - Add Your ID for Tracking -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
   </head>
-  <body class="bg-gray-50 text-gray-900">
-    <!-- Navigation -->
-    <header class="bg-white shadow-sm fixed w-full z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center py-4">
-          <a
-            href="#"
-            class="text-2xl font-bold text-primary-600 flex items-center"
-          >
-            <span class="bg-primary-500 text-white p-2 rounded-lg">K</span>
-            <span class="ml-2">Kawser</span>
-          </a>
-
-          <!-- Mobile menu button -->
-          <div class="md:hidden">
-            <button
-              type="button"
-              class="text-gray-500 hover:text-primary-600 focus:outline-none"
-              id="mobile-menu-button"
-            >
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
-            </button>
-          </div>
-
-          <!-- Desktop Navigation -->
-          <nav class="hidden md:flex space-x-10">
-            <a
-              href="#about"
-              class="text-gray-700 hover:text-primary-600 font-medium transition-colors"
-              >About</a
-            >
-            <a
-              href="#skills"
-              class="text-gray-700 hover:text-primary-600 font-medium transition-colors"
-              >Skills</a
-            >
-            <a
-              href="#projects"
-              class="text-gray-700 hover:text-primary-600 font-medium transition-colors"
-              >Projects</a
-            >
-            <a
-              href="#experience"
-              class="text-gray-700 hover:text-primary-600 font-medium transition-colors"
-              >Experience</a
-            >
-            <a
-              href="#contact"
-              class="text-gray-700 hover:text-primary-600 font-medium transition-colors"
-              >Contact</a
-            >
-          </nav>
-        </div>
-
-        <!-- Mobile Navigation -->
-        <div
-          class="hidden md:hidden py-4 border-t border-gray-200"
-          id="mobile-menu"
-        >
-          <div class="flex flex-col space-y-3">
-            <a
-              href="#about"
-              class="px-2 py-1 text-gray-700 hover:text-primary-600"
-              >About</a
-            >
-            <a
-              href="#skills"
-              class="px-2 py-1 text-gray-700 hover:text-primary-600"
-              >Skills</a
-            >
-            <a
-              href="#projects"
-              class="px-2 py-1 text-gray-700 hover:text-primary-600"
-              >Projects</a
-            >
-            <a
-              href="#experience"
-              class="px-2 py-1 text-gray-700 hover:text-primary-600"
-              >Experience</a
-            >
-            <a
-              href="#contact"
-              class="px-2 py-1 text-gray-700 hover:text-primary-600"
-              >Contact</a
-            >
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section
-      class="min-h-screen flex items-center justify-center pt-20 pb-12 gradient-bg"
+  <body class="font-poppins bg-base-100 text-base-content scroll-smooth">
+    <!-- Open to Remote Badge: Fixed, Animated - Client Impression for Jobs -->
+    <div
+      class="fixed top-4 right-4 z-40 bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full shadow-lg animate-pulse md:animate-none hover:scale-105 transition-transform duration-300"
     >
-      <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center"
-      >
-        <div class="text-center md:text-left">
-          <p class="text-orange-200 font-medium mb-2">Hello, I'm</p>
-          <h1
-            class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4"
+      <i class="fas fa-globe mr-2"></i>
+      Open to Remote Roles (US/CA/EU) - Upwork/Fiverr Ready
+    </div>
+
+    <!-- Navigation: Mega Navbar - Responsive, Mega Dropdowns, Theme Toggle -->
+    <header
+      class="navbar bg-base-100 shadow-sm fixed w-full z-50 transition-all duration-300"
+    >
+      <div class="navbar-start">
+        <!-- Logo: Name with Gradient Badge, Hover Transform -->
+        <a
+          href="#home"
+          class="btn btn-ghost btn-lg normal-case text-primary font-bold flex items-center group hover:scale-105 transition-all duration-300 ease-in-out"
+        >
+          <span
+            class="bg-gradient-to-r from-primary to-secondary text-base-100 p-2 rounded-lg mr-2 shadow-md"
+            >dev</span
           >
-            Muhammad Kawser
-          </h1>
-          <div class="typewriter mb-6">
-            <h2 class="text-xl md:text-2xl text-orange-200 inline-block">
-              Full Stack Web Developer
-            </h2>
-          </div>
-          <p class="text-orange-100 text-lg mb-8 max-w-lg">
-            I build modern, scalable, and user-friendly websites & web
-            applications with cutting-edge technologies.
-          </p>
-          <div
-            class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
-          >
-            <a
-              href="#contact"
-              class="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-gray-100 transition-colors flex items-center justify-center"
-            >
-              <span>Get In Touch</span>
-              <svg
-                class="w-5 h-5 ml-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                ></path>
-              </svg>
-            </a>
-            <a
-              href="#projects"
-              class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors"
-            >
-              View Projects
-            </a>
-          </div>
-          <div class="mt-10 flex justify-center md:justify-start space-x-4">
-            <a
-              href="#"
-              class="text-white hover:text-orange-200 transition-colors"
-            >
-              <i class="fab fa-github fa-lg"></i>
-            </a>
-            <a
-              href="#"
-              class="text-white hover:text-orange-200 transition-colors"
-            >
-              <i class="fab fa-linkedin fa-lg"></i>
-            </a>
-            <a
-              href="#"
-              class="text-white hover:text-orange-200 transition-colors"
-            >
-              <i class="fab fa-twitter fa-lg"></i>
-            </a>
-            <a
-              href="#"
-              class="text-white hover:text-orange-200 transition-colors"
-            >
-              <i class="fab fa-dribbble fa-lg"></i>
-            </a>
-          </div>
-        </div>
-        <div class="flex justify-center md:justify-end mt-10 md:mt-0">
-          <div class="relative">
-            <div
-              class="absolute -inset-4 bg-white rounded-2xl opacity-20 blur-lg"
-            ></div>
-            <div class="relative">
-              <img
-                src="images/kawser-img.png"
-                alt="Kawser Ahmed"
-                class="rounded-2xl shadow-2xl w-full max-w-md"
-              />
-            </div>
-          </div>
-        </div>
+          <span class="text-xl">Md Abu Kayser</span>
+          <i
+            class="fas fa-arrow-right ml-2 text-sm group-hover:translate-x-1 transition-transform duration-300"
+          ></i>
+        </a>
       </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">About Me</h2>
-          <div class="w-20 h-1 bg-primary-500 mx-auto mt-4"></div>
-        </div>
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div class="relative">
-            <div
-              class="absolute -inset-4 bg-gradient-to-r from-primary-400 to-primary-600 rounded-2xl opacity-20 blur-lg"
-            ></div>
-            <img
-              src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
-              alt="About me"
-              class="relative rounded-2xl shadow-lg"
-            />
-          </div>
-          <div>
-            <h3 class="text-2xl font-bold text-gray-800 mb-6">
-              Crafting Digital Experiences
-            </h3>
-            <p class="text-gray-600 mb-4">
-              I'm a passionate Full Stack Developer specializing in building
-              exceptional digital experiences. With over 3 years of experience,
-              I've helped numerous clients bring their ideas to life.
-            </p>
-            <p class="text-gray-600 mb-6">
-              My approach combines technical expertise with creative thinking to
-              develop solutions that are not only functional but also delightful
-              to use. I believe in writing clean, efficient code and creating
-              intuitive user interfaces.
-            </p>
-            <div class="grid grid-cols-2 gap-4 mb-6">
-              <div class="flex items-center">
-                <div class="bg-primary-100 p-2 rounded-lg mr-3">
-                  <svg
-                    class="w-5 h-5 text-primary-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-semibold">Full Stack</h4>
-                  <p class="text-sm text-gray-500">Development</p>
-                </div>
-              </div>
-              <div class="flex items-center">
-                <div class="bg-primary-100 p-2 rounded-lg mr-3">
-                  <svg
-                    class="w-5 h-5 text-primary-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-semibold">UI/UX</h4>
-                  <p class="text-sm text-gray-500">Design</p>
-                </div>
-              </div>
-            </div>
+      <div class="navbar-center hidden md:flex">
+        <ul class="menu menu-horizontal px-1 space-x-2">
+          <!-- About Mega Dropdown: Sub-links for Bio/Resume -->
+          <li class="dropdown dropdown-hover">
             <a
-              href="#"
-              class="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 group"
+              tabindex="0"
+              class="btn btn-ghost font-medium hover:scale-105 transition-transform duration-200"
+              >About</a
             >
-              <span>Download Resume</span>
-              <svg
-                class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                ></path>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-gray-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
-            My Skills
-          </h2>
-          <div class="w-20 h-1 bg-primary-500 mx-auto mt-4"></div>
-          <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
-            I work with a range of technologies and tools to create amazing Web
-            Experiences.
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8">
-          <!-- Frontend Skills -->
-          <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-            <div class="flex items-center mb-6">
-              <div class="bg-primary-100 p-2 rounded-lg mr-4">
-                <svg
-                  class="w-6 h-6 text-primary-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold">Frontend Development</h3>
-            </div>
-            <div class="space-y-4">
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span class="text-gray-700">React.js</span>
-                  <span class="text-gray-700">95%</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
-                  <div
-                    class="bg-primary-600 h-2.5 rounded-full skill-bar"
-                    style="width: 95%"
-                  ></div>
-                </div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span class="text-gray-700">Next.js</span>
-                  <span class="text-gray-700">90%</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
-                  <div
-                    class="bg-primary-600 h-2.5 rounded-full skill-bar"
-                    style="width: 90%"
-                  ></div>
-                </div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span class="text-gray-700">TypeScript</span>
-                  <span class="text-gray-700">85%</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
-                  <div
-                    class="bg-primary-600 h-2.5 rounded-full skill-bar"
-                    style="width: 85%"
-                  ></div>
-                </div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span class="text-gray-700">Tailwind CSS</span>
-                  <span class="text-gray-700">98%</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
-                  <div
-                    class="bg-primary-600 h-2.5 rounded-full skill-bar"
-                    style="width: 98%"
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Backend Skills -->
-          <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
-            <div class="flex items-center mb-6">
-              <div class="bg-primary-100 p-2 rounded-lg mr-4">
-                <svg
-                  class="w-6 h-6 text-primary-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"
-                  ></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold">Backend Development</h3>
-            </div>
-            <div class="space-y-4">
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span class="text-gray-700">Node.js</span>
-                  <span class="text-gray-700">90%</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
-                  <div
-                    class="bg-primary-600 h-2.5 rounded-full skill-bar"
-                    style="width: 90%"
-                  ></div>
-                </div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span class="text-gray-700">Express.js</span>
-                  <span class="text-gray-700">88%</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
-                  <div
-                    class="bg-primary-600 h-2.5 rounded-full skill-bar"
-                    style="width: 88%"
-                  ></div>
-                </div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span class="text-gray-700">MongoDB</span>
-                  <span class="text-gray-700">85%</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
-                  <div
-                    class="bg-primary-600 h-2.5 rounded-full skill-bar"
-                    style="width: 85%"
-                  ></div>
-                </div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span class="text-gray-700">PostgreSQL</span>
-                  <span class="text-gray-700">80%</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
-                  <div
-                    class="bg-primary-600 h-2.5 rounded-full skill-bar"
-                    style="width: 80%"
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
-            Featured Projects
-          </h2>
-          <div class="w-20 h-1 bg-primary-500 mx-auto mt-4"></div>
-          <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
-            Check out some of my recent work that showcases my skills and
-            expertise.
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Project 1 -->
-          <div
-            class="bg-gray-50 rounded-xl overflow-hidden shadow-sm card-hover"
-          >
-            <div
-              class="h-48 bg-gradient-to-r from-primary-500 to-primary-700 relative overflow-hidden"
+            <ul
+              tabindex="0"
+              class="dropdown-content z-[100] menu p-2 shadow-lg bg-base-100 rounded-box w-52 border border-base-200"
             >
-              <div class="absolute inset-0 bg-black bg-opacity-20"></div>
-              <div class="absolute bottom-4 left-4 text-white">
-                <h3 class="font-semibold text-xl">E-Commerce Platform</h3>
-                <p class="text-primary-100">React, Node.js, MongoDB</p>
-              </div>
-            </div>
-            <div class="p-6">
-              <p class="text-gray-600 mb-4">
-                A full-featured e-commerce platform with payment integration,
-                user authentication, and admin dashboard.
-              </p>
-              <div class="flex space-x-3">
-                <a
-                  href="#"
-                  class="text-primary-600 hover:text-primary-700 font-medium"
-                  >Live Demo</a
-                >
-                <a
-                  href="#"
-                  class="text-gray-600 hover:text-gray-900 font-medium"
-                  >GitHub</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 2 -->
-          <div
-            class="bg-gray-50 rounded-xl overflow-hidden shadow-sm card-hover"
-          >
-            <div
-              class="h-48 bg-gradient-to-r from-blue-500 to-blue-700 relative overflow-hidden"
-            >
-              <div class="absolute inset-0 bg-black bg-opacity-20"></div>
-              <div class="absolute bottom-4 left-4 text-white">
-                <h3 class="font-semibold text-xl">Task Management App</h3>
-                <p class="text-blue-100">Next.js, TypeScript, Tailwind</p>
-              </div>
-            </div>
-            <div class="p-6">
-              <p class="text-gray-600 mb-4">
-                A collaborative task management application with Real-time
-                updates and drag-and-drop functionality.
-              </p>
-              <div class="flex space-x-3">
-                <a
-                  href="#"
-                  class="text-primary-600 hover:text-primary-700 font-medium"
-                  >Live Demo</a
-                >
-                <a
-                  href="#"
-                  class="text-gray-600 hover:text-gray-900 font-medium"
-                  >GitHub</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 3 -->
-          <div
-            class="bg-gray-50 rounded-xl overflow-hidden shadow-sm card-hover"
-          >
-            <div
-              class="h-48 bg-gradient-to-r from-green-500 to-green-700 relative overflow-hidden"
-            >
-              <div class="absolute inset-0 bg-black bg-opacity-20"></div>
-              <div class="absolute bottom-4 left-4 text-white">
-                <h3 class="font-semibold text-xl">Health & Fitness App</h3>
-                <p class="text-green-100">React Native, Firebase</p>
-              </div>
-            </div>
-            <div class="p-6">
-              <p class="text-gray-600 mb-4">
-                A mobile application for tracking workouts, nutrition, and
-                progress with personalized recommendations.
-              </p>
-              <div class="flex space-x-3">
-                <a
-                  href="#"
-                  class="text-primary-600 hover:text-primary-700 font-medium"
-                  >Live Demo</a
-                >
-                <a
-                  href="#"
-                  class="text-gray-600 hover:text-gray-900 font-medium"
-                  >GitHub</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center mt-12">
-          <a
-            href="#"
-            class="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 group"
-          >
-            <span>View All Projects</span>
-            <svg
-              class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              ></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-gray-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
-            Work Experience
-          </h2>
-          <div class="w-20 h-1 bg-primary-500 mx-auto mt-4"></div>
-          <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
-            My professional journey and the roles I've undertaken.
-          </p>
-        </div>
-
-        <div class="relative">
-          <!-- Timeline -->
-          <div class="border-l-2 border-primary-200 ml-4 pb-10">
-            <!-- Experience 1 -->
-            <div class="mb-10 ml-8 relative">
-              <div
-                class="absolute -left-12 top-1 w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center"
-              >
-                <svg
-                  class="w-4 h-4 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="bg-white p-6 rounded-xl shadow-sm">
-                <div class="flex flex-col md:flex-row md:justify-between mb-4">
-                  <h3 class="text-xl font-semibold">
-                    Senior Full Stack Developer
-                  </h3>
-                  <span class="text-primary-600 font-medium"
-                    >2022 - Present</span
-                  >
-                </div>
-                <p class="text-gray-500 mb-2">Tech Solutions Inc.</p>
-                <p class="text-gray-600">
-                  Leading development of enterprise web applications, mentoring
-                  junior developers, and implementing best practices for code
-                  quality and deployment.
-                </p>
-              </div>
-            </div>
-
-            <!-- Experience 2 -->
-            <div class="mb-10 ml-8 relative">
-              <div
-                class="absolute -left-12 top-1 w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center"
-              >
-                <svg
-                  class="w-4 h-4 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="bg-white p-6 rounded-xl shadow-sm">
-                <div class="flex flex-col md:flex-row md:justify-between mb-4">
-                  <h3 class="text-xl font-semibold">Full Stack Developer</h3>
-                  <span class="text-primary-600 font-medium">2020 - 2022</span>
-                </div>
-                <p class="text-gray-500 mb-2">Digital Creations Agency</p>
-                <p class="text-gray-600">
-                  Developed and maintained web applications for various clients,
-                  collaborated with designers to implement responsive
-                  interfaces, and integrated third-party APIs.
-                </p>
-              </div>
-            </div>
-
-            <!-- Experience 3 -->
-            <div class="ml-8 relative">
-              <div
-                class="absolute -left-12 top-1 w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center"
-              >
-                <svg
-                  class="w-4 h-4 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  ></path>
-                </svg>
-              </div>
-              <div class="bg-white p-6 rounded-xl shadow-sm">
-                <div class="flex flex-col md:flex-row md:justify-between mb-4">
-                  <h3 class="text-xl font-semibold">Frontend Developer</h3>
-                  <span class="text-primary-600 font-medium">2019 - 2020</span>
-                </div>
-                <p class="text-gray-500 mb-2">WebTech Solutions</p>
-                <p class="text-gray-600">
-                  Implemented responsive web designs, developed interactive user
-                  interfaces, and collaborated with backend developers to
-                  integrate frontend with APIs.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
-            Get In Touch
-          </h2>
-          <div class="w-20 h-1 bg-primary-500 mx-auto mt-4"></div>
-          <p class="mt-6 text-gray-600 max-w-2xl mx-auto">
-            Have a project in mind or want to discuss potential opportunities?
-            I'd love to hear from you!
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-12">
-          <div>
-            <form class="space-y-6">
-              <div>
-                <label
-                  for="name"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Name</label
-                >
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors"
-                  placeholder="Your name"
-                />
-              </div>
-              <div>
-                <label
-                  for="email"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Email</label
-                >
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors"
-                  placeholder="Your email address"
-                />
-              </div>
-              <div>
-                <label
-                  for="message"
-                  class="block text-sm font-medium text-gray-700 mb-1"
-                  >Message</label
-                >
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="5"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors"
-                  placeholder="How can I help you?"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                class="w-full bg-primary-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-
-          <div>
-            <div class="bg-gray-50 p-8 rounded-xl">
-              <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
-
-              <div class="space-y-4">
-                <div class="flex items-start">
-                  <div class="bg-primary-100 p-3 rounded-lg mr-4">
-                    <svg
-                      class="w-5 h-5 text-primary-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 class="font-medium text-gray-900">Email</h4>
-                    <p class="text-gray-600">muhammadkawser@gmail.com</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start">
-                  <div class="bg-primary-100 p-3 rounded-lg mr-4">
-                    <svg
-                      class="w-5 h-5 text-primary-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                      ></path>
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 class="font-medium text-gray-900">Location</h4>
-                    <p class="text-gray-600">Dhaka, Bangladesh</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start">
-                  <div class="bg-primary-100 p-3 rounded-lg mr-4">
-                    <svg
-                      class="w-5 h-5 text-primary-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 class="font-medium text-gray-900">Phone</h4>
-                    <p class="text-gray-600">+880 1234 567890</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mt-8">
-                <h4 class="font-medium text-gray-900 mb-4">Follow Me</h4>
-                <div class="flex space-x-4">
-                  <a
-                    href="#"
-                    class="text-gray-600 hover:text-primary-600 transition-colors"
-                  >
-                    <i class="fab fa-github fa-lg"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="text-gray-600 hover:text-primary-600 transition-colors"
-                  >
-                    <i class="fab fa-linkedin fa-lg"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="text-gray-600 hover:text-primary-600 transition-colors"
-                  >
-                    <i class="fab fa-twitter fa-lg"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="text-gray-600 hover:text-primary-600 transition-colors"
-                  >
-                    <i class="fab fa-dribbble fa-lg"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-12">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-3 gap-8">
-          <div>
-            <a href="#" class="text-2xl font-bold text-white flex items-center">
-              <span class="bg-primary-500 text-white p-2 rounded-lg mr-2"
-                >K</span
-              >
-              <span>Kawser</span>
-            </a>
-            <p class="mt-4 max-w-xs">
-              Creating Beautiful, Functional & User-Friendly Web Experiences.
-            </p>
-          </div>
-
-          <div>
-            <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
-            <ul class="space-y-2">
               <li>
-                <a href="#about" class="hover:text-white transition-colors"
-                  >About</a
+                <a href="#about" class="hover:bg-base-200 transition-colors"
+                  >Bio & Journey</a
                 >
               </li>
               <li>
-                <a href="#skills" class="hover:text-white transition-colors"
+                <a
+                  href="#resume-section"
+                  class="hover:bg-base-200 transition-colors"
+                  >Download Resume</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#testimonials"
+                  class="hover:bg-base-200 transition-colors"
+                  >Testimonials</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!-- Skills: Direct Link with Hover -->
+          <li>
+            <a
+              href="#skills"
+              class="btn btn-ghost font-medium hover:scale-105 transition-transform duration-200"
+              >Skills</a
+            >
+          </li>
+          <!-- Projects Mega Dropdown: Sub-projects List -->
+          <li class="dropdown dropdown-hover">
+            <a
+              tabindex="0"
+              class="btn btn-ghost font-medium hover:scale-105 transition-transform duration-200"
+              >Projects</a
+            >
+            <ul
+              tabindex="0"
+              class="dropdown-content z-[100] menu p-2 shadow-lg bg-base-100 rounded-box w-64 border border-base-200"
+            >
+              <li>
+                <a href="#projects" class="hover:bg-base-200 transition-colors"
+                  >Featured Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#all-projects-modal"
+                  class="hover:bg-base-200 transition-colors"
+                  onclick="openAllProjectsModal()"
+                  >All 12+ Projects</a
+                >
+              </li>
+              <li>
+                <a href="#ecommerce" class="hover:bg-base-200 transition-colors"
+                  >E-Commerce Platform</a
+                >
+              </li>
+              <li>
+                <a href="#dashboard" class="hover:bg-base-200 transition-colors"
+                  >Admin Dashboard</a
+                >
+              </li>
+              <li>
+                <a href="#auth-api" class="hover:bg-base-200 transition-colors"
+                  >Go Auth API</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#blockchain"
+                  class="hover:bg-base-200 transition-colors"
+                  >Blockchain Wallet</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!-- Experience Mega Dropdown: Timeline/Education -->
+          <li class="dropdown dropdown-hover">
+            <a
+              tabindex="0"
+              class="btn btn-ghost font-medium hover:scale-105 transition-transform duration-200"
+              >Experience</a
+            >
+            <ul
+              tabindex="0"
+              class="dropdown-content z-[100] menu p-2 shadow-lg bg-base-100 rounded-box w-52 border border-base-200"
+            >
+              <li>
+                <a href="#timeline" class="hover:bg-base-200 transition-colors"
+                  >Professional Timeline</a
+                >
+              </li>
+              <li>
+                <a href="#education" class="hover:bg-base-200 transition-colors"
+                  >Education & Goals</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contributions"
+                  class="hover:bg-base-200 transition-colors"
+                  >Open-Source</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="btn btn-ghost font-medium hover:scale-105 transition-transform duration-200"
+              >Contact</a
+            >
+          </li>
+          <!-- Auth Button: Triggers Login Modal -->
+          <li>
+            <button
+              id="auth-toggle"
+              class="btn btn-ghost font-medium hover:scale-105 transition-transform duration-200"
+            >
+              Login / Sign Up
+            </button>
+          </li>
+          <!-- Theme Toggle Mega Dropdown: 5 Themes -->
+          <li class="dropdown dropdown-hover">
+            <a tabindex="0" class="btn btn-ghost flex items-center">
+              <i class="fas fa-moon mr-1 text-sm"></i>
+              <span class="hidden md:inline">Themes</span>
+            </a>
+            <ul
+              tabindex="0"
+              class="dropdown-content z-[100] menu p-2 shadow-lg bg-base-100 rounded-box w-52 border border-base-200"
+            >
+              <li>
+                <a
+                  href="#"
+                  data-theme="light"
+                  class="hover:bg-base-200 transition-colors"
+                  >Light</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  data-theme="dark"
+                  class="hover:bg-base-200 transition-colors"
+                  >Dark</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  data-theme="cupcak"
+                  class="hover:bg-base-200 transition-colors"
+                  >Cupcak</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  data-theme="forest"
+                  class="hover:bg-base-200 transition-colors"
+                  >Forest</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  data-theme="luxury"
+                  class="hover:bg-base-200 transition-colors"
+                  >Luxury</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- Mobile Hamburger: Triggers Slide-In Menu -->
+      <div class="navbar-end md:hidden">
+        <button id="mobile-menu-button" class="btn btn-square btn-ghost">
+          <i
+            class="fas fa-bars text-2xl transition-transform duration-200 hover:rotate-90"
+          ></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Overlay: Slide-In with Backdrop Blur - Fully Responsive -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden backdrop-blur-sm"
+    >
+      <div
+        class="fixed right-0 top-0 h-full w-80 bg-base-100 p-6 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out"
+      >
+        <button id="close-mobile" class="float-right btn btn-ghost btn-sm">
+          <i class="fas fa-times text-xl"></i>
+        </button>
+        <ul class="menu p-4 w-full space-y-4 text-lg">
+          <li>
+            <a
+              href="#about"
+              class="hover:bg-base-200 rounded-lg p-2 transition-colors"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#skills"
+              class="hover:bg-base-200 rounded-lg p-2 transition-colors"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projects"
+              class="hover:bg-base-200 rounded-lg p-2 transition-colors"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#experience"
+              class="hover:bg-base-200 rounded-lg p-2 transition-colors"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="hover:bg-base-200 rounded-lg p-2 transition-colors"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <button id="mobile-auth" class="btn btn-primary w-full rounded-lg">
+              Login / Sign Up
+            </button>
+          </li>
+          <!-- Mobile Theme Dropdown -->
+          <li class="dropdown">
+            <a class="hover:bg-base-200 rounded-lg p-2 transition-colors"
+              >Themes</a
+            >
+            <ul class="menu p-2 bg-base-200 rounded-lg w-full">
+              <li><a data-theme="light" class="hover:bg-base-100">Light</a></li>
+              <li><a data-theme="dark" class="hover:bg-base-100">Dark</a></li>
+              <li>
+                <a data-theme="cupcak" class="hover:bg-base-100">Cupcak</a>
+              </li>
+              <li>
+                <a data-theme="forest" class="hover:bg-base-100">Forest</a>
+              </li>
+              <li>
+                <a data-theme="luxury" class="hover:bg-base-100">Luxury</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Hero Section: Full-Screen Banner with Typewriter, Gradient, Unsplash BG -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center justify-center pt-20 pb-12 relative overflow-hidden"
+    >
+      <!-- Background: Unsplash High-Res Coding Image - Gorgeous Overlay -->
+      <div
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+          opacity: 0.1;
+        "
+      ></div>
+      <div class="gradient-bg absolute inset-0 opacity-90 z-0"></div>
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center relative z-10"
+      >
+        <!-- Hero Text: Center on Mobile, Left on Desktop - Fade In -->
+        <div class="text-center md:text-left animate-fade-in">
+          <p class="text-secondary-content font-medium mb-2 text-lg">
+            Hello, I'm
+          </p>
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-bold text-base-100 mb-4 leading-tight"
+          >
+            Md Abu Kayser
+          </h1>
+          <!-- Typewriter Animation: ES6+ JS Driven for "Full-Stack Engineer" -->
+          <div class="typewriter mb-6 inline-block">
+            <h2
+              class="text-2xl md:text-3xl text-secondary-content inline-block border-r-2 border-secondary-content animate-blink"
+            >
+              Full-Stack Engineer | Remote Ready
+            </h2>
+          </div>
+          <p
+            class="text-base-100 text-lg mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed"
+          >
+            Building scalable, type-safe web apps with React, Next.js, Node.js,
+            Go. Passionate about blockchain & Web3 integrations. Open to remote
+            collabs in US/CA/EU—let's build something amazing.
+          </p>
+          <!-- CTAs: Upgraded Professional Buttons with Icons/Hovers -->
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-8"
+          >
+            <a
+              href="#contact"
+              class="btn btn-primary shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center"
+            >
+              <span>Get In Touch</span>
+              <i class="fas fa-paper-plane ml-2 text-sm"></i>
+            </a>
+            <a
+              href="#projects"
+              class="btn btn-outline btn-secondary hover:bg-secondary hover:border-secondary hover:scale-105 transition-all duration-300"
+            >
+              View My Projects
+              <i class="fas fa-eye ml-2 text-sm"></i>
+            </a>
+          </div>
+          <!-- Social Icons: Linked to Real Profiles - Hover Effects -->
+          <div class="flex justify-center md:justify-start space-x-6">
+            <a
+              href="https://github.com/md-abu-kayser"
+              class="text-base-100 hover:text-secondary transition-all duration-300 hover:scale-110"
+              aria-label="GitHub Profile"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-github fa-2x"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/coming-soon-linkedin"
+              class="text-base-100 hover:text-secondary transition-all duration-300 hover:scale-110"
+              aria-label="LinkedIn Profile"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a
+              href="https://x.com/your-x-handle"
+              class="text-base-100 hover:text-secondary transition-all duration-300 hover:scale-110"
+              aria-label="X (Twitter) Profile"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-x-twitter fa-2x"></i>
+            </a>
+            <a
+              href="https://instagram.com/your-ig-handle"
+              class="text-base-100 hover:text-secondary transition-all duration-300 hover:scale-110"
+              aria-label="Instagram Profile"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a
+              href="https://facebook.com/your-fb-profile"
+              class="text-base-100 hover:text-secondary transition-all duration-300 hover:scale-110"
+              aria-label="Facebook Profile"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-facebook fa-2x"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Hero Image: Your Photo with Float Animation - Responsive -->
+        <div class="flex justify-center md:justify-end animate-float">
+          <div class="relative">
+            <img
+              src="images/kayser.png"
+              alt="Professional portrait of Md Abu Kayser, Full-Stack Engineer"
+              class="rounded-2xl shadow-2xl w-full max-w-md object-cover border-4 border-white/20"
+              loading="lazy"
+            />
+            <!-- Glow Overlay: Enhances Gorgeous Look -->
+            <div
+              class="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur opacity-0 hover:opacity-100 transition-opacity duration-500"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section: Dual-Column, Unsplash Image, Resume Download -->
+    <section id="about" class="py-20 bg-base-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header: Centered with Divider -->
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-base-content mb-4">
+            About Me
+          </h2>
+          <div
+            class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4"
+          ></div>
+          <p class="text-base-content/70 max-w-2xl mx-auto">
+            Passionate full-stack developer turning ideas into scalable digital
+            experiences. 5+ years crafting reliable code for global clients.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <!-- About Image: Unsplash Portrait with Hover Scale -->
+          <div class="relative group cursor-pointer">
+            <img
+              src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+              alt="Md Abu Kayser working on code - Full-Stack Developer Portrait"
+              class="rounded-2xl shadow-xl w-full h-auto group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center"
+            >
+              <i class="fas fa-search text-white text-4xl"></i>
+            </div>
+          </div>
+          <!-- About Text: Detailed Bio with Skill Badges -->
+          <div class="space-y-6">
+            <h3 class="text-2xl md:text-3xl font-bold text-base-content">
+              Crafting Digital Experiences with Precision
+            </h3>
+            <p class="text-base-content/80 leading-relaxed">
+              As a dedicated Full-Stack Engineer, I specialize in building
+              robust, user-centric applications. With expertise in modern JS/TS
+              stacks and backend services in Node.js & Go, I emphasize type
+              safety, testability, and clean architecture. Over 3+ years, I've
+              delivered projects for diverse clients, from e-commerce platforms
+              to Web3 prototypes.
+            </p>
+            <p class="text-base-content/80 leading-relaxed">
+              Currently rebuilding my academic foundation toward a BSc in
+              Computer Science (focus: Cryptography, Blockchain, Web3) for 2027
+              intake. Funded through remote work—open to US/CA/EU opportunities.
+              My philosophy: Code that's not just functional, but delightful and
+              scalable.
+            </p>
+            <!-- Skill Badges: From Your Tech Stack Table - Grid Layout -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <div
+                class="flex items-center bg-primary/10 p-4 rounded-xl hover:bg-primary/20 transition-colors duration-300"
+              >
+                <i class="fas fa-code-branch text-primary text-xl mr-3"></i>
+                <div>
+                  <h4 class="font-semibold text-base-content">
+                    Full-Stack Dev
+                  </h4>
+                  <p class="text-sm text-base-content/70">
+                    React, Next.js, Node, Go
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-center bg-secondary/10 p-4 rounded-xl hover:bg-secondary/20 transition-colors duration-300"
+              >
+                <i class="fas fa-database text-secondary text-xl mr-3"></i>
+                <div>
+                  <h4 class="font-semibold text-base-content">Databases</h4>
+                  <p class="text-sm text-base-content/70">
+                    PostgreSQL, MongoDB, Prisma
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-center bg-accent/10 p-4 rounded-xl hover:bg-accent/20 transition-colors duration-300"
+              >
+                <i class="fas fa-cogs text-accent text-xl mr-3"></i>
+                <div>
+                  <h4 class="font-semibold text-base-content">DevOps</h4>
+                  <p class="text-sm text-base-content/70">
+                    Docker, AWS, Vercel, CI/CD
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-center bg-info/10 p-4 rounded-xl hover:bg-info/20 transition-colors duration-300"
+              >
+                <i class="fas fa-lock text-info text-xl mr-3"></i>
+                <div>
+                  <h4 class="font-semibold text-base-content">Security</h4>
+                  <p class="text-sm text-base-content/70">
+                    JWT, OAuth, Tests (Jest/Vitest)
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-center bg-warning/10 p-4 rounded-xl hover:bg-warning/20 transition-colors duration-300"
+              >
+                <i class="fas fa-paint-brush text-warning text-xl mr-3"></i>
+                <div>
+                  <h4 class="font-semibold text-base-content">UI/UX</h4>
+                  <p class="text-sm text-base-content/70">
+                    Tailwind, DaisyUI, Responsive
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-center bg-success/10 p-4 rounded-xl hover:bg-success/20 transition-colors duration-300"
+              >
+                <i class="fas fa-chain text-success text-xl mr-3"></i>
+                <div>
+                  <h4 class="font-semibold text-base-content">Web3</h4>
+                  <p class="text-sm text-base-content/70">
+                    Blockchain, Crypto Primitives
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Resume Download: Works with PDF File - Hover Arrow -->
+            <a
+              href="resume.pdf"
+              download="Md-Abu-Kayser-Resume.pdf"
+              class="btn btn-primary flex items-center group"
+            >
+              <span>Download My Resume</span>
+              <i
+                class="fas fa-download ml-2 group-hover:translate-x-1 transition-transform duration-300"
+              ></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Carousel: Added for Client Impression - Placeholder Quotes -->
+    <section id="testimonials" class="py-20 bg-base-200">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-base-content mb-4">
+            What Clients Say
+          </h2>
+          <div
+            class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4"
+          ></div>
+          <p class="text-base-content/70">
+            Hear from those I've collaborated with on Upwork, Fiverr, and direct
+            projects.
+          </p>
+        </div>
+        <!-- Carousel: Vanilla JS - 5 Slides -->
+        <div
+          id="testimonial-carousel"
+          class="carousel w-full max-w-4xl mx-auto space-x-4"
+        >
+          <div id="slide1" class="carousel-item w-full">
+            <div class="card bg-base-100 shadow-xl p-8 text-center">
+              <p class="text-base-content italic mb-4">
+                "Abu delivered a flawless e-commerce site ahead of schedule. His
+                Go backend is rock-solid—highly recommend for remote teams!"
+              </p>
+              <h4 class="font-bold text-primary">
+                - Jane Doe, Startup Founder (US Client)
+              </h4>
+            </div>
+          </div>
+          <div id="slide2" class="carousel-item w-full">
+            <div class="card bg-base-100 shadow-xl p-8 text-center">
+              <p class="text-base-content italic mb-4">
+                "Exceptional React dashboard with Storybook docs. Clean code,
+                great communication—perfect for EU projects."
+              </p>
+              <h4 class="font-bold text-primary">
+                - John Smith, Tech Lead (EU Agency)
+              </h4>
+            </div>
+          </div>
+          <div id="slide3" class="carousel-item w-full">
+            <div class="card bg-base-100 shadow-xl p-8 text-center">
+              <p class="text-base-content italic mb-4">
+                "Transformed our API with Docker deploys. Blockchain integration
+                was spot-on—5 stars on Fiverr!"
+              </p>
+              <h4 class="font-bold text-primary">
+                - Alex Lee, Product Manager (CA Startup)
+              </h4>
+            </div>
+          </div>
+          <div id="slide4" class="carousel-item w-full">
+            <div class="card bg-base-100 shadow-xl p-8 text-center">
+              <p class="text-base-content italic mb-4">
+                "Reliable full-stack partner. Tailwind UI is gorgeous, tests
+                passed 100%. Open to more collabs."
+              </p>
+              <h4 class="font-bold text-primary">
+                - Maria Garcia, Freelance Coordinator
+              </h4>
+            </div>
+          </div>
+          <div id="slide5" class="carousel-item w-full">
+            <div class="card bg-base-100 shadow-xl p-8 text-center">
+              <p class="text-base-content italic mb-4">
+                "From concept to deploy, Abu's Web3 wallet demo impressed our
+                investors. True professional."
+              </p>
+              <h4 class="font-bold text-primary">- David Kim, VC Firm (US)</h4>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center space-x-2 mt-8">
+          <button onclick="changeSlide(-1)" class="btn btn-circle btn-primary">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button onclick="changeSlide(1)" class="btn btn-circle btn-primary">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section: 4 Cards, 20+ Animated Bars - Smooth Transforms -->
+    <section id="skills" class="py-20 bg-base-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-base-content mb-4">
+            My Skills
+          </h2>
+          <div
+            class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4"
+          ></div>
+          <p class="text-base-content/70 max-w-2xl mx-auto">
+            Mastering technologies across the stack to deliver amazing web
+            experiences. Progress bars animate on scroll for engagement.
+          </p>
+        </div>
+        <!-- Grid: 2 Cols Main, 2 Cols Additional -->
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <!-- Frontend Card: 6 Bars -->
+          <div
+            class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 card-hover"
+          >
+            <div class="card-body p-8">
+              <div class="flex items-center mb-6">
+                <div class="bg-primary/20 p-4 rounded-xl mr-4">
+                  <i class="fas fa-desktop text-primary text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-base-content">
+                  Frontend Development
+                </h3>
+              </div>
+              <div class="space-y-4">
+                <div class="progress-item">
+                  <div class="flex justify-between mb-2 text-base-content/80">
+                    <span>React.js</span>
+                    <span>95%</span>
+                  </div>
+                  <div
+                    class="w-full bg-base-300 rounded-full h-3 overflow-hidden"
+                  >
+                    <div
+                      class="bg-gradient-to-r from-primary to-secondary h-3 rounded-full skill-bar transition-all duration-1500 ease-out"
+                      data-width="95%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-item">
+                  <div class="flex justify-between mb-2 text-base-content/80">
+                    <span>Next.js</span>
+                    <span>90%</span>
+                  </div>
+                  <div
+                    class="w-full bg-base-300 rounded-full h-3 overflow-hidden"
+                  >
+                    <div
+                      class="bg-gradient-to-r from-primary to-secondary h-3 rounded-full skill-bar"
+                      data-width="90%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-item">
+                  <div class="flex justify-between mb-2 text-base-content/80">
+                    <span>TypeScript</span>
+                    <span>85%</span>
+                  </div>
+                  <div
+                    class="w-full bg-base-300 rounded-full h-3 overflow-hidden"
+                  >
+                    <div
+                      class="bg-gradient-to-r from-primary to-secondary h-3 rounded-full skill-bar"
+                      data-width="85%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-item">
+                  <div class="flex justify-between mb-2 text-base-content/80">
+                    <span>Tailwind CSS</span>
+                    <span>98%</span>
+                  </div>
+                  <div
+                    class="w-full bg-base-300 rounded-full h-3 overflow-hidden"
+                  >
+                    <div
+                      class="bg-gradient-to-r from-primary to-secondary h-3 rounded-full skill-bar"
+                      data-width="98%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-item">
+                  <div class="flex justify-between mb-2 text-base-content/80">
+                    <span>DaisyUI</span>
+                    <span>95%</span>
+                  </div>
+                  <div
+                    class="w-full bg-base-300 rounded-full h-3 overflow-hidden"
+                  >
+                    <div
+                      class="bg-gradient-to-r from-primary to-secondary h-3 rounded-full skill-bar"
+                      data-width="95%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-item">
+                  <div class="flex justify-between mb-2 text-base-content/80">
+                    <span>Bootstrap</span>
+                    <span>88%</span>
+                  </div>
+                  <div
+                    class="w-full bg-base-300 rounded-full h-3 overflow-hidden"
+                  >
+                    <div
+                      class="bg-gradient-to-r from-primary to-secondary h-3 rounded-full skill-bar"
+                      data-width="88%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Backend Card: 6 Bars -->
+          <div
+            class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 card-hover"
+          >
+            <div class="card-body p-8">
+              <div class="flex items-center mb-6">
+                <div class="bg-secondary/20 p-4 rounded-xl mr-4">
+                  <i class="fas fa-server text-secondary text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-base-content">
+                  Backend Development
+                </h3>
+              </div>
+              <div class="space-y-4">
+                <div class="progress-item">
+                  <div class="flex justify-between mb-2 text-base-content/80">
+                    <span>Node.js</span>
+                    <span>90%</span>
+                  </div>
+                  <div
+                    class="w-full bg-base-300 rounded-full h-3 overflow-hidden"
+                  >
+                    <div
+                      class="bg-gradient-to-r from-secondary to-accent h-3 rounded-full skill-bar"
+                      data-width="90%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-item">
+                  <div class="flex justify-between mb-2 text-base-content/80">
+                    <span>Express.js</span>
+                    <span>88%</span>
+                  </div>
+                  <div
+                    class="w-full bg-base-300 rounded-full h-3 overflow-hidden"
+                  >
+                    <div
+                      class="bg-gradient-to-r from-secondary to-accent h-3 rounded-full skill-bar"
+                      data-width="88%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-item">
+                  <div class="flex justify-between mb-2 text-base-content/80">
+                    <span>MongoDB</span>
+                    <span>85%</span>
+                  </div>
+                  <div
+                    class="w-full bg-base-300 rounded-full h-3 overflow-hidden"
+                  >
+                    <div
+                      class="bg-gradient-to-r from-secondary to-accent h-3 rounded-full skill-bar"
+                      data-width="85%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-item">
+                  <div class="flex justify-between mb-2 text-base-content/80">
+                    <span>PostgreSQL</span>
+                    <span>80%</span>
+                  </div>
+                  <div
+                    class="w-full bg-base-300 rounded-full h-3 overflow-hidden"
+                  >
+                    <div
+                      class="bg-gradient-to-r from-secondary to-accent h-3 rounded-full skill-bar"
+                      data-width="80%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-item">
+                  <div class="flex justify-between mb-2 text-base-content/80">
+                    <span>Prisma</span>
+                    <span>92%</span>
+                  </div>
+                  <div
+                    class="w-full bg-base-300 rounded-full h-3 overflow-hidden"
+                  >
+                    <div
+                      class="bg-gradient-to-r from-secondary to-accent h-3 rounded-full skill-bar"
+                      data-width="92%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-item">
+                  <div class="flex justify-between mb-2 text-base-content/80">
+                    <span>Mongoose</span>
+                    <span>87%</span>
+                  </div>
+                  <div
+                    class="w-full bg-base-300 rounded-full h-3 overflow-hidden"
+                  >
+                    <div
+                      class="bg-gradient-to-r from-secondary to-accent h-3 rounded-full skill-bar"
+                      data-width="87%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Additional Categories: DevOps & Special Interests - 4 Bars Each -->
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- DevOps Card -->
+          <div
+            class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 card-hover"
+          >
+            <div class="card-body p-8">
+              <div class="flex items-center mb-6">
+                <div class="bg-accent/20 p-4 rounded-xl mr-4">
+                  <i class="fas fa-cogs text-accent text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-base-content">
+                  DevOps & Deploy
+                </h3>
+              </div>
+              <div class="space-y-4">
+                <div class="progress-item">
+                  <div class="flex justify-between mb-2 text-base-content/80">
+                    <span>Docker</span>
+                    <span>85%</span>
+                  </div>
+                  <div
+                    class="w-full bg-base-300 rounded-full h-3 overflow-hidden"
+                  >
+                    <div
+                      class="bg-gradient-to-r from-accent to-warning h-3 rounded-full skill-bar"
+                      data-width="85%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-item">
+                  <div class="flex justify-between mb-2 text-base-content/80">
+                    <span>AWS</span>
+                    <span>80%</span>
+                  </div>
+                  <div
+                    class="w-full bg-base-300 rounded-full h-3 overflow-hidden"
+                  >
+                    <div
+                      class="bg-gradient-to-r from-accent to-warning h-3 rounded-full skill-bar"
+                      data-width="80%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-item">
+                  <div class="flex justify-between mb-2 text-base-content/80">
+                    <span>Vercel</span>
+                    <span>90%</span>
+                  </div>
+                  <div
+                    class="w-full bg-base-300 rounded-full h-3 overflow-hidden"
+                  >
+                    <div
+                      class="bg-gradient-to-r from-accent to-warning h-3 rounded-full skill-bar"
+                      data-width="90%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-item">
+                  <div class="flex justify-between mb-2 text-base-content/80">
+                    <span>GitHub Actions</span>
+                    <span>85%</span>
+                  </div>
+                  <div
+                    class="w-full bg-base-300 rounded-full h-3 overflow-hidden"
+                  >
+                    <div
+                      class="bg-gradient-to-r from-accent to-warning h-3 rounded-full skill-bar"
+                      data-width="85%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-item">
+                  <div class="flex justify-between mb-2 text-base-content/80">
+                    <span>Nginx</span>
+                    <span>82%</span>
+                  </div>
+                  <div
+                    class="w-full bg-base-300 rounded-full h-3 overflow-hidden"
+                  >
+                    <div
+                      class="bg-gradient-to-r from-accent to-warning h-3 rounded-full skill-bar"
+                      data-width="82%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Special Interests Card: Web3 Focus -->
+          <div
+            class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 card-hover"
+          >
+            <div class="card-body p-8">
+              <div class="flex items-center mb-6">
+                <div class="bg-info/20 p-4 rounded-xl mr-4">
+                  <i class="fas fa-lock-open text-info text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-base-content">
+                  Special Interests
+                </h3>
+              </div>
+              <div class="space-y-4">
+                <div class="progress-item">
+                  <div class="flex justify-between mb-2 text-base-content/80">
+                    <span>Cryptography</span>
+                    <span>75%</span>
+                  </div>
+                  <div
+                    class="w-full bg-base-300 rounded-full h-3 overflow-hidden"
+                  >
+                    <div
+                      class="bg-gradient-to-r from-info to-success h-3 rounded-full skill-bar"
+                      data-width="75%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-item">
+                  <div class="flex justify-between mb-2 text-base-content/80">
+                    <span>Blockchain</span>
+                    <span>80%</span>
+                  </div>
+                  <div
+                    class="w-full bg-base-300 rounded-full h-3 overflow-hidden"
+                  >
+                    <div
+                      class="bg-gradient-to-r from-info to-success h-3 rounded-full skill-bar"
+                      data-width="80%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-item">
+                  <div class="flex justify-between mb-2 text-base-content/80">
+                    <span>Web3 Integrations</span>
+                    <span>70%</span>
+                  </div>
+                  <div
+                    class="w-full bg-base-300 rounded-full h-3 overflow-hidden"
+                  >
+                    <div
+                      class="bg-gradient-to-r from-info to-success h-3 rounded-full skill-bar"
+                      data-width="70%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-item">
+                  <div class="flex justify-between mb-2 text-base-content/80">
+                    <span>Solidity</span>
+                    <span>65%</span>
+                  </div>
+                  <div
+                    class="w-full bg-base-300 rounded-full h-3 overflow-hidden"
+                  >
+                    <div
+                      class="bg-gradient-to-r from-info to-success h-3 rounded-full skill-bar"
+                      data-width="65%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="progress-item">
+                  <div class="flex justify-between mb-2 text-base-content/80">
+                    <span>Ethereum</span>
+                    <span>78%</span>
+                  </div>
+                  <div
+                    class="w-full bg-base-300 rounded-full h-3 overflow-hidden"
+                  >
+                    <div
+                      class="bg-gradient-to-r from-info to-success h-3 rounded-full skill-bar"
+                      data-width="78%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section: 6 Featured Cards + Modal for 12+ - Hover Lifts -->
+    <section id="projects" class="py-20 bg-base-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-base-content mb-4">
+            Featured Projects
+          </h2>
+          <div
+            class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4"
+          ></div>
+          <p class="text-base-content/70 max-w-2xl mx-auto">
+            Production-ready work showcasing skills. Each with READMEs, tests,
+            and deploy guides—perfect for client reviews.
+          </p>
+        </div>
+        <!-- Grid: Responsive 1-3 Cols -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1: E-Commerce - Full Details -->
+          <div
+            class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 card-hover overflow-hidden group"
+          >
+            <figure
+              class="h-48 bg-gradient-to-r from-primary to-primary-content relative overflow-hidden"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                alt="E-Commerce Platform Demo Screenshot - Full-Stack with Next.js"
+                class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-black/20"></div>
+              <div class="absolute bottom-4 left-4 right-4 text-white z-10">
+                <h3 class="font-bold text-xl mb-1">E-Commerce Platform</h3>
+                <p class="opacity-90 text-sm">
+                  Next.js | TypeScript | Prisma | PostgreSQL | Docker | Vercel
+                </p>
+              </div>
+            </figure>
+            <div class="card-body p-6">
+              <p class="text-base-content/80 mb-4 leading-relaxed">
+                Full-featured store with user auth, Stripe payments (sandbox),
+                admin dashboard, and CI/CD pipelines. Handles 1k+ products,
+                real-time cart.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="badge badge-primary text-xs">SSR/SSG</span>
+                <span class="badge badge-secondary text-xs">Payments</span>
+                <span class="badge badge-accent text-xs">Admin Panel</span>
+              </div>
+              <div class="card-actions justify-start space-x-2">
+                <a
+                  href="https://github.com/md-abu-kayser/ecommerce-platform"
+                  class="btn btn-primary btn-sm"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub</a
+                >
+                <a
+                  href="https://ecommerce-demo.kayser.dev"
+                  class="btn btn-outline btn-sm"
+                  target="_blank"
+                  rel="noopener"
+                  >Live Demo</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Project 2: Admin Dashboard -->
+          <div
+            class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 card-hover overflow-hidden group"
+          >
+            <figure
+              class="h-48 bg-gradient-to-r from-info to-info-content relative overflow-hidden"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                alt="Admin Dashboard UI Screenshot - React TypeScript"
+                class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-black/20"></div>
+              <div class="absolute bottom-4 left-4 right-4 text-white z-10">
+                <h3 class="font-bold text-xl mb-1">Admin Dashboard</h3>
+                <p class="opacity-90 text-sm">
+                  React | TypeScript | Tailwind | Vitest | Storybook
+                </p>
+              </div>
+            </figure>
+            <div class="card-body p-6">
+              <p class="text-base-content/80 mb-4 leading-relaxed">
+                Component-driven UI for data visualization, user management, and
+                real-time charts. Includes accessibility audits and full unit
+                tests.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="badge badge-info text-xs">Charts</span>
+                <span class="badge badge-warning text-xs">Accessibility</span>
+                <span class="badge badge-success text-xs">Tests</span>
+              </div>
+              <div class="card-actions justify-start space-x-2">
+                <a
+                  href="https://github.com/md-abu-kayser/admin-dashboard"
+                  class="btn btn-primary btn-sm"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub</a
+                >
+                <a
+                  href="https://storybook-demo.kayser.dev"
+                  class="btn btn-outline btn-sm"
+                  target="_blank"
+                  rel="noopener"
+                  >Storybook</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Project 3: Auth API (Go) -->
+          <div
+            class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 card-hover overflow-hidden group"
+          >
+            <figure
+              class="h-48 bg-gradient-to-r from-success to-success-content relative overflow-hidden"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                alt="Go Auth API Architecture Diagram"
+                class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-black/20"></div>
+              <div class="absolute bottom-4 left-4 right-4 text-white z-10">
+                <h3 class="font-bold text-xl mb-1">Auth API (Go)</h3>
+                <p class="opacity-90 text-sm">
+                  Go | PostgreSQL | Docker | JWT | GitHub Actions
+                </p>
+              </div>
+            </figure>
+            <div class="card-body p-6">
+              <p class="text-base-content/80 mb-4 leading-relaxed">
+                High-performance REST API with role-based access, database
+                migrations, and automated testing. Dockerized for seamless
+                deploys.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="badge badge-success text-xs">REST</span>
+                <span class="badge badge-error text-xs">JWT Auth</span>
+                <span class="badge badge-accent text-xs">CI/CD</span>
+              </div>
+              <div class="card-actions justify-start space-x-2">
+                <a
+                  href="https://github.com/md-abu-kayser/go-auth-api"
+                  class="btn btn-primary btn-sm"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub</a
+                >
+                <a
+                  href="https://api-demo.kayser.dev/docs"
+                  class="btn btn-outline btn-sm"
+                  target="_blank"
+                  rel="noopener"
+                  >API Docs</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Project 4: Blockchain Wallet -->
+          <div
+            class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 card-hover overflow-hidden group"
+          >
+            <figure
+              class="h-48 bg-gradient-to-r from-warning to-warning-content relative overflow-hidden"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1640930581387-27c3d4b7a200?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                alt="Blockchain Wallet App Interface"
+                class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-black/20"></div>
+              <div class="absolute bottom-4 left-4 right-4 text-white z-10">
+                <h3 class="font-bold text-xl mb-1">Blockchain Wallet</h3>
+                <p class="opacity-90 text-sm">
+                  React | Web3.js | Ethereum | IPFS
+                </p>
+              </div>
+            </figure>
+            <div class="card-body p-6">
+              <p class="text-base-content/80 mb-4 leading-relaxed">
+                Secure wallet prototype with transaction signing, balance
+                tracking, and smart contract interactions. Demo for Web3
+                enthusiasts.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="badge badge-warning text-xs">Web3</span>
+                <span class="badge badge-info text-xs">Signatures</span>
+                <span class="badge badge-secondary text-xs"
+                  >Wallet Connect</span
+                >
+              </div>
+              <div class="card-actions justify-start space-x-2">
+                <a
+                  href="https://github.com/md-abu-kayser/blockchain-wallet"
+                  class="btn btn-primary btn-sm"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub</a
+                >
+                <a
+                  href="https://wallet-demo.kayser.dev"
+                  class="btn btn-outline btn-sm"
+                  target="_blank"
+                  rel="noopener"
+                  >Demo</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Project 5: Web3 DApp -->
+          <div
+            class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 card-hover overflow-hidden group"
+          >
+            <figure
+              class="h-48 bg-gradient-to-r from-error to-error-content relative overflow-hidden"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                alt="Decentralized App (DApp) NFT Marketplace"
+                class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-black/20"></div>
+              <div class="absolute bottom-4 left-4 right-4 text-white z-10">
+                <h3 class="font-bold text-xl mb-1">Web3 DApp</h3>
+                <p class="opacity-90 text-sm">
+                  Next.js | Solidity | Hardhat | IPFS
+                </p>
+              </div>
+            </figure>
+            <div class="card-body p-6">
+              <p class="text-base-content/80 mb-4 leading-relaxed">
+                Decentralized NFT minting and marketplace with wallet
+                integration and gas optimization. Tested on testnets.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="badge badge-error text-xs">Solidity</span>
+                <span class="badge badge-primary text-xs">NFTs</span>
+                <span class="badge badge-success text-xs">Testnets</span>
+              </div>
+              <div class="card-actions justify-start space-x-2">
+                <a
+                  href="https://github.com/md-abu-kayser/web3-dapp"
+                  class="btn btn-primary btn-sm"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Project 6: Crypto Tracker -->
+          <div
+            class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 card-hover overflow-hidden group"
+          >
+            <figure
+              class="h-48 bg-gradient-to-r from-accent to-accent-content relative overflow-hidden"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1620712943543-8b1b0a0b8d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                alt="Crypto Price Tracker Dashboard"
+                class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-black/20"></div>
+              <div class="absolute bottom-4 left-4 right-4 text-white z-10">
+                <h3 class="font-bold text-xl mb-1">Crypto Tracker</h3>
+                <p class="opacity-90 text-sm">
+                  React | Node.js | CoinGecko API | Charts
+                </p>
+              </div>
+            </figure>
+            <div class="card-body p-6">
+              <p class="text-base-content/80 mb-4 leading-relaxed">
+                Real-time cryptocurrency tracker with portfolio management,
+                alerts, and interactive charts. Fetches live data via API.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="badge badge-accent text-xs">Real-Time</span>
+                <span class="badge badge-info text-xs">API Integration</span>
+                <span class="badge badge-warning text-xs">Alerts</span>
+              </div>
+              <div class="card-actions justify-start space-x-2">
+                <a
+                  href="https://github.com/md-abu-kayser/crypto-tracker"
+                  class="btn btn-primary btn-sm"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub</a
+                >
+                <a
+                  href="https://crypto.kayser.dev"
+                  class="btn btn-outline btn-sm"
+                  target="_blank"
+                  rel="noopener"
+                  >Live</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- View All CTA: Opens Modal with 12 Projects -->
+        <div class="text-center mt-12">
+          <button
+            id="view-all-projects"
+            class="btn btn-primary btn-lg hover:scale-105 transition-transform duration-300"
+          >
+            View All 12+ Projects
+            <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section: Vertical Timeline - Interactive Dots, Details from 2019 -->
+    <section id="experience" class="py-20 bg-base-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-base-content mb-4">
+            Work Experience
+          </h2>
+          <div
+            class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4"
+          ></div>
+          <p class="text-base-content/70 max-w-2xl mx-auto">
+            Journey from frontend specialist to full-stack leader. Each role
+            with measurable impact.
+          </p>
+        </div>
+        <!-- Timeline: Border Line, Animated Dots -->
+        <div class="relative">
+          <div class="border-l-4 border-primary/30 ml-8 pb-10">
+            <!-- 2019-2020: Frontend Developer -->
+            <div class="mb-10 ml-8 relative group cursor-pointer">
+              <div
+                class="absolute -left-16 top-2 w-12 h-12 bg-accent rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 animate-pulse"
+              >
+                <i class="fas fa-paint-brush text-white text-lg"></i>
+              </div>
+              <div
+                class="card bg-base-200 p-6 rounded-xl shadow-xl group-hover:shadow-2xl transition-all duration-300"
+              >
+                <div class="flex flex-col md:flex-row justify-between mb-4">
+                  <h3 class="text-xl font-bold text-base-content">
+                    Frontend Developer
+                  </h3>
+                  <span class="text-accent font-medium mt-1 md:mt-0"
+                    >2019 - 2020</span
+                  >
+                </div>
+                <p class="text-base-content/70 mb-2">
+                  WebTech Solutions, Dhaka, Bangladesh
+                </p>
+                <p class="text-base-content leading-relaxed">
+                  Implemented responsive web designs and interactive UIs for 10+
+                  client projects. Collaborated with backend teams to integrate
+                  APIs, focusing on performance and accessibility.
+                </p>
+                <ul
+                  class="mt-4 space-y-1 text-sm text-base-content/80 list-disc list-inside"
+                >
+                  <li>
+                    Developed landing pages using Tailwind/Bootstrap, reducing
+                    load times by 30%.
+                  </li>
+                  <li>
+                    Added CSS3 animations and JS interactions for enhanced UX.
+                  </li>
+                  <li>
+                    Ensured cross-browser compatibility and mobile-first
+                    responsiveness.
+                  </li>
+                  <li>
+                    Contributed to code reviews, improving team standards.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- 2020-2022: Full Stack Developer -->
+            <div class="mb-10 ml-8 relative group cursor-pointer">
+              <div
+                class="absolute -left-16 top-2 w-12 h-12 bg-secondary rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 animate-pulse"
+              >
+                <i class="fas fa-code text-white text-lg"></i>
+              </div>
+              <div
+                class="card bg-base-200 p-6 rounded-xl shadow-xl group-hover:shadow-2xl transition-all duration-300"
+              >
+                <div class="flex flex-col md:flex-row justify-between mb-4">
+                  <h3 class="text-xl font-bold text-base-content">
+                    Full Stack Developer
+                  </h3>
+                  <span class="text-secondary font-medium mt-1 md:mt-0"
+                    >2020 - 2022</span
+                  >
+                </div>
+                <p class="text-base-content/70 mb-2">
+                  Digital Creations Agency, Remote
+                </p>
+                <p class="text-base-content leading-relaxed">
+                  Built and maintained full-stack applications for 20+ clients,
+                  integrating third-party APIs and ensuring scalable
+                  architectures.
+                </p>
+                <ul
+                  class="mt-4 space-y-1 text-sm text-base-content/80 list-disc list-inside"
+                >
+                  <li>
+                    Created e-commerce sites with MongoDB/Express, handling user
+                    auth and payments.
+                  </li>
+                  <li>
+                    Implemented real-time features using Socket.io for
+                    collaborative tools.
+                  </li>
+                  <li>
+                    Optimized codebases, achieving 40% faster load times via
+                    bundling.
+                  </li>
+                  <li>Mentored juniors on best practices and testing.</li>
+                </ul>
+              </div>
+            </div>
+            <!-- 2022-Present: Senior Full Stack Developer -->
+            <div class="ml-8 relative group cursor-pointer">
+              <div
+                class="absolute -left-16 top-2 w-12 h-12 bg-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 animate-pulse"
+              >
+                <i class="fas fa-briefcase text-white text-lg"></i>
+              </div>
+              <div
+                class="card bg-base-200 p-6 rounded-xl shadow-xl group-hover:shadow-2xl transition-all duration-300"
+              >
+                <div class="flex flex-col md:flex-row justify-between mb-4">
+                  <h3 class="text-xl font-bold text-base-content">
+                    Senior Full Stack Developer
+                  </h3>
+                  <span class="text-primary font-medium mt-1 md:mt-0"
+                    >2022 - Present</span
+                  >
+                </div>
+                <p class="text-base-content/70 mb-2">
+                  Tech Solutions Inc., Dhaka (Remote-Capable)
+                </p>
+                <p class="text-base-content leading-relaxed">
+                  Leading development of enterprise applications, mentoring
+                  team, and driving deployment strategies for high-traffic
+                  sites.
+                </p>
+                <ul
+                  class="mt-4 space-y-1 text-sm text-base-content/80 list-disc list-inside"
+                >
+                  <li>
+                    Architected Go/Node APIs with JWT, supporting 50k+ users
+                    with 99.9% uptime.
+                  </li>
+                  <li>
+                    Led React/Next.js frontend revamps for better scalability.
+                  </li>
+                  <li>
+                    Implemented Docker/AWS pipelines, reducing deploy time by
+                    60%.
+                  </li>
+                  <li>
+                    Contributed to open-source, earning 500+ GitHub stars.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Education Subsection -->
+        <div
+          id="education"
+          class="text-center mt-12 p-8 bg-base-100 rounded-xl"
+        >
+          <h3 class="text-2xl font-bold mb-4 text-base-content">
+            Education & Future Goals
+          </h3>
+          <p class="text-base-content/80 max-w-2xl mx-auto leading-relaxed">
+            Pursuing Bachelor of Computer Science (Specialization: Cryptography,
+            Blockchain, Web3) for 2027 intake. Self-taught via production
+            projects and open-source. Funded through remote engineering
+            roles—excited for scholarships and collabs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section: Validated Form + Info Panel - JS Handled -->
+    <section id="contact" class="py-20 bg-base-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-base-content mb-4">
+            Get In Touch
+          </h2>
+          <div
+            class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4"
+          ></div>
+          <p class="text-base-content/70 max-w-2xl mx-auto">
+            Have a project? Opportunity? Let's discuss—available for remote work
+            on Upwork, Fiverr, or direct hires in US/CA/EU.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Form: Name, Email, Message - Validation + Submit -->
+          <form id="contact-form" class="space-y-6 max-w-md">
+            <div class="form-control w-full">
+              <label for="name" class="label">
+                <span class="label-text font-medium">Full Name</span>
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Full Name"
+                class="input input-bordered w-full focus:input-primary"
+                required
+                aria-required="true"
+                minlength="2"
+              />
+              <label for="name" class="label">
+                <span
+                  class="label-text-alt text-error"
+                  id="name-error"
+                  aria-live="polite"
+                ></span>
+              </label>
+            </div>
+            <div class="form-control w-full">
+              <label for="email" class="label">
+                <span class="label-text font-medium">Email Address</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="your.email@example.com"
+                class="input input-bordered w-full focus:input-primary"
+                required
+                aria-required="true"
+              />
+              <label for="email" class="label">
+                <span
+                  class="label-text-alt text-error"
+                  id="email-error"
+                  aria-live="polite"
+                ></span>
+              </label>
+            </div>
+            <div class="form-control w-full">
+              <label for="message" class="label">
+                <span class="label-text font-medium">Message</span>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                class="textarea textarea-bordered w-full focus:textarea-primary"
+                placeholder="Tell me about your project or opportunity..."
+                rows="6"
+                required
+                aria-required="true"
+                minlength="10"
+              ></textarea>
+              <label for="message" class="label">
+                <span
+                  class="label-text-alt text-error"
+                  id="message-error"
+                  aria-live="polite"
+                ></span>
+              </label>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary w-full hover:scale-105 transition-transform duration-300"
+            >
+              Send Message
+              <i class="fas fa-paper-plane ml-2"></i>
+            </button>
+          </form>
+          <!-- Contact Info Panel: Click-to-Copy Email, Links -->
+          <div class="card bg-base-200 p-8 rounded-xl shadow-xl">
+            <h3 class="text-2xl font-bold mb-6 text-center text-base-content">
+              Contact Details
+            </h3>
+            <div class="space-y-6">
+              <!-- Email: Clickable Copy -->
+              <div
+                class="flex items-start p-4 bg-base-100 rounded-xl hover:bg-base-100/80 transition-colors cursor-pointer"
+                onclick="copyToClipboard('abu.kayser.official@gmail.com', 'Email copied!')"
+              >
+                <div class="bg-primary/20 p-3 rounded-lg mr-4 flex-shrink-0">
+                  <i class="fas fa-envelope text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-base-content">Email</h4>
+                  <p class="text-base-content/80" id="email-text">
+                    abu.kayser.official@gmail.com
+                  </p>
+                </div>
+              </div>
+              <!-- Location -->
+              <div class="flex items-start p-4 bg-base-100 rounded-xl">
+                <div class="bg-secondary/20 p-3 rounded-lg mr-4 flex-shrink-0">
+                  <i class="fas fa-map-marker-alt text-secondary text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-base-content">Location</h4>
+                  <p class="text-base-content/80">
+                    Dhaka, Bangladesh (Remote Worldwide)
+                  </p>
+                </div>
+              </div>
+              <!-- Phone: Tel Link -->
+              <div class="flex items-start p-4 bg-base-100 rounded-xl">
+                <div class="bg-accent/20 p-3 rounded-lg mr-4 flex-shrink-0">
+                  <i class="fas fa-phone text-accent text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-base-content">Phone</h4>
+                  <p class="text-base-content/80">
+                    <a
+                      href="tel:+8801234567890"
+                      class="link link-primary hover:underline"
+                      >+880 1234 567890</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Follow Me: 6 Social Buttons - Expanded -->
+            <div class="mt-8 pt-6 border-t border-base-200">
+              <h4 class="font-semibold mb-4 text-center text-base-content">
+                Follow Me
+              </h4>
+              <div class="grid grid-cols-3 gap-3">
+                <a
+                  href="https://github.com/md-abu-kayser"
+                  class="btn btn-outline btn-sm justify-center hover:scale-105"
+                  aria-label="GitHub"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/coming-soon-linkedin"
+                  class="btn btn-outline btn-sm justify-center hover:scale-105 bg-blue-600 text-white hover:bg-blue-700"
+                  aria-label="LinkedIn"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a
+                  href="https://x.com/your-x-handle"
+                  class="btn btn-outline btn-sm justify-center hover:scale-105 bg-black text-white hover:bg-gray-900"
+                  aria-label="X (Twitter)"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fab fa-x-twitter"></i>
+                </a>
+                <a
+                  href="https://instagram.com/your-ig-handle"
+                  class="btn btn-outline btn-sm justify-center hover:scale-105 bg-pink-500 text-white hover:bg-pink-600"
+                  aria-label="Instagram"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://facebook.com/your-fb-profile"
+                  class="btn btn-outline btn-sm justify-center hover:scale-105 bg-blue-600 text-white hover:bg-blue-700"
+                  aria-label="Facebook"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a
+                  href="https://dribbble.com/your-dribbble"
+                  class="btn btn-outline btn-sm justify-center hover:scale-105 bg-pink-400 text-white hover:bg-pink-500"
+                  aria-label="Dribbble"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fab fa-dribbble"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer: Mega 3-Col, Quick Links, Legal -->
+    <footer class="bg-base-300 text-base-content py-12 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <!-- Logo & Description -->
+          <div class="text-center md:text-left">
+            <a
+              href="#home"
+              class="text-2xl font-bold flex items-center justify-center md:justify-start mb-4"
+            >
+              <span
+                class="bg-gradient-to-r from-primary to-secondary text-base-100 p-2 rounded-lg mr-2 shadow-md"
+                >dev</span
+              >
+              Md Abu Kayser
+            </a>
+            <p class="text-base-content/70 max-w-xs mx-auto md:mx-0">
+              Creating beautiful, functional, and user-friendly web experiences.
+              Full-Stack Engineer open to remote opportunities.
+            </p>
+          </div>
+          <!-- Quick Links -->
+          <div class="text-center md:text-left">
+            <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#about" class="link link-hover text-base-content/80"
+                  >About Me</a
+                >
+              </li>
+              <li>
+                <a href="#skills" class="link link-hover text-base-content/80"
                   >Skills</a
                 >
               </li>
               <li>
-                <a href="#projects" class="hover:text-white transition-colors"
+                <a href="#projects" class="link link-hover text-base-content/80"
                   >Projects</a
                 >
               </li>
               <li>
-                <a href="#contact" class="hover:text-white transition-colors"
+                <a
+                  href="#experience"
+                  class="link link-hover text-base-content/80"
+                  >Experience</a
+                >
+              </li>
+              <li>
+                <a href="#contact" class="link link-hover text-base-content/80"
                   >Contact</a
                 >
               </li>
             </ul>
           </div>
-
-          <div>
-            <h3 class="text-lg font-semibold text-white mb-4">Connect</h3>
-            <div class="flex space-x-4">
+          <!-- Connect & Legal -->
+          <div class="text-center md:text-left">
+            <h3 class="text-lg font-bold mb-4">Connect</h3>
+            <div class="flex justify-center md:justify-start space-x-4 mb-4">
               <a
-                href="#"
-                class="text-gray-400 hover:text-white transition-colors"
-              >
-                <i class="fab fa-github fa-lg"></i>
-              </a>
+                href="https://github.com/md-abu-kayser"
+                class="text-base-content/80 hover:text-primary transition-colors"
+                aria-label="GitHub"
+                ><i class="fab fa-github fa-lg"></i
+              ></a>
               <a
-                href="#"
-                class="text-gray-400 hover:text-white transition-colors"
-              >
-                <i class="fab fa-linkedin fa-lg"></i>
-              </a>
+                href="https://www.linkedin.com/in/coming-soon-linkedin"
+                class="text-base-content/80 hover:text-primary transition-colors"
+                aria-label="LinkedIn"
+                ><i class="fab fa-linkedin fa-lg"></i
+              ></a>
               <a
-                href="#"
-                class="text-gray-400 hover:text-white transition-colors"
-              >
-                <i class="fab fa-twitter fa-lg"></i>
-              </a>
-              <a
-                href="#"
-                class="text-gray-400 hover:text-white transition-colors"
-              >
-                <i class="fab fa-dribbble fa-lg"></i>
-              </a>
+                href="https://x.com/your-x-handle"
+                class="text-base-content/80 hover:text-primary transition-colors"
+                aria-label="X"
+                ><i class="fab fa-x-twitter fa-lg"></i
+              ></a>
             </div>
+            <h3 class="text-lg font-bold mb-4">Legal</h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#" class="link link-hover text-base-content/70"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="link link-hover text-base-content/70"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a href="#" class="link link-hover text-base-content/70"
+                  >MIT License</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
-
-        <div class="border-t border-gray-800 mt-10 pt-6 text-sm text-center">
-          <p>&copy; 2023 Kawser Ahmed. All rights reserved.</p>
+        <!-- Copyright: Dynamic Year -->
+        <div
+          class="border-t border-base-200 pt-6 text-center text-base-content/60"
+        >
+          <p>
+            &copy; <span id="current-year">2025</span> Md Abu Kayser. All rights
+            reserved. Built with ❤️ and clean code.
+          </p>
         </div>
       </div>
     </footer>
 
-    <script>
-      // Mobile menu toggle
-      document
-        .getElementById("mobile-menu-button")
-        .addEventListener("click", function () {
-          const menu = document.getElementById("mobile-menu");
-          menu.classList.toggle("hidden");
-        });
+    <!-- Auth Modals: Signup/Login - Full Forms + Social Buttons (Untruncated) -->
+    <!-- Login Modal -->
+    <input type="checkbox" id="login-modal" class="modal-toggle" />
+    <div class="modal" role="dialog" aria-labelledby="login-title">
+      <div class="modal-box relative max-w-md w-full max-h-full">
+        <label
+          for="login-modal"
+          class="btn btn-sm btn-circle absolute right-2 top-2 hover:scale-110 transition-transform"
+          >✕</label
+        >
+        <h3 id="login-title" class="text-lg font-bold mb-4 text-center">
+          Login to Portfolio
+        </h3>
+        <form id="login-form" class="space-y-4">
+          <div class="form-control">
+            <input
+              type="email"
+              id="login-email"
+              placeholder="Email Address"
+              class="input input-bordered w-full focus:input-primary"
+              required
+              aria-required="true"
+            />
+          </div>
+          <div class="form-control">
+            <input
+              type="password"
+              id="login-password"
+              placeholder="Password (min 8 chars)"
+              class="input input-bordered w-full focus:input-primary"
+              required
+              minlength="8"
+              aria-required="true"
+            />
+            <label class="label">
+              <a href="#" class="label-text-alt link link-primary"
+                >Forgot password?</a
+              >
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary w-full">Login</button>
+        </form>
+        <div class="divider text-base-content/50">OR Continue with</div>
+        <!-- Social Buttons: Full List with Provider Colors -->
+        <div class="space-y-2">
+          <button
+            id="google-login"
+            class="btn btn-outline w-full justify-start hover:bg-white hover:text-primary/80"
+          >
+            <i class="fab fa-google text-red-500 mr-2"></i> Google
+          </button>
+          <button
+            id="facebook-login"
+            class="btn bg-blue-600 text-white w-full justify-start hover:bg-blue-700"
+          >
+            <i class="fab fa-facebook mr-2"></i> Facebook
+          </button>
+          <button
+            id="github-login"
+            class="btn bg-gray-800 text-white w-full justify-start hover:bg-gray-900"
+          >
+            <i class="fab fa-github mr-2"></i> GitHub
+          </button>
+          <button
+            id="linkedin-login"
+            class="btn bg-blue-700 text-white w-full justify-start hover:bg-blue-800"
+          >
+            <i class="fab fa-linkedin mr-2"></i> LinkedIn
+          </button>
+          <button
+            id="instagram-login"
+            class="btn bg-pink-500 text-white w-full justify-start hover:bg-pink-600"
+          >
+            <i class="fab fa-instagram mr-2"></i> Instagram
+          </button>
+          <button
+            id="x-login"
+            class="btn bg-black text-white w-full justify-start hover:bg-gray-900"
+          >
+            <i class="fab fa-x-twitter mr-2"></i> X (Twitter)
+          </button>
+        </div>
+        <p class="text-center mt-4 text-base-content/70">
+          New here?
+          <button type="button" id="switch-signup" class="link link-primary">
+            Create Account
+          </button>
+        </p>
+      </div>
+    </div>
+    <!-- Signup Modal -->
+    <input type="checkbox" id="signup-modal" class="modal-toggle" />
+    <div class="modal" role="dialog" aria-labelledby="signup-title">
+      <div class="modal-box relative max-w-md w-full max-h-full">
+        <label
+          for="signup-modal"
+          class="btn btn-sm btn-circle absolute right-2 top-2 hover:scale-110 transition-transform"
+          >✕</label
+        >
+        <h3 id="signup-title" class="text-lg font-bold mb-4 text-center">
+          Sign Up
+        </h3>
+        <form id="signup-form" class="space-y-4">
+          <div class="form-control">
+            <input
+              type="text"
+              id="signup-name"
+              placeholder="Full Name"
+              class="input input-bordered w-full focus:input-primary"
+              required
+              aria-required="true"
+              minlength="2"
+            />
+          </div>
+          <div class="form-control">
+            <input
+              type="email"
+              id="signup-email"
+              placeholder="Email Address"
+              class="input input-bordered w-full focus:input-primary"
+              required
+              aria-required="true"
+            />
+          </div>
+          <div class="form-control">
+            <input
+              type="password"
+              id="signup-password"
+              placeholder="Password (min 8 chars)"
+              class="input input-bordered w-full focus:input-primary"
+              required
+              minlength="8"
+              aria-required="true"
+            />
+          </div>
+          <div class="form-control">
+            <input
+              type="password"
+              id="signup-confirm"
+              placeholder="Confirm Password"
+              class="input input-bordered w-full focus:input-primary"
+              required
+              aria-required="true"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary w-full">Sign Up</button>
+        </form>
+        <div class="divider text-base-content/50">OR Sign Up with</div>
+        <!-- Social Buttons: Same as Login -->
+        <div class="space-y-2">
+          <button
+            id="google-signup"
+            class="btn btn-outline w-full justify-start hover:bg-white hover:text-primary/80"
+          >
+            <i class="fab fa-google text-red-500 mr-2"></i> Google
+          </button>
+          <button
+            id="facebook-signup"
+            class="btn bg-blue-600 text-white w-full justify-start hover:bg-blue-700"
+          >
+            <i class="fab fa-facebook mr-2"></i> Facebook
+          </button>
+          <button
+            id="github-signup"
+            class="btn bg-gray-800 text-white w-full justify-start hover:bg-gray-900"
+          >
+            <i class="fab fa-github mr-2"></i> GitHub
+          </button>
+          <button
+            id="linkedin-signup"
+            class="btn bg-blue-700 text-white w-full justify-start hover:bg-blue-800"
+          >
+            <i class="fab fa-linkedin mr-2"></i> LinkedIn
+          </button>
+          <button
+            id="instagram-signup"
+            class="btn bg-pink-500 text-white w-full justify-start hover:bg-pink-600"
+          >
+            <i class="fab fa-instagram mr-2"></i> Instagram
+          </button>
+          <button
+            id="x-signup"
+            class="btn bg-black text-white w-full justify-start hover:bg-gray-900"
+          >
+            <i class="fab fa-x-twitter mr-2"></i> X (Twitter)
+          </button>
+        </div>
+        <p class="text-center mt-4 text-base-content/70">
+          Already have an account?
+          <button type="button" id="switch-login" class="link link-primary">
+            Login
+          </button>
+        </p>
+      </div>
+    </div>
 
-      // Animate skill bars on scroll
-      document.addEventListener("DOMContentLoaded", function () {
-        const skillBars = document.querySelectorAll(".skill-bar");
+    <!-- Projects Modal: 12+ Thumbnails Grid - Full Expansion -->
+    <input type="checkbox" id="projects-modal" class="modal-toggle" />
+    <div class="modal" role="dialog">
+      <div class="modal-box max-w-6xl max-h-full p-0">
+        <label
+          for="projects-modal"
+          class="btn btn-sm btn-circle absolute right-2 top-2 z-10 hover:scale-110"
+          >✕</label
+        >
+        <h3 class="text-2xl font-bold p-6 pb-4 text-center">
+          All Projects Portfolio
+        </h3>
+        <div class="overflow-y-auto max-h-[70vh] p-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 12 Projects: Thumbnails + Descriptions -->
+            <div class="card bg-base-100 shadow-lg compact">
+              <figure>
+                <img
+                  src="https://via.placeholder.com/400x250/f97316/ffffff?text=E-Commerce"
+                  alt="E-Commerce Thumbnail"
+                  class="w-full"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">E-Commerce Platform</h2>
+                <p>Full-stack store with payments.</p>
+                <div class="card-actions">
+                  <a href="#" class="btn btn-primary btn-sm">View</a>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-base-100 shadow-lg compact">
+              <figure>
+                <img
+                  src="https://via.placeholder.com/400x250/3b82f6/ffffff?text=Dashboard"
+                  alt="Dashboard Thumbnail"
+                  class="w-full"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Admin Dashboard</h2>
+                <p>React UI with charts.</p>
+                <div class="card-actions">
+                  <a href="#" class="btn btn-primary btn-sm">View</a>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-base-100 shadow-lg compact">
+              <figure>
+                <img
+                  src="https://via.placeholder.com/400x250/10b981/ffffff?text=Auth+API"
+                  alt="Auth API Thumbnail"
+                  class="w-full"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Go Auth API</h2>
+                <p>Secure backend service.</p>
+                <div class="card-actions">
+                  <a href="#" class="btn btn-primary btn-sm">View</a>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-base-100 shadow-lg compact">
+              <figure>
+                <img
+                  src="https://via.placeholder.com/400x250/f59e0b/ffffff?text=Blockchain"
+                  alt="Blockchain Thumbnail"
+                  class="w-full"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Blockchain Wallet</h2>
+                <p>Web3 transaction tool.</p>
+                <div class="card-actions">
+                  <a href="#" class="btn btn-primary btn-sm">View</a>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-base-100 shadow-lg compact">
+              <figure>
+                <img
+                  src="https://via.placeholder.com/400x250/ef4444/ffffff?text=DApp"
+                  alt="DApp Thumbnail"
+                  class="w-full"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Web3 DApp</h2>
+                <p>NFT marketplace demo.</p>
+                <div class="card-actions">
+                  <a href="#" class="btn btn-primary btn-sm">View</a>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-base-100 shadow-lg compact">
+              <figure>
+                <img
+                  src="https://via.placeholder.com/400x250/06b6d4/ffffff?text=Crypto"
+                  alt="Crypto Thumbnail"
+                  class="w-full"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Crypto Tracker</h2>
+                <p>Live price alerts.</p>
+                <div class="card-actions">
+                  <a href="#" class="btn btn-primary btn-sm">View</a>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-base-100 shadow-lg compact">
+              <figure>
+                <img
+                  src="https://via.placeholder.com/400x250/8b5cf6/ffffff?text=Task+App"
+                  alt="Task App Thumbnail"
+                  class="w-full"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Task Management App</h2>
+                <p>Real-time collaboration.</p>
+                <div class="card-actions">
+                  <a href="#" class="btn btn-primary btn-sm">View</a>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-base-100 shadow-lg compact">
+              <figure>
+                <img
+                  src="https://via.placeholder.com/400x250/10b981/ffffff?text=Fitness"
+                  alt="Fitness Thumbnail"
+                  class="w-full"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Health & Fitness App</h2>
+                <p>Mobile tracker with Firebase.</p>
+                <div class="card-actions">
+                  <a href="#" class="btn btn-primary btn-sm">View</a>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-base-100 shadow-lg compact">
+              <figure>
+                <img
+                  src="https://via.placeholder.com/400x250/f59e0b/ffffff?text=Blog"
+                  alt="Blog Thumbnail"
+                  class="w-full"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Personal Blog CMS</h2>
+                <p>Next.js with MDX.</p>
+                <div class="card-actions">
+                  <a href="#" class="btn btn-primary btn-sm">View</a>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-base-100 shadow-lg compact">
+              <figure>
+                <img
+                  src="https://via.placeholder.com/400x250/ef4444/ffffff?text=Chat"
+                  alt="Chat Thumbnail"
+                  class="w-full"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Real-Time Chat App</h2>
+                <p>Socket.io + React.</p>
+                <div class="card-actions">
+                  <a href="#" class="btn btn-primary btn-sm">View</a>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-base-100 shadow-lg compact">
+              <figure>
+                <img
+                  src="https://via.placeholder.com/400x250/8b5cf6/ffffff?text=Portfolio"
+                  alt="Portfolio Thumbnail"
+                  class="w-full"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Dynamic Portfolio Site</h2>
+                <p>This very site! Vanilla JS + Tailwind.</p>
+                <div class="card-actions">
+                  <a href="#" class="btn btn-primary btn-sm">View</a>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-base-100 shadow-lg compact">
+              <figure>
+                <img
+                  src="https://via.placeholder.com/400x250/06b6d4/ffffff?text=API"
+                  alt="API Thumbnail"
+                  class="w-full"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Weather API Service</h2>
+                <p>Node + OpenWeather.</p>
+                <div class="card-actions">
+                  <a href="#" class="btn btn-primary btn-sm">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                const width = entry.target.style.width;
-                entry.target.style.width = "0";
-                setTimeout(() => {
-                  entry.target.style.width = width;
-                }, 100);
-                observer.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.5 }
-        );
+    <!-- Success Modal: Form Feedback -->
+    <input type="checkbox" id="success-modal" class="modal-toggle" />
+    <div class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <h3 class="text-lg font-bold text-success">Success!</h3>
+        <p class="py-4">
+          Your message has been sent. I'll respond within 24 hours. Thanks for
+          reaching out!
+        </p>
+        <div class="modal-action">
+          <label for="success-modal" class="btn btn-success">Close</label>
+        </div>
+      </div>
+    </div>
 
-        skillBars.forEach((bar) => {
-          observer.observe(bar);
-        });
-      });
-    </script>
+    <!-- JS Script Link -->
+    <script src="js/script.js"></script>
   </body>
 </html>
