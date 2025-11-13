@@ -1,9 +1,4 @@
-/* ========================================
-   ADVANCED THEME SYSTEM - 5 PROFESSIONAL THEMES
-   Enhanced color schemes for optimal readability
-   ======================================== */
-
-/* Light Theme (Default) */
+/* Light Theme---> Default */
 [data-theme="light"] {
   --primary-color: #667eea;
   --secondary-color: #764ba2;
@@ -139,7 +134,7 @@
     border-color 0.3s ease;
 }
 
-/* Enhanced Focus States for Each Theme */
+/* Focus States */
 [data-theme="light"] button:focus-visible,
 [data-theme="light"] a:focus-visible {
   outline: 2px solid var(--primary-color);
@@ -199,3 +194,5 @@
     animation: none !important;
   }
 }
+
+/* ------------------end----------------------- */
