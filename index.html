@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
   <head>
-    <!-- ========================================
-         ENHANCED META TAGS & SEO OPTIMIZATION
-         Optimized for Google/LinkedIn trending
-    ======================================== -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
@@ -29,6 +25,7 @@
     <meta name="canonical" content="https://kayser.dev" />
 
     <!-- OpenGraph Meta Tags for Social Sharing -->
+    <!-------------------------------------------------->
     <meta
       property="og:title"
       content="Md Abu Kayser - World-Class Full-Stack Engineer | Remote US CA EU"
@@ -37,11 +34,12 @@
       property="og:description"
       content="Building scalable web applications with modern technologies. Open to remote opportunities in United States, Canada, and European Union."
     />
+    <!-- i used many unsplash images -->
     <meta
       property="og:image"
       content="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     />
-    <meta property="og:url" content="https://kayser.dev" />
+    <meta property="og:url" content="https://md-abu-kayser/web.portfolio/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Md Abu Kayser Portfolio" />
     <meta property="og:locale" content="en_US" />
@@ -56,13 +54,14 @@
       name="twitter:description"
       content="Full-Stack Developer | Remote Ready | React Node Go Blockchain | Open to US/CA/EU Opportunities"
     />
+    <!-- i used many unsplash images -->
     <meta
       name="twitter:image"
       content="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     />
     <meta name="twitter:creator" content="@mdabukayser" />
 
-    <!-- Structured Data for SEO -->
+    <!-- Structured Data For SEO -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -100,7 +99,7 @@
       }
     </script>
 
-    <!-- Favicon Set - Multi-size for All Devices -->
+    <!-- Favicon Set | Multi-size for All Devices -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -109,26 +108,29 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
 
-    <!-- Core CSS & Frameworks -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisyUI Component CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
       rel="stylesheet"
     />
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
     />
 
-    <!-- Custom Stylesheets -->
+    <!-- All Custom Style Sheets -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/themes.css" />
 
-    <!-- Enhanced Tailwind Configuration -->
+    <!-- Tailwind Configuration -->
     <script>
       tailwind.config = {
         theme: {
@@ -236,9 +238,7 @@
   </head>
 
   <body class="font-poppins bg-base-100 text-base-content scroll-smooth">
-    <!-- ========================================
-         ENHANCED NAVIGATION - FIXED & RESPONSIVE
-    ======================================== -->
+    <!-- Header Start -->
     <header
       id="navbar"
       class="navbar bg-base-100/80 backdrop-blur-md shadow-sm fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-base-300/50"
@@ -292,7 +292,8 @@
                   href="#about"
                   class="flex items-center gap-3 py-2 px-2 rounded hover:bg-base-200"
                   role="menuitem"
-                  ><i class="fas fa-user text-primary w-5"></i>Bio & Journey</a
+                  ><i class="fas fa-user text-primary w-5"></i>Bio and
+                  Journey</a
                 >
                 <a
                   href="#resume"
@@ -406,7 +407,7 @@
                   href="#education"
                   class="flex items-center gap-3 py-2 px-2 rounded hover:bg-base-200"
                   ><i class="fas fa-graduation-cap text-success w-5"></i
-                  >Education & Goals</a
+                  >Education and Goals</a
                 >
                 <a
                   href="#open-source"
@@ -490,7 +491,7 @@
           </ul>
         </nav>
 
-        <!-- Mobile menu button -->
+        <!-- Mobile Menu Button -->
         <div class="lg:hidden">
           <button
             id="mobile-menu-btn"
@@ -506,10 +507,9 @@
         </div>
       </div>
     </header>
+    <!-- Header End -->
 
-    <!-- ========================================
-         ENHANCED MOBILE MENU - FIXED & SMOOTH
-    ======================================== -->
+    <!-- Smooth Mobile Menu -->
     <div
       id="mobile-overlay"
       class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 hidden transition-all duration-300"
@@ -695,14 +695,12 @@
       </div>
     </div>
 
-    <!-- ========================================
-         ENHANCED HERO SECTION - WORLD CLASS
-    ======================================== -->
+    <!-- Hero Section -->
     <section
       id="home"
       class="min-h-screen flex items-center justify-center pt-20 pb-12 relative overflow-hidden bg-gradient-to-br from-primary/5 via-base-100 to-secondary/5"
     >
-      <!-- Enhanced Background Elements -->
+      <!-- Background Elements -->
       <div class="absolute inset-0 overflow-hidden">
         <div
           class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"
@@ -755,7 +753,7 @@
             <h2
               class="text-2xl md:text-3xl lg:text-4xl text-base-content/80 font-semibold typewriter-text border-r-2 border-primary animate-blink-caret"
             >
-              Full-Stack Engineer & Web3 Developer
+              Full-Stack Engineer and Web Developer
             </h2>
           </div>
 
@@ -767,13 +765,13 @@
             <span class="font-semibold text-primary"
               >scalable, type-safe web applications</span
             >
-            with React, Next.js, Node.js, and Go. Passionate about blockchain &
-            Web3 integrations.
+            with React, Next.js, Node.js, and Go. Passionate about blockchain
+            and Web3 integrations.
             <span class="font-semibold text-secondary">5+ years</span> of
             experience delivering production-ready solutions for global clients.
           </p>
 
-          <!-- Enhanced CTA Buttons -->
+          <!-- CTA Buttons -->
           <div
             class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8"
           >
@@ -797,7 +795,7 @@
             </a>
           </div>
 
-          <!-- Enhanced Social Proof -->
+          <!-- Social Proof -->
           <div
             class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 text-sm text-base-content/60"
           >
@@ -881,9 +879,7 @@
       </div>
     </section>
 
-    <!-- ========================================
-         ENHANCED ABOUT SECTION - PROFESSIONAL
-    ======================================== -->
+    <!-- About Section -->
     <section id="about" class="py-20 bg-base-100 relative overflow-hidden">
       <!-- Background Pattern -->
       <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
@@ -910,9 +906,10 @@
         </div>
 
         <div class="grid lg:grid-cols-2 gap-16 items-center">
-          <!-- About Image with Enhanced Effects -->
+          <!-- About Image with Effects -->
           <div class="relative group animate-fade-in-left">
             <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+              <!-- i used many unsplash images -->
               <img
                 src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                 alt="Md Abu Kayser working on advanced web development projects"
@@ -956,8 +953,8 @@
                     >Full-Stack Engineer</span
                   >, I specialize in building robust, user-centric applications
                   that drive business growth. With expertise spanning modern
-                  JavaScript/TypeScript stacks and backend services in Node.js &
-                  Go, I emphasize type safety, testability, and clean
+                  JavaScript/TypeScript stacks and backend services in Node.js
+                  and Go, I emphasize type safety, testability, and clean
                   architecture.
                 </p>
                 <p>
@@ -980,7 +977,7 @@
               </div>
             </div>
 
-            <!-- Enhanced Skill Badges Grid -->
+            <!-- Skill Badges Grid -->
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
               <div
                 class="flex items-center bg-primary/10 p-4 rounded-xl hover:bg-primary/20 transition-all duration-300 group cursor-pointer"
@@ -1087,7 +1084,7 @@
               </div>
             </div>
 
-            <!-- Enhanced Action Buttons -->
+            <!-- Action Buttons -->
             <div class="flex flex-col sm:flex-row gap-4 pt-4">
               <a
                 href="resume.pdf"
@@ -1114,9 +1111,7 @@
       </div>
     </section>
 
-    <!-- ========================================
-         ENHANCED TESTIMONIALS SECTION - 20+ CLIENTS
-    ======================================== -->
+    <!-- Testimontals sections---client here is: -->
     <section
       id="testimonials"
       class="py-20 bg-base-200 relative overflow-hidden"
@@ -1146,7 +1141,7 @@
           </p>
         </div>
 
-        <!-- Enhanced Testimonial Carousel -->
+        <!-- Testimonial Carousel -->
         <div class="relative">
           <!-- Carousel Container -->
           <div
@@ -1163,14 +1158,11 @@
                     <div
                       class="w-16 h-16 rounded-full ring-2 ring-primary ring-offset-2"
                     >
-                      <img
-                        src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                        alt="Sarah Johnson"
-                      />
+                      <img src="images/kayser1.png" alt="Md Abu Kayser" />
                     </div>
                   </div>
                   <div>
-                    <h4 class="font-bold text-lg">Sarah Johnson</h4>
+                    <h4 class="font-bold text-lg">Md Abu Kayser</h4>
                     <p class="text-base-content/70 text-sm">
                       CTO, TechStart Inc. (US)
                     </p>
@@ -1229,14 +1221,11 @@
                     <div
                       class="w-16 h-16 rounded-full ring-2 ring-secondary ring-offset-2"
                     >
-                      <img
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                        alt="Marcus Chen"
-                      />
+                      <img src="images/kayser3.png" alt="Md Abu Kayser" />
                     </div>
                   </div>
                   <div>
-                    <h4 class="font-bold text-lg">Marcus Chen</h4>
+                    <h4 class="font-bold text-lg">Md Abu Kayser</h4>
                     <p class="text-base-content/70 text-sm">
                       Tech Lead, EuroTech (EU)
                     </p>
@@ -1281,8 +1270,10 @@
               </div>
             </div>
 
-            <!-- Add 18 more testimonials following the same pattern -->
-            <!-- Testimonial 3 to 20 would be here in production -->
+            <!-- when i need, then Add more testimonials, maybe 18-20+ more Testimonials -->
+            <!-- ------------------------------------------------------------------------- -->
+            <!-- Whe i need then maybe, Testimonial 3 to 20 would be here in production -->
+            <!-- -------------------------------------------------------------------------- -->
           </div>
 
           <!-- Carousel Navigation -->
@@ -1327,9 +1318,7 @@
       </div>
     </section>
 
-    <!-- ========================================
-         ENHANCED SKILLS SECTION - SMOOTH PROGRESS
-    ======================================== -->
+    <!-- Skills Section -->
     <section id="skills" class="py-20 bg-base-100 relative overflow-hidden">
       <!-- Background Pattern -->
       <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
@@ -1669,7 +1658,7 @@
 
         <!-- Additional Skills Grid -->
         <div class="grid lg:grid-cols-2 gap-8">
-          <!-- DevOps & Deploy Card -->
+          <!-- DevOps and Deploy Card -->
           <div
             class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 animate-fade-in-left"
           >
@@ -1680,7 +1669,7 @@
                 </div>
                 <div>
                   <h3 class="text-2xl font-bold text-base-content">
-                    DevOps & Deploy
+                    DevOps and Deploy
                   </h3>
                   <p class="text-base-content/70">
                     Infrastructure and deployment
@@ -1813,7 +1802,7 @@
                     Special Interests
                   </h3>
                   <p class="text-base-content/70">
-                    Emerging technologies & research
+                    Emerging technologies and research
                   </p>
                 </div>
               </div>
@@ -1940,9 +1929,7 @@
       </div>
     </section>
 
-    <!-- ========================================
-         ENHANCED PROJECTS SECTION - INTERACTIVE
-    ======================================== -->
+    <!-- Project Section -->
     <section id="projects" class="py-20 bg-base-200 relative overflow-hidden">
       <!-- Background Elements -->
       <div
@@ -2117,8 +2104,10 @@
             </div>
           </div>
 
-          <!-- Additional projects would continue here -->
-          <!-- Projects 4-6 would follow the same pattern -->
+          <!-- When i need, next time more Additional projects would continue here -->
+          <!-- --------------------------------------------------------------------------- -->
+          <!-- When i need, next time more Projects maybe, 4-6 would added -->
+          <!-- ------------------------------------------------------------------------------------- -->
         </div>
 
         <!-- View All Projects CTA -->
@@ -2136,9 +2125,7 @@
       </div>
     </section>
 
-    <!-- ========================================
-         ENHANCED EXPERIENCE SECTION - TIMELINE
-    ======================================== -->
+    <!-- Experience Section -->
     <section id="experience" class="py-20 bg-base-100 relative overflow-hidden">
       <!-- Background Pattern -->
       <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
@@ -2160,7 +2147,7 @@
           </p>
         </div>
 
-        <!-- Enhanced Timeline -->
+        <!-- Timeline -->
         <div class="relative">
           <!-- Timeline Line -->
           <div
@@ -2169,7 +2156,7 @@
 
           <!-- Timeline Items -->
           <div class="space-y-12">
-            <!-- Experience 1: 2019-2020 -->
+            <!-- Experience 1: 2020-2022 -->
             <div class="timeline-item group animate-fade-in-left">
               <div
                 class="flex flex-col lg:flex-row items-center lg:items-start gap-8"
@@ -2183,7 +2170,7 @@
                         Frontend Developer
                       </h3>
                       <span class="badge badge-primary badge-lg"
-                        >2019 - 2020</span
+                        >2020 - 2022</span
                       >
                     </div>
                     <p class="text-primary font-semibold mb-2">
@@ -2223,7 +2210,7 @@
               </div>
             </div>
 
-            <!-- Experience 2: 2020-2022 -->
+            <!-- Experience 2: 2023-2024 -->
             <div class="timeline-item group animate-fade-in-right">
               <div
                 class="flex flex-col lg:flex-row items-center lg:items-start gap-8"
@@ -2244,7 +2231,7 @@
                         Full Stack Developer
                       </h3>
                       <span class="badge badge-secondary badge-lg"
-                        >2020 - 2022</span
+                        >2023 - 2024</span
                       >
                     </div>
                     <p class="text-secondary font-semibold mb-2">
@@ -2277,7 +2264,7 @@
               </div>
             </div>
 
-            <!-- Experience 3: 2022-Present -->
+            <!-- Experience 3: 2025-Present -->
             <div class="timeline-item group animate-fade-in-left">
               <div
                 class="flex flex-col lg:flex-row items-center lg:items-start gap-8"
@@ -2291,7 +2278,7 @@
                         Senior Full Stack Developer
                       </h3>
                       <span class="badge badge-accent badge-lg"
-                        >2022 - Present</span
+                        >2025 - Present</span
                       >
                     </div>
                     <p class="text-accent font-semibold mb-2">
@@ -2339,7 +2326,7 @@
             class="card bg-base-200 p-12 rounded-2xl shadow-xl border border-base-300"
           >
             <h3 class="text-2xl md:text-3xl font-bold text-base-content mb-6">
-              Education & Future Goals
+              Education and Future Goals
             </h3>
             <div
               class="w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8 rounded-full"
@@ -2374,9 +2361,7 @@
       </div>
     </section>
 
-    <!-- ========================================
-         ENHANCED CONTACT SECTION - PROFESSIONAL
-    ======================================== -->
+    <!-- Contact Section -->
     <section id="contact" class="py-20 bg-base-200 relative overflow-hidden">
       <!-- Background Elements -->
       <div
@@ -2552,14 +2537,14 @@
               </div>
 
               <!-- Social Links -->
-              <div class="mt-8 pt-8 border-t border-base-300">
+              <div class="mt-8 pt-8 border-t border-base-400">
                 <h4 class="font-semibold text-lg text-center mb-6">
-                  Follow & Connect
+                  Follow and Connect
                 </h4>
                 <div class="grid grid-cols-2 lg:grid-cols-3 gap-3">
                   <a
                     href="https://github.com/md-abu-kayser"
-                    class="btn btn-outline justify-start hover:bg-base-300"
+                    class="btn btn-outline justify-start hover:bg-base-600"
                     target="_blank"
                   >
                     <i class="fab fa-github mr-2"></i>
@@ -2567,7 +2552,7 @@
                   </a>
                   <a
                     href="https://linkedin.com/in/md-abu-kayser"
-                    class="btn btn-outline justify-start hover:bg-base-300"
+                    class="btn btn-outline justify-start hover:bg-base-600"
                     target="_blank"
                   >
                     <i class="fab fa-linkedin mr-2 text-blue-600"></i>
@@ -2575,7 +2560,7 @@
                   </a>
                   <a
                     href="https://x.com/mdabukayser"
-                    class="btn btn-outline justify-start hover:bg-base-300"
+                    class="btn btn-outline justify-start hover:bg-base-600"
                     target="_blank"
                   >
                     <i class="fab fa-x-twitter mr-2"></i>
@@ -2583,7 +2568,7 @@
                   </a>
                   <a
                     href="https://upwork.com/mdabukayser"
-                    class="btn btn-outline justify-start hover:bg-base-300"
+                    class="btn btn-outline justify-start hover:bg-base-600"
                     target="_blank"
                   >
                     <i class="fab fa-upwork mr-2 text-green-600"></i>
@@ -2591,7 +2576,7 @@
                   </a>
                   <a
                     href="https://fiverr.com/mdabukayser"
-                    class="btn btn-outline justify-start hover:bg-base-300"
+                    class="btn btn-outline justify-start hover:bg-base-600"
                     target="_blank"
                   >
                     <i class="fab fa-fonticons-fi mr-2 text-green-500"></i>
@@ -2599,10 +2584,10 @@
                   </a>
                   <a
                     href="https://instagram.com/mdabukayser"
-                    class="btn btn-outline justify-start hover:bg-base-300"
+                    class="btn btn-outline justify-start hover:bg-base-600"
                     target="_blank"
                   >
-                    <i class="fab fa-instagram mr-2 text-pink-500"></i>
+                    <i class="fab fa-instagram mr-2 text-pink-600"></i>
                     Instagram
                   </a>
                 </div>
@@ -2613,9 +2598,7 @@
       </div>
     </section>
 
-    <!-- ========================================
-         ENHANCED FOOTER - PROFESSIONAL
-    ======================================== -->
+    <!-- Footer -->
     <footer
       class="bg-base-300 text-base-content py-16 px-4 relative overflow-hidden"
     >
@@ -2624,7 +2607,7 @@
 
       <div class="max-w-7xl mx-auto relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          <!-- Brand & Description -->
+          <!-- Brand and Description -->
           <div class="text-center md:text-left">
             <a
               href="#home"
@@ -2743,15 +2726,15 @@
                 <a
                   href="#mentoring"
                   class="link link-hover text-base-content/70 hover:text-primary transition-colors"
-                  >Code Review & Mentoring</a
+                  >Code Review and Mentoring</a
                 >
               </li>
             </ul>
           </div>
 
-          <!-- Legal & Contact -->
+          <!-- Legal and Contact -->
           <div class="text-center md:text-left">
-            <h3 class="text-lg font-bold mb-6">Legal & Contact</h3>
+            <h3 class="text-lg font-bold mb-6">Legal and Contact</h3>
             <ul class="space-y-3 mb-6">
               <li>
                 <a
@@ -2790,7 +2773,7 @@
         <div class="border-t border-base-200 pt-8 text-center">
           <p class="text-base-content/60">
             &copy; <span id="current-year">2024</span> Md Abu Kayser. All rights
-            reserved. Built with ❤️ and clean, maintainable code.
+            reserved. Built with LOVE and clean, maintainable code.
           </p>
           <p class="text-base-content/50 text-sm mt-2">
             Designed and developed for world-class client experiences.
@@ -2799,9 +2782,7 @@
       </div>
     </footer>
 
-    <!-- ========================================
-         BACK TO TOP BUTTON - ENHANCED
-    ======================================== -->
+    <!-- back to Top button -->
     <button
       id="back-to-top"
       class="fixed bottom-8 right-8 btn btn-primary btn-circle shadow-2xl hover:scale-110 transition-all duration-300 opacity-0 invisible z-40"
@@ -2809,9 +2790,8 @@
       <i class="fas fa-chevron-up text-xl"></i>
     </button>
 
-    <!-- ========================================
-         AUTH MODALS - ENHANCED
-    ======================================== -->
+    <!-- Auto Modals -->
+    <!-- ------------------------------------------- -->
     <!-- Login Modal -->
     <input type="checkbox" id="login-modal" class="modal-toggle" />
     <div
@@ -2829,7 +2809,7 @@
           <label
             for="login-modal"
             class="btn btn-sm btn-circle absolute right-2 top-2 hover:scale-110 transition-transform"
-            >✕</label
+            >X</label
           >
 
           <form id="login-form" class="space-y-4">
@@ -2987,9 +2967,7 @@
       </div>
     </div>
 
-    <!-- ========================================
-         PROJECTS MODAL - ENHANCED
-    ======================================== -->
+    <!-- Projects Modal -->
     <div id="projects-modal" class="modal-overlay">
       <div class="modal-content max-w-6xl max-h-[90vh] overflow-hidden">
         <button class="modal-close">
@@ -3002,16 +2980,15 @@
           </h3>
           <div class="overflow-y-auto max-h-[70vh] p-6">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <!-- Project items would be dynamically loaded here -->
+              <!-- Project Items Would Be Dynamically Loaded Here:- -->
+              <!-- --------------------------------------------------------- -->
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- ========================================
-         SUCCESS MODAL
-    ======================================== -->
+    <!-- Success Modal -->
     <input type="checkbox" id="success-modal" class="modal-toggle" />
     <div class="modal modal-bottom sm:modal-middle">
       <div class="modal-box text-center">
@@ -3033,9 +3010,7 @@
       </div>
     </div>
 
-    <!-- ========================================
-         BACK TO TOP BUTTON - ENHANCED
-    ======================================== -->
+    <!-- back to Top Button -->
     <button
       id="back-to-top"
       class="btn btn-circle btn-primary fixed bottom-8 right-8 shadow-lg z-30 opacity-0 transition-opacity duration-300 invisible"
@@ -3043,9 +3018,8 @@
       <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- ========================================
-         JAVASCRIPT FILES
-    ======================================== -->
+    <!-- javascript links added -->
+    <!-- -------------------------------------- -->
     <script src="js/script.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/theme-switcher.js"></script>
