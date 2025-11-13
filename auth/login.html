@@ -18,23 +18,27 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
 
-    <!-- Styles -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisyUI Component CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
       rel="stylesheet"
     />
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
     />
+    <!-- Connect with main CSS Styles -->
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/themes.css" />
-
+    <!-- tailwind config for auth/login.html file code -->
     <script>
       tailwind.config = {
         theme: {
@@ -64,7 +68,7 @@
     </script>
   </head>
   <body class="font-poppins bg-base-100 min-h-screen flex flex-col">
-    <!-- Enhanced Navbar -->
+    <!-- Navbar -->
     <header
       id="navbar"
       class="navbar bg-base-100/80 backdrop-blur-md shadow-sm fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-base-300/50"
@@ -141,7 +145,7 @@
           </div>
         </div>
 
-        <!-- Mobile menu button -->
+        <!-- Mobile Menu Button -->
         <div class="sm:hidden">
           <button
             id="mobile-menu-btn"
@@ -255,7 +259,7 @@
       ></div>
     </div>
 
-    <!-- Main Content with proper padding for navbar -->
+    <!-- Main Content For Navbar -->
     <div class="flex-1 flex items-center justify-center pt-20 pb-12">
       <!-- Login Container -->
       <div class="w-full max-w-md mx-4">
@@ -397,7 +401,8 @@
     <script src="../js/auth.js"></script>
     <script src="../js/theme-switcher.js"></script>
     <script>
-      // Mobile menu handlers for login page
+      // Mobile Menu Handlers For Login Page
+      // ------------------------------------------------------------------->
       document.addEventListener("DOMContentLoaded", function () {
         const mobileMenuBtn = document.getElementById("mobile-menu-btn");
         const mobileMenu = document.getElementById("mobile-menu");
@@ -413,7 +418,7 @@
         closeMobileMenu.addEventListener("click", toggleMenu);
         mobileOverlay.addEventListener("click", toggleMenu);
 
-        // Theme switching
+        // Theme Switching
         document.querySelectorAll("[data-theme]").forEach((btn) => {
           btn.addEventListener("click", (e) => {
             const theme = e.currentTarget.dataset.theme;
