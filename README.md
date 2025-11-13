@@ -76,7 +76,7 @@ This makes it easy to present the full auth UI without duplicating markup or scr
 
 ---
 
-## Run Locally (Quick)
+### Run Locally (Quick)
 
 Because this is a static site, you can run it with any static HTTP server. Example using Python (works on Windows PowerShell):
 
