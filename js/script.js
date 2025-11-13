@@ -92,14 +92,28 @@ class PortfolioApp {
         const theme = link.getAttribute("data-theme");
         if (theme) {
           this.setTheme(theme);
-          // Close mobile menu if open on mobile, but keep desktop clean
-          if (window.innerWidth < 1024 && this.isMobileMenuOpen) {
+          // Close mobile menu if open
+          if (this.isMobileMenuOpen) {
             this.toggleMobileMenu();
           }
           // Close dropdown on desktop
-          document.body.click();
+          setTimeout(() => document.body.click(), 100);
         }
       });
+    });
+
+    // Robust delegation for any theme buttons (covers dynamic or nested elements)
+    document.addEventListener("click", (e) => {
+      const themeEl = e.target.closest && e.target.closest("[data-theme]");
+      if (!themeEl) return;
+      e.preventDefault();
+      e.stopPropagation();
+      const theme = themeEl.getAttribute("data-theme");
+      if (theme) {
+        this.setTheme(theme);
+        if (this.isMobileMenuOpen) this.toggleMobileMenu();
+        setTimeout(() => document.body.click(), 100);
+      }
     });
 
     // Auth Modal Handlers
@@ -168,6 +182,13 @@ class PortfolioApp {
         icon.classList.toggle("fa-bars");
         icon.classList.toggle("fa-times");
       }
+      // Keep aria-expanded in sync for accessibility
+      try {
+        this.elements.mobileMenuBtn.setAttribute(
+          "aria-expanded",
+          this.isMobileMenuOpen ? "true" : "false"
+        );
+      } catch (err) {}
     }
 
     document.body.style.overflow = this.isMobileMenuOpen ? "hidden" : "";

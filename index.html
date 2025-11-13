@@ -427,12 +427,20 @@
 
             <!-- Auth -->
             <li>
-              <button
-                id="auth-toggle"
-                class="px-3 py-2 rounded-lg text-sm font-medium hover:bg-primary/10 hover:text-primary transition"
+              <a
+                href="auth/login.html"
+                class="px-3 py-2 rounded-lg text-sm font-medium hover:bg-primary/10 hover:text-primary transition flex items-center"
               >
-                <i class="fas fa-user-circle mr-2"></i> Login
-              </button>
+                <i class="fas fa-sign-in-alt mr-2"></i> Login
+              </a>
+            </li>
+            <li>
+              <a
+                href="auth/signup.html"
+                class="px-3 py-2 rounded-lg text-sm font-medium hover:bg-primary/10 hover:text-primary transition flex items-center"
+              >
+                <i class="fas fa-user-plus mr-2"></i> Sign Up
+              </a>
             </li>
 
             <!-- Theme -->
@@ -576,15 +584,24 @@
             >
           </li>
 
-          <!-- Mobile Auth Button -->
+          <!-- Mobile Auth Links -->
           <li class="mt-4">
-            <button
-              id="mobile-auth"
-              class="btn btn-primary w-full rounded-lg py-4"
+            <a
+              href="auth/login.html"
+              class="btn btn-primary w-full rounded-lg py-4 flex items-center justify-center gap-2"
             >
-              <i class="fas fa-user-circle mr-2"></i>
-              Login / Sign Up
-            </button>
+              <i class="fas fa-sign-in-alt"></i>
+              Login
+            </a>
+          </li>
+          <li class="mt-3">
+            <a
+              href="auth/signup.html"
+              class="btn btn-outline w-full rounded-lg py-4 flex items-center justify-center gap-2"
+            >
+              <i class="fas fa-user-plus"></i>
+              Sign Up
+            </a>
           </li>
 
           <!-- Mobile Theme Selector -->
