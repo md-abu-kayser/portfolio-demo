@@ -1,10 +1,3 @@
-/**
- * ========================================
- * ADVANCED THEME SWITCHER
- * Enhanced: 5 Professional Themes with Smooth Transitions
- * ========================================
- */
-
 class ThemeSwitcher {
   constructor() {
     this.availableThemes = ["light", "dark", "cupcake", "forest", "luxury"];
@@ -43,7 +36,6 @@ class ThemeSwitcher {
   }
 
   createThemeSelector() {
-    // Create theme selector UI if it doesn't exist
     if (!document.getElementById("theme-selector")) {
       const selector = document.createElement("div");
       selector.id = "theme-selector";
@@ -82,8 +74,8 @@ class ThemeSwitcher {
         `;
   }
 
+  // Theme Option Clicks
   bindThemeEvents() {
-    // Theme option clicks
     document.addEventListener("click", (e) => {
       if (e.target.closest(".theme-option")) {
         const theme = e.target.closest(".theme-option").dataset.theme;
@@ -91,29 +83,30 @@ class ThemeSwitcher {
         this.closeThemeMenu();
       }
 
-      // Toggle theme menu
+      // Toggle Theme Menu
+      // ---------------------------------------------------->>>
       if (e.target.closest(".theme-selector-toggle")) {
         this.toggleThemeMenu();
       }
 
-      // Close theme menu when clicking outside
+      // Close Theme Menu When Clicking Outside
+      // --------------------------------------------------------------->>
       if (!e.target.closest(".theme-selector")) {
         this.closeThemeMenu();
       }
     });
 
-    // Keyboard navigation
+    // Keyboard Navigation
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") {
         this.closeThemeMenu();
       }
     });
 
-    // System theme changes
+    // System Theme Changes
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     mediaQuery.addEventListener("change", (e) => {
       if (!this.getSavedTheme()) {
-        // Only auto-switch if no manual preference
         this.applyTheme(e.matches ? "dark" : "light");
       }
     });
@@ -133,8 +126,8 @@ class ThemeSwitcher {
     }
   }
 
+  // Update active in theme selector
   updateThemeIndicator(theme) {
-    // Update active state in theme selector
     document.querySelectorAll(".theme-option").forEach((option) => {
       option.classList.toggle("active", option.dataset.theme === theme);
     });
@@ -153,8 +146,8 @@ class ThemeSwitcher {
     }
   }
 
+  // Observe for theme-related Changes in CSS
   setupThemeObserver() {
-    // Observe for theme-related changes in CSS
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
         if (
@@ -174,19 +167,22 @@ class ThemeSwitcher {
 
   handleThemeChange() {
     // Add smooth transition class
+    // ----------------------------------->
     document.documentElement.classList.add("theme-transition");
 
     // Remove transition class after animation
+    // ----------------------------------------->
     setTimeout(() => {
       document.documentElement.classList.remove("theme-transition");
     }, 300);
 
     // Update meta theme color for mobile browsers
+    // ---------------------------------------------------->
     this.updateMetaThemeColor();
   }
 
   updateMetaThemeColor() {
-    let themeColor = "#667eea"; // Default primary color
+    let themeColor = "#667eea";
 
     switch (this.currentTheme) {
       case "dark":
@@ -227,16 +223,19 @@ class ThemeSwitcher {
   }
 
   // Public method to get current theme
+  // ------------------------------------------->
   getCurrentTheme() {
     return this.currentTheme;
   }
 
   // Public method to set theme programmatically
+  // ------------------------------------------------------->
   setTheme(theme) {
     this.applyTheme(theme);
   }
 
-  // Cycle through themes (for demo purposes)
+  // Cycle through themes
+  // -------------------------------------------------->
   cycleThemes() {
     const currentIndex = this.availableThemes.indexOf(this.currentTheme);
     const nextIndex = (currentIndex + 1) % this.availableThemes.length;
@@ -244,12 +243,13 @@ class ThemeSwitcher {
   }
 }
 
-// Initialize theme switcher
+// Theme Switcher
 document.addEventListener("DOMContentLoaded", () => {
   window.themeSwitcher = new ThemeSwitcher();
 });
 
 // Add CSS for theme selector
+// ------------------------------------------>>>
 const themeSelectorCSS = `
 .theme-selector {
     position: fixed;
@@ -356,7 +356,10 @@ const themeSelectorCSS = `
 }
 `;
 
-// Inject theme selector styles
+// Inject theme selector
+// -------------------------------------------------------->>>
 const styleSheet = document.createElement("style");
 styleSheet.textContent = themeSelectorCSS;
 document.head.appendChild(styleSheet);
+
+// ------------------------end---------------------------------------->>>>
