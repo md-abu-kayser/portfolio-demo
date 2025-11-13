@@ -146,7 +146,7 @@ When deploying make sure the branch and domain settings are correct and the `ind
 
 ---
 
-## Changelog (Highlights)
+### Changelog (Highlights)
 
 - v2.0.0 — Major UI upgrade, performance improvements, theme system, iframe auth integration
 - v1.x — Earlier versions with baseline portfolio content and project listings
