@@ -242,262 +242,260 @@
     <header
       id="navbar"
       class="navbar bg-base-100/80 backdrop-blur-md shadow-sm fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-base-300/50"
+      role="navigation"
     >
-      <div class="navbar-start">
-        <!-- Enhanced Logo with Professional Badge -->
-        <a
-          href="#home"
-          class="btn btn-ghost btn-lg normal-case text-xl font-bold flex items-center group hover:scale-105 transition-all duration-300"
-        >
-          <span
-            class="bg-gradient-to-r from-primary to-secondary text-white p-2 rounded-lg mr-3 shadow-lg group-hover:shadow-xl transition-shadow"
-            >DEV</span
+      <div
+        class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-3">
+          <!-- Logo -->
+          <a
+            href="#home"
+            class="flex items-center gap-3 group"
+            aria-label="Go to homepage"
           >
-          <span class="hidden sm:inline">Md Abu Kayser</span>
-          <i
-            class="fas fa-arrow-right ml-2 text-sm group-hover:translate-x-1 transition-transform"
-          ></i>
-        </a>
-      </div>
+            <span
+              class="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-2 rounded-lg shadow-md"
+            >
+              <span class="font-semibold tracking-wide">DEV</span>
+            </span>
+            <span class="hidden sm:inline text-lg font-semibold"
+              >Md Abu Kayser</span
+            >
+            <i
+              class="fas fa-arrow-right ml-2 text-sm transform group-hover:translate-x-1 transition-transform"
+            ></i>
+          </a>
+        </div>
 
-      <!-- Desktop Navigation - Enhanced Mega Menu -->
-      <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal px-1 space-x-1">
-          <!-- About Mega Dropdown -->
-          <li class="dropdown dropdown-hover">
-            <a
-              tabindex="0"
-              class="btn btn-ghost font-medium hover:bg-primary/10 hover:text-primary rounded-lg transition-all duration-200"
-              >About</a
-            >
-            <ul
-              tabindex="0"
-              class="dropdown-content z-[100] menu p-4 shadow-2xl bg-base-100 rounded-box w-64 border border-base-300 mt-4"
-            >
-              <li>
+        <!-- Desktop Navigation -->
+        <nav
+          class="hidden lg:flex lg:items-center lg:space-x-2"
+          aria-label="Primary"
+        >
+          <ul class="flex items-center gap-1">
+            <!-- About -->
+            <li class="relative dropdown">
+              <button
+                class="px-3 py-2 rounded-lg text-sm font-medium hover:bg-primary/10 hover:text-primary transition"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                About
+              </button>
+              <div
+                class="dropdown-content absolute left-0 mt-3 w-64 bg-base-100 rounded-md shadow-2xl border border-base-300 p-3"
+                role="menu"
+                aria-label="About menu"
+              >
                 <a
                   href="#about"
-                  class="hover:bg-base-200 rounded-lg transition-colors py-3"
-                  ><i class="fas fa-user mr-3 text-primary"></i>Bio & Journey</a
+                  class="flex items-center gap-3 py-2 px-2 rounded hover:bg-base-200"
+                  role="menuitem"
+                  ><i class="fas fa-user text-primary w-5"></i>Bio & Journey</a
                 >
-              </li>
-              <li>
                 <a
                   href="#resume"
-                  class="hover:bg-base-200 rounded-lg transition-colors py-3"
-                  ><i class="fas fa-file-alt mr-3 text-secondary"></i>Download
+                  class="flex items-center gap-3 py-2 px-2 rounded hover:bg-base-200"
+                  role="menuitem"
+                  ><i class="fas fa-file-alt text-secondary w-5"></i>Download
                   Resume</a
                 >
-              </li>
-              <li>
                 <a
                   href="#testimonials"
-                  class="hover:bg-base-200 rounded-lg transition-colors py-3"
-                  ><i class="fas fa-star mr-3 text-warning"></i>Client
+                  class="flex items-center gap-3 py-2 px-2 rounded hover:bg-base-200"
+                  role="menuitem"
+                  ><i class="fas fa-star text-warning w-5"></i>Client
                   Testimonials</a
                 >
-              </li>
-            </ul>
-          </li>
+              </div>
+            </li>
 
-          <!-- Skills Direct Link -->
-          <li>
-            <a
-              href="#skills"
-              class="btn btn-ghost font-medium hover:bg-primary/10 hover:text-primary rounded-lg transition-all duration-200"
-              >Skills</a
-            >
-          </li>
+            <!-- Skills -->
+            <li>
+              <a
+                href="#skills"
+                class="px-3 py-2 rounded-lg text-sm font-medium hover:bg-primary/10 hover:text-primary transition"
+                >Skills</a
+              >
+            </li>
 
-          <!-- Projects Mega Dropdown -->
-          <li class="dropdown dropdown-hover">
-            <a
-              tabindex="0"
-              class="btn btn-ghost font-medium hover:bg-primary/10 hover:text-primary rounded-lg transition-all duration-200"
-              >Projects</a
-            >
-            <ul
-              tabindex="0"
-              class="dropdown-content z-[100] menu p-4 shadow-2xl bg-base-100 rounded-box w-72 border border-base-300 mt-4"
-            >
-              <li>
+            <!-- Projects -->
+            <li class="relative dropdown">
+              <button
+                class="px-3 py-2 rounded-lg text-sm font-medium hover:bg-primary/10 hover:text-primary transition"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Projects
+              </button>
+              <div
+                class="dropdown-content absolute left-0 mt-3 w-72 bg-base-100 rounded-md shadow-2xl border border-base-300 p-3"
+                role="menu"
+                aria-label="Projects menu"
+              >
                 <a
                   href="#projects"
-                  class="hover:bg-base-200 rounded-lg transition-colors py-3"
-                  ><i class="fas fa-rocket mr-3 text-info"></i>Featured
+                  class="flex items-center gap-3 py-2 px-2 rounded hover:bg-base-200"
+                  role="menuitem"
+                  ><i class="fas fa-rocket text-info w-5"></i>Featured
                   Portfolio</a
                 >
-              </li>
-              <li>
-                <a
-                  href="#all-projects"
+                <button
                   onclick="openAllProjectsModal()"
-                  class="hover:bg-base-200 rounded-lg transition-colors py-3"
-                  ><i class="fas fa-th-large mr-3 text-success"></i>All 12+
-                  Projects</a
+                  class="text-left w-full flex items-center gap-3 py-2 px-2 rounded hover:bg-base-200"
+                  role="menuitem"
                 >
-              </li>
-              <li>
-                <a
-                  href="#ecommerce"
+                  <i class="fas fa-th-large text-success w-5"></i>All 12+
+                  Projects
+                </button>
+                <button
                   onclick="openProjectModal('ecommerce-platform')"
-                  class="hover:bg-base-200 rounded-lg transition-colors py-3"
-                  ><i class="fas fa-shopping-cart mr-3 text-primary"></i
-                  >E-Commerce Platform</a
+                  class="text-left w-full flex items-center gap-3 py-2 px-2 rounded hover:bg-base-200"
+                  role="menuitem"
                 >
-              </li>
-              <li>
-                <a
-                  href="#dashboard"
+                  <i class="fas fa-shopping-cart text-primary w-5"></i
+                  >E-Commerce Platform
+                </button>
+                <button
                   onclick="openProjectModal('admin-dashboard')"
-                  class="hover:bg-base-200 rounded-lg transition-colors py-3"
-                  ><i class="fas fa-chart-bar mr-3 text-secondary"></i>Admin
-                  Dashboard</a
+                  class="text-left w-full flex items-center gap-3 py-2 px-2 rounded hover:bg-base-200"
+                  role="menuitem"
                 >
-              </li>
-              <li>
-                <a
-                  href="#auth-api"
+                  <i class="fas fa-chart-bar text-secondary w-5"></i>Admin
+                  Dashboard
+                </button>
+                <button
                   onclick="openProjectModal('go-auth-api')"
-                  class="hover:bg-base-200 rounded-lg transition-colors py-3"
-                  ><i class="fas fa-lock mr-3 text-accent"></i>Go Auth API</a
+                  class="text-left w-full flex items-center gap-3 py-2 px-2 rounded hover:bg-base-200"
+                  role="menuitem"
                 >
-              </li>
-              <li>
-                <a
-                  href="#blockchain"
+                  <i class="fas fa-lock text-accent w-5"></i>Go Auth API
+                </button>
+                <button
                   onclick="openProjectModal('blockchain-wallet')"
-                  class="hover:bg-base-200 rounded-lg transition-colors py-3"
-                  ><i class="fas fa-coins mr-3 text-warning"></i>Blockchain
-                  Wallet</a
+                  class="text-left w-full flex items-center gap-3 py-2 px-2 rounded hover:bg-base-200"
+                  role="menuitem"
                 >
-              </li>
-            </ul>
-          </li>
+                  <i class="fas fa-coins text-warning w-5"></i>Blockchain Wallet
+                </button>
+              </div>
+            </li>
 
-          <!-- Experience Mega Dropdown -->
-          <li class="dropdown dropdown-hover">
-            <a
-              tabindex="0"
-              class="btn btn-ghost font-medium hover:bg-primary/10 hover:text-primary rounded-lg transition-all duration-200"
-              >Experience</a
-            >
-            <ul
-              tabindex="0"
-              class="dropdown-content z-[100] menu p-4 shadow-2xl bg-base-100 rounded-box w-64 border border-base-300 mt-4"
-            >
-              <li>
+            <!-- Experience -->
+            <li class="relative dropdown">
+              <button
+                class="px-3 py-2 rounded-lg text-sm font-medium hover:bg-primary/10 hover:text-primary transition"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Experience
+              </button>
+              <div
+                class="dropdown-content absolute left-0 mt-3 w-64 bg-base-100 rounded-md shadow-2xl border border-base-300 p-3"
+                role="menu"
+                aria-label="Experience menu"
+              >
                 <a
                   href="#experience"
-                  class="hover:bg-base-200 rounded-lg transition-colors py-3"
-                  ><i class="fas fa-briefcase mr-3 text-primary"></i
-                  >Professional Timeline</a
+                  class="flex items-center gap-3 py-2 px-2 rounded hover:bg-base-200"
+                  ><i class="fas fa-briefcase text-primary w-5"></i>Professional
+                  Timeline</a
                 >
-              </li>
-              <li>
                 <a
                   href="#education"
-                  class="hover:bg-base-200 rounded-lg transition-colors py-3"
-                  ><i class="fas fa-graduation-cap mr-3 text-success"></i
+                  class="flex items-center gap-3 py-2 px-2 rounded hover:bg-base-200"
+                  ><i class="fas fa-graduation-cap text-success w-5"></i
                   >Education & Goals</a
                 >
-              </li>
-              <li>
                 <a
                   href="#open-source"
-                  class="hover:bg-base-200 rounded-lg transition-colors py-3"
-                  ><i class="fab fa-github mr-3 text-base-content"></i>Open
-                  Source</a
+                  class="flex items-center gap-3 py-2 px-2 rounded hover:bg-base-200"
+                  ><i class="fab fa-github w-5"></i>Open Source</a
                 >
-              </li>
-            </ul>
-          </li>
+              </div>
+            </li>
 
-          <!-- Contact Link -->
-          <li>
-            <a
-              href="#contact"
-              class="btn btn-ghost font-medium hover:bg-primary/10 hover:text-primary rounded-lg transition-all duration-200"
-              >Contact</a
-            >
-          </li>
+            <!-- Contact -->
+            <li>
+              <a
+                href="#contact"
+                class="px-3 py-2 rounded-lg text-sm font-medium hover:bg-primary/10 hover:text-primary transition"
+                >Contact</a
+              >
+            </li>
 
-          <!-- Auth Button -->
-          <li>
-            <button
-              id="auth-toggle"
-              class="btn btn-ghost font-medium hover:bg-primary/10 hover:text-primary rounded-lg transition-all duration-200"
-            >
-              <i class="fas fa-user-circle mr-2"></i>
-              Login
-            </button>
-          </li>
+            <!-- Auth -->
+            <li>
+              <button
+                id="auth-toggle"
+                class="px-3 py-2 rounded-lg text-sm font-medium hover:bg-primary/10 hover:text-primary transition"
+              >
+                <i class="fas fa-user-circle mr-2"></i> Login
+              </button>
+            </li>
 
-          <!-- Theme Toggle Mega Dropdown -->
-          <li class="dropdown dropdown-hover">
-            <a
-              tabindex="0"
-              class="btn btn-ghost font-medium hover:bg-primary/10 hover:text-primary rounded-lg transition-all duration-200 flex items-center"
-            >
-              <i class="fas fa-palette mr-2"></i>
-              <span>Themes</span>
-            </a>
-            <ul
-              tabindex="0"
-              class="dropdown-content z-[100] menu p-4 shadow-2xl bg-base-100 rounded-box w-48 border border-base-300 mt-4"
-            >
-              <li>
-                <a
-                  href="#"
+            <!-- Theme -->
+            <li class="relative dropdown">
+              <button
+                class="px-3 py-2 rounded-lg text-sm font-medium hover:bg-primary/10 hover:text-primary transition flex items-center gap-2"
+              >
+                <i class="fas fa-palette"></i> Themes
+              </button>
+              <div
+                class="dropdown-content absolute right-0 mt-3 w-48 bg-base-100 rounded-md shadow-2xl border border-base-300 p-3"
+                role="menu"
+                aria-label="Theme menu"
+              >
+                <button
                   data-theme="light"
-                  class="hover:bg-base-200 rounded-lg transition-colors py-3"
-                  ><i class="fas fa-sun mr-3 text-warning"></i>Light</a
+                  class="w-full text-left py-2 rounded hover:bg-base-200"
                 >
-              </li>
-              <li>
-                <a
-                  href="#"
+                  Light
+                </button>
+                <button
                   data-theme="dark"
-                  class="hover:bg-base-200 rounded-lg transition-colors py-3"
-                  ><i class="fas fa-moon mr-3 text-info"></i>Dark</a
+                  class="w-full text-left py-2 rounded hover:bg-base-200"
                 >
-              </li>
-              <li>
-                <a
-                  href="#"
+                  Dark
+                </button>
+                <button
                   data-theme="cupcake"
-                  class="hover:bg-base-200 rounded-lg transition-colors py-3"
-                  ><i class="fas fa-cupcake mr-3 text-secondary"></i>Cupcake</a
+                  class="w-full text-left py-2 rounded hover:bg-base-200"
                 >
-              </li>
-              <li>
-                <a
-                  href="#"
+                  Cupcake
+                </button>
+                <button
                   data-theme="forest"
-                  class="hover:bg-base-200 rounded-lg transition-colors py-3"
-                  ><i class="fas fa-tree mr-3 text-success"></i>Forest</a
+                  class="w-full text-left py-2 rounded hover:bg-base-200"
                 >
-              </li>
-              <li>
-                <a
-                  href="#"
+                  Forest
+                </button>
+                <button
                   data-theme="luxury"
-                  class="hover:bg-base-200 rounded-lg transition-colors py-3"
-                  ><i class="fas fa-crown mr-3 text-warning"></i>Luxury</a
+                  class="w-full text-left py-2 rounded hover:bg-base-200"
                 >
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+                  Luxury
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
 
-      <!-- Mobile Menu Button -->
-      <div class="navbar-end lg:hidden">
-        <button id="mobile-menu-btn" class="btn btn-square btn-ghost">
-          <i
-            class="fas fa-bars text-2xl transition-transform duration-200 hover:rotate-90"
-          ></i>
-        </button>
+        <!-- Mobile menu button -->
+        <div class="lg:hidden">
+          <button
+            id="mobile-menu-btn"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="Open mobile menu"
+            class="p-2 rounded-md focus:ring"
+          >
+            <i
+              class="fas fa-bars text-2xl transition-transform duration-200"
+            ></i>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -3019,97 +3017,20 @@
     </div>
 
     <!-- ========================================
+         BACK TO TOP BUTTON - ENHANCED
+    ======================================== -->
+    <button
+      id="back-to-top"
+      class="btn btn-circle btn-primary fixed bottom-8 right-8 shadow-lg z-30 opacity-0 transition-opacity duration-300 invisible"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ========================================
          JAVASCRIPT FILES
     ======================================== -->
     <script src="js/script.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/theme-switcher.js"></script>
-    <script src="js/projects.js"></script>
-
-    <!-- ========================================
-         ADDITIONAL STYLES FOR ENHANCEMENTS
-    ======================================== -->
-    <style>
-      /* Enhanced Particle Animation */
-      .particle {
-        position: absolute;
-        background: var(--primary);
-        border-radius: 50%;
-        animation: float 6s ease-in-out infinite;
-        opacity: 0.1;
-      }
-      .particle-1 {
-        width: 20px;
-        height: 20px;
-        top: 10%;
-        left: 10%;
-        animation-delay: 0s;
-      }
-      .particle-2 {
-        width: 15px;
-        height: 15px;
-        top: 20%;
-        right: 15%;
-        animation-delay: 1s;
-      }
-      .particle-3 {
-        width: 25px;
-        height: 25px;
-        bottom: 15%;
-        left: 20%;
-        animation-delay: 2s;
-      }
-      .particle-4 {
-        width: 12px;
-        height: 12px;
-        bottom: 25%;
-        right: 10%;
-        animation-delay: 3s;
-      }
-      .particle-5 {
-        width: 18px;
-        height: 18px;
-        top: 50%;
-        left: 5%;
-        animation-delay: 4s;
-      }
-
-      /* Enhanced Grid Pattern */
-      .bg-grid-pattern {
-        background-image: linear-gradient(
-            rgba(0, 0, 0, 0.1) 1px,
-            transparent 1px
-          ),
-          linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
-        background-size: 50px 50px;
-      }
-
-      /* Enhanced Skill Progress Bars */
-      .skill-progress-bar {
-        transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
-      }
-
-      /* Enhanced Project Card Hover */
-      .project-card {
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-
-      /* Enhanced Mobile Menu Transitions */
-      #mobile-menu {
-        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-
-      /* Enhanced Theme Transitions */
-      [data-theme] {
-        transition: background-color 0.3s ease, color 0.3s ease;
-      }
-
-      /* Enhanced Focus States */
-      button:focus-visible,
-      a:focus-visible {
-        outline: 2px solid var(--primary);
-        outline-offset: 2px;
-      }
-    </style>
   </body>
 </html>

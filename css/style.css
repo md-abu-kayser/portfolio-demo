@@ -179,21 +179,7 @@ body {
   animation: typewriter 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
-/* Enhanced Skill Bars */
-.skill-container {
-  background: var(--bg-secondary);
-  border-radius: 15px;
-  padding: 20px;
-  margin-bottom: 20px;
-  transition: all 0.3s ease;
-  border: 1px solid var(--border-color);
-}
-
-.skill-container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
+/* Enhanced Skill Progress Bars with Smooth Animation */
 .skill-progress {
   height: 12px;
   background: var(--bg-primary);
@@ -208,6 +194,7 @@ body {
   position: relative;
   transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1);
   background: var(--primary-gradient);
+  width: 0%;
 }
 
 .skill-progress-bar::after {
@@ -224,6 +211,129 @@ body {
     transparent
   );
   animation: shimmer 2s infinite;
+}
+
+/* Enhanced Skill Item Container */
+.skill-item {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.skill-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.skill-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.skill-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.skill-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.skill-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.skill-item:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* Enhanced Card Styling */
+.card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--bg-base-200);
+  border: 1px solid var(--border-color);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-body {
+  transition: all 0.3s ease;
+}
+
+/* Enhanced Card Hover Effects */
+.card.bg-base-200 {
+  background: var(--tw-gradient-stops);
+  background: linear-gradient(135deg, var(--tw-gradient-stops));
+}
+
+/* Smooth transition for all elements */
+.card,
+.card > *,
+.skill-progress,
+.skill-progress-bar {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced Project Card Styles */
+.project-card {
+  background: var(--bg-base-100);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--border-color);
+  position: relative;
+  cursor: pointer;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #f97316 0%, #14b8a6 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  z-index: 10;
+}
+
+.project-card:hover::before {
+  transform: scaleX(1);
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.1);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
 }
 
 /* Enhanced Project Cards */
@@ -292,75 +402,103 @@ body {
   opacity: 1;
 }
 
-/* Enhanced Navigation */
+/* Navbar and Theme Styling */
 .navbar {
-  background: var(--bg-secondary);
+  background: var(--bg-base-100);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
   transition: all 0.3s ease;
+  padding: 0.5rem 0;
 }
 
-.navbar.scrolled {
-  background: var(--bg-primary);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+.navbar--scrolled {
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.85);
+  border-bottom-width: 1px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
-.nav-link {
-  position: relative;
-  padding: 10px 15px;
-  transition: all 0.3s ease;
+[data-theme="dark"] .navbar--scrolled {
+  background-color: rgba(10, 10, 12, 0.6);
 }
 
-.nav-link::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: var(--primary-gradient);
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-  width: 80%;
-}
-
-/* Mobile Navigation */
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 300px;
-  height: 100vh;
-  background: var(--bg-secondary);
-  z-index: 1000;
-  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
-}
-
-.mobile-menu.active {
-  right: 0;
-}
-
-.mobile-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+/* Theme Dropdown Styling */
+.dropdown-content {
+  transform-origin: top center;
+  transition: all 0.12s ease, opacity 0.12s ease;
   opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
+  transform: translateY(-6px) scale(0.98);
+  pointer-events: none;
+  z-index: 1000;
 }
 
-.mobile-overlay.active {
+.dropdown:hover > .dropdown-content,
+.dropdown:focus-within > .dropdown-content {
   opacity: 1;
-  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Mobile Menu Styling */
+#mobile-menu {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+  width: 100%;
+  max-width: 400px;
+}
+
+#mobile-menu.translate-x-full {
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+#mobile-menu:not(.translate-x-full) {
+  transform: translateX(0%);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#mobile-overlay {
+  transition: opacity 0.25s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#mobile-overlay:not(.hidden) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Responsive Mobile Adjustments */
+@media (max-width: 1024px) {
+  #mobile-menu {
+    width: 100%;
+    max-width: 85vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.75rem 0;
+  }
+
+  .dropdown-content {
+    min-width: 200px;
+    right: 0;
+  }
+
+  #mobile-menu {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Hide desktop theme selector on mobile */
+  .hidden.sm\:flex {
+    display: none;
+  }
 }
 
 /* Enhanced Forms */
@@ -810,4 +948,213 @@ textarea:focus-visible {
 ::-moz-selection {
   background: var(--primary-color);
   color: white;
+}
+
+/* Auth Modal Animation */
+.modal-auth {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.modal-auth .card {
+  transform-origin: center;
+  animation: scaleIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Dropdown Fix */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  transform-origin: top right;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  transform: translateY(-8px) scale(0.95);
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.dropdown:hover > .dropdown-content,
+.dropdown:focus-within > .dropdown-content {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Click-to-close dropdown */
+.dropdown.dropdown-end .dropdown-content {
+  left: auto;
+  right: 0;
+}
+
+/* Mobile Menu Icon Animation */
+#mobile-menu-btn i {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#mobile-menu-btn.open i.fa-bars {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+#mobile-menu-btn.open i.fa-times {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+/* Enhanced Particle Animation */
+.particle {
+  position: absolute;
+  background: var(--primary);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.1;
+}
+.particle-1 {
+  width: 20px;
+  height: 20px;
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+.particle-2 {
+  width: 15px;
+  height: 15px;
+  top: 20%;
+  right: 15%;
+  animation-delay: 1s;
+}
+.particle-3 {
+  width: 25px;
+  height: 25px;
+  bottom: 15%;
+  left: 20%;
+  animation-delay: 2s;
+}
+.particle-4 {
+  width: 12px;
+  height: 12px;
+  bottom: 25%;
+  right: 10%;
+  animation-delay: 3s;
+}
+.particle-5 {
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  left: 5%;
+  animation-delay: 4s;
+}
+
+/* Enhanced Grid Pattern */
+.bg-grid-pattern {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Enhanced Skill Progress Bars */
+.skill-progress-bar {
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Enhanced Project Card Hover */
+.project-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* -----------------------------
+       Minimal helper styles for
+       the mobile menu animation
+       and a11y polish
+       ----------------------------- */
+#mobile-menu {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+#mobile-menu.open {
+  transform: translateX(0%);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* overlay fade */
+#mobile-menu .overlay {
+  transition: opacity 0.25s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+#mobile-menu.open .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* small improvement: hide native .invisible used in markup */
+.invisible-mobile {
+  visibility: hidden;
+}
+.visible-mobile {
+  visibility: visible;
+}
+
+/* Focus outline improvement for keyboard users */
+:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+/* Desktop dropdown subtle animation */
+.dropdown-content {
+  transform-origin: top center;
+  transition: transform 0.12s ease, opacity 0.12s ease;
+  opacity: 0;
+  transform: translateY(-6px) scale(0.98);
+  pointer-events: none;
+}
+.dropdown:hover > .dropdown-content,
+.dropdown:focus-within > .dropdown-content {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Navbar shrink on scroll */
+.navbar--scrolled {
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.85);
+  border-bottom-width: 1px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+[data-theme="dark"] .navbar--scrolled {
+  background-color: rgba(10, 10, 12, 0.6);
+}
+
+/* Make sure large dropdown z-index is high */
+.dropdown-content {
+  z-index: 1000;
+}
+
+/* Enhanced Theme Transitions */
+[data-theme] {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Enhanced Focus States */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }

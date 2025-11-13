@@ -25,6 +25,7 @@ class PortfolioApp {
     this.setupSmoothScrolling();
     this.setupBackToTop();
     this.setCurrentYear();
+    this.initThemeSwitcher();
 
     console.log("🚀 Portfolio App Initialized - World Class Ready!");
   }
@@ -43,14 +44,14 @@ class PortfolioApp {
       themeLinks: document.querySelectorAll("[data-theme]"),
 
       // Sections
-      heroSection: document.getElementById("hero"),
+      heroSection: document.getElementById("home"),
       skillBars: document.querySelectorAll(".skill-progress-bar"),
       projectCards: document.querySelectorAll(".project-card"),
       testimonialCarousel: document.getElementById("testimonial-carousel"),
       contactForm: document.getElementById("contact-form"),
 
       // Modals
-      projectModal: document.getElementById("project-modal"),
+      projectModal: document.getElementById("projects-modal"),
       modalClose: document.querySelectorAll(".modal-close"),
       modalOverlay: document.querySelectorAll(".modal-overlay"),
 
@@ -65,29 +66,54 @@ class PortfolioApp {
   bindEvents() {
     // Mobile Menu
     if (this.elements.mobileMenuBtn) {
-      this.elements.mobileMenuBtn.addEventListener("click", () =>
-        this.toggleMobileMenu()
-      );
+      this.elements.mobileMenuBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        this.toggleMobileMenu();
+      });
     }
     if (this.elements.closeMobileMenu) {
-      this.elements.closeMobileMenu.addEventListener("click", () =>
-        this.toggleMobileMenu()
-      );
+      this.elements.closeMobileMenu.addEventListener("click", (e) => {
+        e.stopPropagation();
+        this.toggleMobileMenu();
+      });
     }
     if (this.elements.mobileOverlay) {
-      this.elements.mobileOverlay.addEventListener("click", () =>
-        this.toggleMobileMenu()
-      );
+      this.elements.mobileOverlay.addEventListener("click", (e) => {
+        e.stopPropagation();
+        this.toggleMobileMenu();
+      });
     }
 
-    // Theme Switching
+    // Theme Switching with proper dropdown handling
     this.elements.themeLinks.forEach((link) => {
       link.addEventListener("click", (e) => {
         e.preventDefault();
-        const theme = link.dataset.theme;
-        this.setTheme(theme);
+        e.stopPropagation();
+        const theme = link.getAttribute("data-theme");
+        if (theme) {
+          this.setTheme(theme);
+          // Close mobile menu if open on mobile, but keep desktop clean
+          if (window.innerWidth < 1024 && this.isMobileMenuOpen) {
+            this.toggleMobileMenu();
+          }
+          // Close dropdown on desktop
+          document.body.click();
+        }
       });
     });
+
+    // Auth Modal Handlers
+    const authToggle = document.getElementById("auth-toggle");
+    const mobileAuth = document.getElementById("mobile-auth");
+    if (authToggle) {
+      authToggle.addEventListener("click", () => this.openAuthModal());
+    }
+    if (mobileAuth) {
+      mobileAuth.addEventListener("click", () => {
+        this.toggleMobileMenu();
+        this.openAuthModal();
+      });
+    }
 
     // Navigation
     document.querySelectorAll('a[href^="#"]').forEach((link) => {
@@ -129,10 +155,19 @@ class PortfolioApp {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
 
     if (this.elements.mobileMenu) {
-      this.elements.mobileMenu.classList.toggle("active");
+      this.elements.mobileMenu.classList.toggle("translate-x-full");
     }
     if (this.elements.mobileOverlay) {
-      this.elements.mobileOverlay.classList.toggle("active");
+      this.elements.mobileOverlay.classList.toggle("hidden");
+    }
+
+    // Toggle menu button icon
+    if (this.elements.mobileMenuBtn) {
+      const icon = this.elements.mobileMenuBtn.querySelector("i");
+      if (icon) {
+        icon.classList.toggle("fa-bars");
+        icon.classList.toggle("fa-times");
+      }
     }
 
     document.body.style.overflow = this.isMobileMenuOpen ? "hidden" : "";
@@ -145,6 +180,17 @@ class PortfolioApp {
 
     this.updateThemeIcon(theme);
     this.dispatchThemeChangeEvent(theme);
+  }
+
+  initThemeSwitcher() {
+    const savedTheme = localStorage.getItem("portfolio-theme");
+    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+      .matches
+      ? "dark"
+      : "light";
+    const theme = savedTheme || systemTheme;
+
+    this.setTheme(theme);
   }
 
   updateThemeIcon(theme) {
@@ -163,13 +209,13 @@ class PortfolioApp {
   }
 
   handleSmoothScroll(e) {
-    e.preventDefault();
     const targetId = e.currentTarget.getAttribute("href");
 
-    if (targetId === "#") return;
+    if (targetId === "#" || !targetId) return;
 
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
+      e.preventDefault();
       const navbarHeight = this.elements.navbar?.offsetHeight || 0;
       const targetPosition = targetElement.offsetTop - navbarHeight - 20;
 
@@ -197,7 +243,7 @@ class PortfolioApp {
           entry.target.classList.add("animate-in");
 
           // Animate skill bars
-          if (entry.target.classList.contains("skill-container")) {
+          if (entry.target.classList.contains("skill-item")) {
             this.animateSkillBars();
           }
 
@@ -208,18 +254,23 @@ class PortfolioApp {
 
     // Observe all animate-on-scroll elements
     document
-      .querySelectorAll(".skill-container, .project-card, .testimonial-card")
+      .querySelectorAll(".skill-item, .project-card, .testimonial-card")
       .forEach((el) => {
         observer.observe(el);
       });
   }
 
   animateSkillBars() {
-    this.elements.skillBars.forEach((bar) => {
-      const width = bar.dataset.width || "100%";
+    if (this.skillsAnimated) return; // Prevent re-animation
+    this.skillsAnimated = true;
+
+    this.elements.skillBars.forEach((bar, index) => {
+      const width = bar.getAttribute("data-width") || "100%";
       setTimeout(() => {
         bar.style.width = width;
-      }, 200);
+        bar.style.transition =
+          "width 1.5s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.8s ease";
+      }, index * 100); // Stagger animation
     });
   }
 
@@ -235,9 +286,11 @@ class PortfolioApp {
 
     window.addEventListener("scroll", () => {
       if (window.pageYOffset > 300) {
-        this.elements.backToTop.classList.add("visible");
+        this.elements.backToTop.classList.remove("opacity-0", "invisible");
+        this.elements.backToTop.classList.add("opacity-100", "visible");
       } else {
-        this.elements.backToTop.classList.remove("visible");
+        this.elements.backToTop.classList.add("opacity-0", "invisible");
+        this.elements.backToTop.classList.remove("opacity-100", "visible");
       }
     });
 
@@ -253,23 +306,16 @@ class PortfolioApp {
     // Navbar background on scroll
     if (this.elements.navbar) {
       if (window.scrollY > 100) {
-        this.elements.navbar.classList.add("scrolled");
+        this.elements.navbar.classList.add("navbar--scrolled");
       } else {
-        this.elements.navbar.classList.remove("scrolled");
+        this.elements.navbar.classList.remove("navbar--scrolled");
       }
-    }
-
-    // Parallax effect for hero
-    if (this.elements.heroSection) {
-      const scrolled = window.pageYOffset;
-      const parallax = scrolled * 0.5;
-      this.elements.heroSection.style.transform = `translateY(${parallax}px)`;
     }
   }
 
   handleResize() {
     // Close mobile menu on resize to desktop
-    if (window.innerWidth > 768 && this.isMobileMenuOpen) {
+    if (window.innerWidth >= 1024 && this.isMobileMenuOpen) {
       this.toggleMobileMenu();
     }
   }
@@ -542,20 +588,8 @@ class PortfolioApp {
   }
 
   loadData() {
-    this.loadTheme();
     this.loadProjects();
     this.loadTestimonials();
-  }
-
-  loadTheme() {
-    const savedTheme = localStorage.getItem("portfolio-theme");
-    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-      .matches
-      ? "dark"
-      : "light";
-    const theme = savedTheme || systemTheme;
-
-    this.setTheme(theme);
   }
 
   loadProjects() {
@@ -613,6 +647,50 @@ class PortfolioApp {
   dispatchThemeChangeEvent(theme) {
     const event = new CustomEvent("themeChanged", { detail: { theme } });
     window.dispatchEvent(event);
+  }
+
+  openAuthModal() {
+    const modal = document.createElement("div");
+    modal.className =
+      "fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center modal-auth";
+    modal.innerHTML = `
+      <div class="card bg-base-100 shadow-2xl max-w-md w-full mx-4 animate-bounce-in">
+        <div class="card-body">
+          <div class="flex justify-between items-center mb-6">
+            <h3 class="text-2xl font-bold text-base-content">Get Started</h3>
+            <button class="btn btn-sm btn-circle btn-ghost close-auth-modal">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="divider"></div>
+          <div class="flex flex-col gap-4">
+            <a href="./auth/login.html" class="btn btn-primary w-full">
+              <i class="fas fa-sign-in-alt mr-2"></i>Login
+            </a>
+            <a href="./auth/signup.html" class="btn btn-secondary w-full">
+              <i class="fas fa-user-plus mr-2"></i>Sign Up
+            </a>
+          </div>
+          <p class="text-center text-sm text-base-content/60 mt-4">
+            New here? Create an account to get started
+          </p>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    modal.querySelectorAll(".close-auth-modal").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        modal.remove();
+      });
+    });
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.remove();
+      }
+    });
   }
 }
 
