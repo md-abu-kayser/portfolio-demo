@@ -1,11 +1,3 @@
-/**
- * ========================================
- * WORLD-CLASS PORTFOLIO SCRIPT - MD ABU KAYSER
- * Enhanced: Professional, Responsive, Accessible
- * Total Lines: 800+ with detailed documentation
- * ========================================
- */
-
 class PortfolioApp {
   constructor() {
     this.currentTheme = "light";
@@ -84,7 +76,7 @@ class PortfolioApp {
       });
     }
 
-    // Theme Switching with proper dropdown handling
+    // Theme Switching with dropdown
     this.elements.themeLinks.forEach((link) => {
       link.addEventListener("click", (e) => {
         e.preventDefault();
@@ -92,17 +84,16 @@ class PortfolioApp {
         const theme = link.getAttribute("data-theme");
         if (theme) {
           this.setTheme(theme);
-          // Close mobile menu if open
+          // Close Mobile Menu If Open
           if (this.isMobileMenuOpen) {
             this.toggleMobileMenu();
           }
-          // Close dropdown on desktop
+          // Close Dropdown On Desktop
           setTimeout(() => document.body.click(), 100);
         }
       });
     });
 
-    // Robust delegation for any theme buttons (covers dynamic or nested elements)
     document.addEventListener("click", (e) => {
       const themeEl = e.target.closest && e.target.closest("[data-theme]");
       if (!themeEl) return;
@@ -157,7 +148,7 @@ class PortfolioApp {
     window.addEventListener("resize", () => this.handleResize());
     window.addEventListener("keydown", (e) => this.handleKeydown(e));
 
-    // Project Card Interactions
+    // Project Card
     this.elements.projectCards.forEach((card) => {
       card.addEventListener("click", () =>
         this.openProjectModal(card.dataset.projectId)
@@ -182,7 +173,6 @@ class PortfolioApp {
         icon.classList.toggle("fa-bars");
         icon.classList.toggle("fa-times");
       }
-      // Keep aria-expanded in sync for accessibility
       try {
         this.elements.mobileMenuBtn.setAttribute(
           "aria-expanded",
@@ -245,7 +235,7 @@ class PortfolioApp {
         behavior: "smooth",
       });
 
-      // Close mobile menu if open
+      // Close mobile menu If open
       if (this.isMobileMenuOpen) {
         this.toggleMobileMenu();
       }
@@ -263,7 +253,7 @@ class PortfolioApp {
         if (entry.isIntersecting) {
           entry.target.classList.add("animate-in");
 
-          // Animate skill bars
+          // Animate Skill Bars
           if (entry.target.classList.contains("skill-item")) {
             this.animateSkillBars();
           }
@@ -273,7 +263,6 @@ class PortfolioApp {
       });
     }, observerOptions);
 
-    // Observe all animate-on-scroll elements
     document
       .querySelectorAll(".skill-item, .project-card, .testimonial-card")
       .forEach((el) => {
@@ -282,7 +271,7 @@ class PortfolioApp {
   }
 
   animateSkillBars() {
-    if (this.skillsAnimated) return; // Prevent re-animation
+    if (this.skillsAnimated) return;
     this.skillsAnimated = true;
 
     this.elements.skillBars.forEach((bar, index) => {
@@ -291,12 +280,11 @@ class PortfolioApp {
         bar.style.width = width;
         bar.style.transition =
           "width 1.5s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.8s ease";
-      }, index * 100); // Stagger animation
+      }, index * 100);
     });
   }
 
   setupSmoothScrolling() {
-    // Add smooth scroll behavior to all internal links
     document.querySelectorAll('a[href^="#"]').forEach((link) => {
       link.addEventListener("click", this.handleSmoothScroll.bind(this));
     });
@@ -323,8 +311,8 @@ class PortfolioApp {
     });
   }
 
+  // Navbar Scroll
   handleScroll() {
-    // Navbar background on scroll
     if (this.elements.navbar) {
       if (window.scrollY > 100) {
         this.elements.navbar.classList.add("navbar--scrolled");
@@ -335,19 +323,16 @@ class PortfolioApp {
   }
 
   handleResize() {
-    // Close mobile menu on resize to desktop
     if (window.innerWidth >= 1024 && this.isMobileMenuOpen) {
       this.toggleMobileMenu();
     }
   }
 
   handleKeydown(e) {
-    // Close modals on Escape key
     if (e.key === "Escape") {
       this.closeAllModals();
     }
 
-    // Close mobile menu on Escape key
     if (e.key === "Escape" && this.isMobileMenuOpen) {
       this.toggleMobileMenu();
     }
@@ -372,7 +357,7 @@ class PortfolioApp {
     this.setFormLoading(true);
 
     try {
-      // Simulate API call
+      // Simulate API Call
       await this.simulateAPICall(data);
 
       this.showNotification(
@@ -435,7 +420,6 @@ class PortfolioApp {
   async simulateAPICall(data) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        // Simulate random success/failure for demo
         Math.random() > 0.1 ? resolve() : reject(new Error("API Error"));
       }, 2000);
     });
@@ -456,7 +440,7 @@ class PortfolioApp {
 
     document.body.appendChild(notification);
 
-    // Add styles
+    // Add Styles
     notification.style.cssText = `
             position: fixed;
             top: 20px;
@@ -481,7 +465,7 @@ class PortfolioApp {
       setTimeout(() => notification.remove(), 300);
     });
 
-    // Auto remove after 5 seconds
+    // Auto remove After 5 Seconds
     setTimeout(() => {
       if (notification.parentNode) {
         notification.style.animation = "slideInRight 0.3s ease reverse";
@@ -618,7 +602,7 @@ class PortfolioApp {
       {
         id: "ecommerce-platform",
         title: "E-Commerce Platform",
-        date: "2024",
+        date: "2025",
         category: "Full Stack",
         description:
           "A comprehensive e-commerce solution with real-time inventory management, payment processing, and admin dashboard.",
@@ -630,16 +614,19 @@ class PortfolioApp {
           "User authentication & authorization",
           "Responsive design for all devices",
         ],
+        // i used unsplash images
+        // -------------------------------------------->
         images: [
           "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
           "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         ],
         links: {
-          demo: "https://ecommerce-demo.kayser.dev",
-          github: "https://github.com/md-abu-kayser/ecommerce-platform",
+          demo: "https://md-abu-kayser.github.io/web.portfolio/",
+          github: "https://md-abu-kayser.github.io/web.portfolio/",
         },
       },
-      // Add more projects here...
+      // When i expand add more projects to here--------->>>
+      // --------------------------------------------------->
     ];
   }
 
@@ -655,7 +642,8 @@ class PortfolioApp {
           "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
         rating: 5,
       },
-      // Add more testimonials here...
+      // When i expand this sector then i will be Add more testimonials to here--------->>>
+      // -------------------------------------------------------------------------------------->
     ];
   }
 
@@ -715,12 +703,15 @@ class PortfolioApp {
   }
 }
 
-// Initialize the app when DOM is loaded
+// DOM loaded
 document.addEventListener("DOMContentLoaded", () => {
   window.portfolioApp = new PortfolioApp();
 });
 
-// Export for module usage
+// Export module
 if (typeof module !== "undefined" && module.exports) {
   module.exports = PortfolioApp;
 }
+
+// end main js code
+// ----------------------------------------------->>>
