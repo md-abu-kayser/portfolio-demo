@@ -153,17 +153,28 @@ When deploying make sure the branch and domain settings are correct and the `ind
 
 ---
 
-## License
+### License
 
-This repository is released under the MIT License. See the `LICENSE` file for details.
+- This project is licensed under the terms of the **[MIT License](./LICENSE)**.
+- You may replace or update the license as needed for client or proprietary projects.
 
 ---
 
-## Contact
+### Contact and Maintainer
 
-- Website: https://kayser.dev
-- Email: abu.kayser.official@gmail.com
-- GitHub: https://github.com/Kawser420
+**Maintainer:** [md-abu-kayser](https://github.com/md-abu-kayser)  
+**Name:** Md Abu Kayser - Full-Stack Engineer
+
+- **GitHub:** [github.com/abu.kayser-official](https://github.com/md-abu-kayser)
+- **Email:** [abu.kayser.official@gmail.com](mailto:abu.kayser.official@gmail.com)
+- **Project:** _web.portfolio_
+
+If you’d like this README tailored for a specific purpose - such as **hiring managers**, **open-source contributors**, or **client deliverables** - feel free to request a custom tone or format.
+
+---
+
+**Thank you for reviewing this project!**  
+It’s designed to be **clean, well-structured**, and **pleasant to explore** - perfect for interviews, portfolio showcases, or professional demos.
 
 ---
 
