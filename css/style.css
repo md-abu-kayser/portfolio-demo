@@ -1,10 +1,6 @@
-/* ========================================
-   WORLD-CLASS PORTFOLIO STYLES - MD ABU KAYSER
-   Enhanced: Professional, Responsive, Accessible
-   Total Lines: 500+ with detailed comments
-   ======================================== */
-
-/* CSS Variables for Theme Consistency */
+/* main css styles code */
+/* ----------------------------------------------------------------------------- */
+/* CSS Variables For Theme Consistency */
 :root {
   --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
@@ -15,7 +11,7 @@
   --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
-/* Global Reset & Base Styles */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -37,7 +33,7 @@ body {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Enhanced Utility Classes */
+/* Utility Classes */
 .glass-morphism {
   background: var(--glass-effect);
   backdrop-filter: blur(10px);
@@ -74,7 +70,7 @@ body {
   animation: shimmer 2s infinite;
 }
 
-/* Enhanced Animations */
+/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -147,7 +143,7 @@ body {
   }
 }
 
-/* Enhanced Component Styles */
+/* Component */
 .hero-section {
   min-height: 100vh;
   display: flex;
@@ -179,7 +175,7 @@ body {
   animation: typewriter 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
-/* Enhanced Skill Progress Bars with Smooth Animation */
+/* Skill Progress Bars With Smooth Animation */
 .skill-progress {
   height: 12px;
   background: var(--bg-primary);
@@ -213,7 +209,7 @@ body {
   animation: shimmer 2s infinite;
 }
 
-/* Enhanced Skill Item Container */
+/* Skill Item Container */
 .skill-item {
   animation: fadeInUp 0.6s ease-out forwards;
   opacity: 0;
@@ -238,7 +234,7 @@ body {
   animation-delay: 0.6s;
 }
 
-/* Enhanced Card Styling */
+/* Card */
 .card {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   background: var(--bg-base-200);
@@ -254,13 +250,13 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Enhanced Card Hover Effects */
+/* Card Hover Effects */
 .card.bg-base-200 {
   background: var(--tw-gradient-stops);
   background: linear-gradient(135deg, var(--tw-gradient-stops));
 }
 
-/* Smooth transition for all elements */
+/* Smooth Transition For All Elements */
 .card,
 .card > *,
 .skill-progress,
@@ -268,7 +264,7 @@ body {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Enhanced Project Card Styles */
+/* Project Card */
 .project-card {
   background: var(--bg-base-100);
   border-radius: 20px;
@@ -336,7 +332,7 @@ body {
   opacity: 1;
 }
 
-/* Enhanced Project Cards */
+/* Project Cards */
 .project-card {
   background: var(--bg-secondary);
   border-radius: 20px;
@@ -402,7 +398,7 @@ body {
   opacity: 1;
 }
 
-/* Navbar and Theme Styling */
+/* Navbar and Theme */
 .navbar {
   background: var(--bg-base-100);
   backdrop-filter: blur(10px);
@@ -422,7 +418,7 @@ body {
   background-color: rgba(10, 10, 12, 0.6);
 }
 
-/* Theme Dropdown Styling */
+/* Theme Dropdown */
 .dropdown-content {
   transform-origin: top center;
   transition: all 0.12s ease, opacity 0.12s ease;
@@ -439,7 +435,7 @@ body {
   pointer-events: auto;
 }
 
-/* Mobile Menu Styling */
+/* Mobile Menu */
 #mobile-menu {
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
   transform: translateX(100%);
@@ -495,13 +491,13 @@ body {
     max-width: 100%;
   }
 
-  /* Hide desktop theme selector on mobile */
+  /* Hide Desktop Theme Selector On Mobile */
   .hidden.sm\:flex {
     display: none;
   }
 }
 
-/* Enhanced Forms */
+/* Forms */
 .form-group {
   margin-bottom: 1.5rem;
   position: relative;
@@ -544,7 +540,7 @@ body {
   color: var(--primary-color);
 }
 
-/* Enhanced Buttons */
+/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -599,7 +595,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* Enhanced Testimonials */
+/* Testimonials */
 .testimonial-carousel {
   position: relative;
   overflow: hidden;
@@ -631,7 +627,7 @@ body {
   border: 3px solid var(--primary-color);
 }
 
-/* Enhanced Footer */
+/* Footer */
 .footer {
   background: var(--bg-secondary);
   border-top: 1px solid var(--border-color);
@@ -688,7 +684,7 @@ body {
   box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
 }
 
-/* Enhanced Modal */
+/* Modal */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -823,7 +819,7 @@ body {
   }
 }
 
-/* Accessibility Improvements */
+/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -834,7 +830,7 @@ body {
   }
 }
 
-/* Focus styles for keyboard navigation */
+/* Focus Styles for Keyboard Navigation */
 button:focus-visible,
 a:focus-visible,
 input:focus-visible,
@@ -843,7 +839,7 @@ textarea:focus-visible {
   outline-offset: 2px;
 }
 
-/* High contrast mode support */
+/* High Contrast Mode Support */
 @media (prefers-contrast: high) {
   .skill-progress-bar {
     background: #000 !important;
@@ -872,7 +868,7 @@ textarea:focus-visible {
   --border-color: #e2e8f0;
 }
 
-/* Theme-specific enhancements */
+/* Theme-specific */
 [data-theme="cupcake"] {
   --primary-gradient: linear-gradient(135deg, #65c3c8 0%, #eeaf3a 100%);
 }
@@ -885,7 +881,7 @@ textarea:focus-visible {
   --primary-gradient: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
 }
 
-/* Loading states */
+/* Loading States */
 .loading {
   opacity: 0.7;
   pointer-events: none;
@@ -914,14 +910,14 @@ textarea:focus-visible {
   }
 }
 
-/* Enhanced grid system */
+/* grid */
 .grid-responsive {
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-/* Custom scrollbar */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -939,7 +935,7 @@ textarea:focus-visible {
   background: var(--secondary-gradient);
 }
 
-/* Selection styles */
+/* Selection */
 ::selection {
   background: var(--primary-color);
   color: white;
@@ -971,7 +967,7 @@ textarea:focus-visible {
   }
 }
 
-/* Dropdown Fix */
+/* Dropdown */
 .dropdown {
   position: relative;
 }
@@ -1012,7 +1008,7 @@ textarea:focus-visible {
   opacity: 1;
   transform: rotate(0deg);
 }
-/* Enhanced Particle Animation */
+/* Particle Animation */
 .particle {
   position: absolute;
   background: var(--primary);
@@ -1056,28 +1052,24 @@ textarea:focus-visible {
   animation-delay: 4s;
 }
 
-/* Enhanced Grid Pattern */
+/* Grid Pattern */
 .bg-grid-pattern {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
 }
 
-/* Enhanced Skill Progress Bars */
+/* Skill Progress Bars */
 .skill-progress-bar {
   transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-/* Enhanced Project Card Hover */
+/* Project Card Hover */
 .project-card {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* -----------------------------
-       Minimal helper styles for
-       the mobile menu animation
-       and a11y polish
-       ----------------------------- */
+/* Mobile Menu */
 #mobile-menu {
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
   transform: translateX(100%);
@@ -1101,7 +1093,7 @@ textarea:focus-visible {
   pointer-events: auto;
 }
 
-/* small improvement: hide native .invisible used in markup */
+/* hide native and invisible */
 .invisible-mobile {
   visibility: hidden;
 }
@@ -1109,14 +1101,14 @@ textarea:focus-visible {
   visibility: visible;
 }
 
-/* Focus outline improvement for keyboard users */
+/* Focus */
 :focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
   box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
 }
 
-/* Desktop dropdown subtle animation */
+/* Desktop Dropdown */
 .dropdown-content {
   transform-origin: top center;
   transition: transform 0.12s ease, opacity 0.12s ease;
@@ -1131,7 +1123,7 @@ textarea:focus-visible {
   pointer-events: auto;
 }
 
-/* Navbar shrink on scroll */
+/* Navbar Shrink On Scroll */
 .navbar--scrolled {
   backdrop-filter: blur(8px);
   background-color: rgba(255, 255, 255, 0.85);
@@ -1142,19 +1134,21 @@ textarea:focus-visible {
   background-color: rgba(10, 10, 12, 0.6);
 }
 
-/* Make sure large dropdown z-index is high */
+/* z-index is high */
 .dropdown-content {
   z-index: 1000;
 }
 
-/* Enhanced Theme Transitions */
+/* Theme Transitions */
 [data-theme] {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Enhanced Focus States */
+/* Focus */
 button:focus-visible,
 a:focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
+
+/* -----------------end------------------- */
