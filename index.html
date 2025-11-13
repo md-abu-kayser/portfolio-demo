@@ -3049,5 +3049,30 @@
     <script src="js/script.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/theme-switcher.js"></script>
+
+    <!-- Auth Navigation Handler -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Handle Login links
+        document
+          .querySelectorAll('a[href="auth/login.html"]')
+          .forEach((link) => {
+            link.addEventListener("click", function (e) {
+              e.preventDefault();
+              window.location.href = "auth/login.html";
+            });
+          });
+
+        // Handle Sign Up links
+        document
+          .querySelectorAll('a[href="auth/signup.html"]')
+          .forEach((link) => {
+            link.addEventListener("click", function (e) {
+              e.preventDefault();
+              window.location.href = "auth/signup.html";
+            });
+          });
+      });
+    </script>
   </body>
 </html>
