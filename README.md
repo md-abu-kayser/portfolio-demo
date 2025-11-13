@@ -106,7 +106,7 @@ Notes: open `index.html` directly from the file system (file:///) will mostly wo
 
 ---
 
-## Customization and Theming
+### Customization and Theming
 
 - Tailwind utilities are used heavily; edit `tailwind.config` (inlined via CDN config in HTML) to change fonts/colors
 - Theme palettes are managed by DaisyUI (data-theme attribute). `js/script.js` persists theme to `localStorage` under key `portfolio-theme`.
