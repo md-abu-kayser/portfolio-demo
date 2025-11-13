@@ -1,12 +1,7 @@
-// ========================================
-// WORLD-CLASS TAILWIND CONFIG - MD ABU KAYSER
-// Enhanced: Professional animations, colors, utilities
-// Total Configuration: 500+ lines with detailed comments
-// ========================================
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  // Content paths for optimization
+  // Content Paths For Optimization
+  // --------------------------------------------->
   content: [
     "./*.html",
     "./auth/*.html",
@@ -16,6 +11,7 @@ module.exports = {
   ],
 
   // Safelist for dynamic classes
+  // ----------------------------------------->
   safelist: [
     "animate-fade-in-up",
     "animate-fade-in-down",
@@ -39,21 +35,19 @@ module.exports = {
   // Dark mode configuration
   darkMode: ["class", '[data-theme="dark"]'],
 
-  // Enhanced theme extensions
+  // theme extensions
   theme: {
     extend: {
-      // ========================================
-      // ENHANCED COLOR PALETTE - PROFESSIONAL
-      // ========================================
       colors: {
         // Primary Color Palette - Orange
+        // ----------------------------------------------------->
         primary: {
           50: "#fff7ed",
           100: "#ffedd5",
           200: "#fed7aa",
           300: "#fdba74",
           400: "#fb923c",
-          500: "#f97316", // Base primary
+          500: "#f97316",
           600: "#ea580c",
           700: "#c2410c",
           800: "#9a3412",
@@ -63,13 +57,14 @@ module.exports = {
         },
 
         // Secondary Color Palette - Teal
+        // ----------------------------------------------------->
         secondary: {
           50: "#f0fdfa",
           100: "#ccfbf1",
           200: "#99f6e4",
           300: "#5eead4",
           400: "#2dd4bf",
-          500: "#14b8a6", // Base secondary
+          500: "#14b8a6",
           600: "#0d9488",
           700: "#0f766e",
           800: "#115e59",
@@ -79,13 +74,14 @@ module.exports = {
         },
 
         // Accent Color Palette - Blue
+        // ----------------------------------------------------->
         accent: {
           50: "#eff6ff",
           100: "#dbeafe",
           200: "#bfdbfe",
           300: "#93c5fd",
           400: "#60a5fa",
-          500: "#3b82f6", // Base accent
+          500: "#3b82f6",
           600: "#2563eb",
           700: "#1d4ed8",
           800: "#1e40af",
@@ -95,13 +91,14 @@ module.exports = {
         },
 
         // Success Color Palette - Green
+        // ----------------------------------------------------->
         success: {
           50: "#f0fdf4",
           100: "#dcfce7",
           200: "#bbf7d0",
           300: "#86efac",
           400: "#4ade80",
-          500: "#22c55e", // Base success
+          500: "#22c55e",
           600: "#16a34a",
           700: "#15803d",
           800: "#166534",
@@ -111,13 +108,14 @@ module.exports = {
         },
 
         // Warning Color Palette - Amber
+        // ----------------------------------------------------->
         warning: {
           50: "#fffbeb",
           100: "#fef3c7",
           200: "#fde68a",
           300: "#fcd34d",
           400: "#fbbf24",
-          500: "#f59e0b", // Base warning
+          500: "#f59e0b",
           600: "#d97706",
           700: "#b45309",
           800: "#92400e",
@@ -127,13 +125,14 @@ module.exports = {
         },
 
         // Error Color Palette - Red
+        // ----------------------------------------------------->
         error: {
           50: "#fef2f2",
           100: "#fee2e2",
           200: "#fecaca",
           300: "#fca5a5",
           400: "#f87171",
-          500: "#ef4444", // Base error
+          500: "#ef4444",
           600: "#dc2626",
           700: "#b91c1c",
           800: "#991b1b",
@@ -143,13 +142,14 @@ module.exports = {
         },
 
         // Info Color Palette - Sky Blue
+        // ----------------------------------------------------->
         info: {
           50: "#f0f9ff",
           100: "#e0f2fe",
           200: "#bae6fd",
           300: "#7dd3fc",
           400: "#38bdf8",
-          500: "#0ea5e9", // Base info
+          500: "#0ea5e9",
           600: "#0284c7",
           700: "#0369a1",
           800: "#075985",
@@ -159,6 +159,7 @@ module.exports = {
         },
 
         // Neutral Color Palette - Gray
+        // ----------------------------------------------------->
         neutral: {
           50: "#fafafa",
           100: "#f4f4f5",
@@ -175,11 +176,10 @@ module.exports = {
         },
       },
 
-      // ========================================
-      // ENHANCED TYPOGRAPHY - PROFESSIONAL FONTS
-      // ========================================
+      // typography
       fontFamily: {
         // Primary font family
+        // ----------------------------------------------------->
         poppins: [
           "Poppins",
           "ui-sans-serif",
@@ -199,6 +199,7 @@ module.exports = {
         ],
 
         // Monospace for code
+        // ----------------------------------------------------->
         mono: [
           "Fira Code",
           "ui-monospace",
@@ -212,11 +213,13 @@ module.exports = {
         ],
 
         // Secondary font option
+        // ----------------------------------------------------->
         inter: ["Inter", "ui-sans-serif", "system-ui"],
       },
 
       fontSize: {
-        // Enhanced font sizes with better line heights
+        // font sizes with better line heights
+        // ----------------------------------------------------->
         xs: ["0.75rem", { lineHeight: "1rem", letterSpacing: "0.025em" }],
         sm: ["0.875rem", { lineHeight: "1.25rem", letterSpacing: "0.01em" }],
         base: ["1rem", { lineHeight: "1.5rem", letterSpacing: "0.005em" }],
@@ -235,6 +238,7 @@ module.exports = {
         "9xl": ["8rem", { lineHeight: "1", letterSpacing: "-0.05em" }],
 
         // Custom sizes for portfolio
+        // ----------------------------------------------------->
         hero: ["4.5rem", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
         display: ["3.5rem", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
         heading: ["2.5rem", { lineHeight: "1.2", letterSpacing: "-0.015em" }],
@@ -245,7 +249,8 @@ module.exports = {
       },
 
       fontWeight: {
-        // Enhanced font weights
+        // font weights
+        // ----------------------------------------------------->
         thin: "100",
         extralight: "200",
         light: "300",
@@ -257,11 +262,11 @@ module.exports = {
         black: "900",
       },
 
-      // ========================================
-      // ENHANCED ANIMATIONS - PROFESSIONAL MOTION
-      // ========================================
+      // animation
+      // ----------------------------------------------------->
       animation: {
         // Fade animations
+        // ----------------------------------------------------->
         "fade-in": "fadeIn 0.6s ease-out forwards",
         "fade-in-up": "fadeInUp 0.8s ease-out forwards",
         "fade-in-down": "fadeInDown 0.8s ease-out forwards",
@@ -269,17 +274,20 @@ module.exports = {
         "fade-in-right": "fadeInRight 0.8s ease-out forwards",
 
         // Slide animations
+        // ----------------------------------------------------->
         "slide-in-up": "slideInUp 0.6s ease-out forwards",
         "slide-in-down": "slideInDown 0.6s ease-out forwards",
         "slide-in-left": "slideInLeft 0.6s ease-out forwards",
         "slide-in-right": "slideInRight 0.6s ease-out forwards",
 
         // Scale animations
+        // ----------------------------------------------------->
         "scale-in": "scaleIn 0.5s ease-out forwards",
         "scale-out": "scaleOut 0.5s ease-out forwards",
         "bounce-in": "bounceIn 0.8s ease-out forwards",
 
         // Special animations
+        // ----------------------------------------------------->
         float: "float 6s ease-in-out infinite",
         typewriter: "typewriter 3.5s steps(40, end) forwards",
         "blink-caret": "blinkCaret 0.75s step-end infinite",
@@ -291,22 +299,24 @@ module.exports = {
         gradient: "gradient 3s ease infinite",
         "bounce-gentle": "bounceGentle 2s infinite",
 
-        // Entrance animations
+        // animations
+        // ----------------------------------------------------->
         "zoom-in": "zoomIn 0.5s ease-out forwards",
         "flip-in-x": "flipInX 0.8s ease-out forwards",
         "flip-in-y": "flipInY 0.8s ease-out forwards",
         "light-speed-in": "lightSpeedIn 0.8s ease-out forwards",
 
         // Loading animations
+        // ----------------------------------------------------->
         "progress-load": "progressLoad 2s ease-in-out infinite",
         "dot-pulse": "dotPulse 1.5s ease-in-out infinite",
       },
 
-      // ========================================
-      // ENHANCED KEYFRAMES - SMOOTH MOTION
-      // ========================================
+      // keyframes
+      // ----------------------------------------------------->
       keyframes: {
         // Fade keyframes
+        // ----------------------------------------------------->
         fadeIn: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
@@ -353,6 +363,7 @@ module.exports = {
         },
 
         // Slide keyframes
+        // ----------------------------------------------------->
         slideInUp: {
           "0%": { transform: "translateY(100%)" },
           "100%": { transform: "translateY(0)" },
@@ -371,6 +382,7 @@ module.exports = {
         },
 
         // Scale keyframes
+        // ----------------------------------------------------->
         scaleIn: {
           "0%": {
             opacity: "0",
@@ -410,6 +422,7 @@ module.exports = {
         },
 
         // Special effect keyframes
+        // ----------------------------------------------------->
         float: {
           "0%, 100%": {
             transform: "translateY(0px) rotate(0deg)",
@@ -475,7 +488,8 @@ module.exports = {
           },
         },
 
-        // Entrance animation keyframes
+        // animation keyframes
+        // ----------------------------------------------------->
         zoomIn: {
           "0%": {
             opacity: "0",
@@ -537,6 +551,7 @@ module.exports = {
         },
 
         // Loading keyframes
+        // ----------------------------------------------------->
         progressLoad: {
           "0%": {
             transform: "translateX(-100%)",
@@ -563,11 +578,11 @@ module.exports = {
         },
       },
 
-      // ========================================
-      // ENHANCED SPACING & SIZING
-      // ========================================
+      // spacing and sizing
+      // ----------------------------------------------------->
       spacing: {
-        // Extended spacing scale
+        // spacing scale
+        // ----------------------------------------------------->
         18: "4.5rem",
         22: "5.5rem",
         30: "7.5rem",
@@ -577,17 +592,16 @@ module.exports = {
         160: "40rem",
 
         // Custom spacing for portfolio
+        // ----------------------------------------------------->
         "nav-height": "4rem",
         "hero-height": "calc(100vh - 4rem)",
         "section-padding": "5rem",
         "container-padding": "2rem",
       },
 
-      // ========================================
-      // ENHANCED BORDER RADIUS
-      // ========================================
+      // border radius
+      // ----------------------------------------------------->
       borderRadius: {
-        // Extended border radius
         none: "0px",
         sm: "0.125rem",
         DEFAULT: "0.25rem",
@@ -601,6 +615,7 @@ module.exports = {
         full: "9999px",
 
         // Custom border radius
+        // ----------------------------------------------------->
         card: "1.5rem",
         button: "0.75rem",
         input: "0.75rem",
@@ -608,11 +623,11 @@ module.exports = {
         avatar: "50%",
       },
 
-      // ========================================
-      // ENHANCED BOX SHADOW
-      // ========================================
+      // box shadow
+      // ----------------------------------------------------->
       boxShadow: {
-        // Material Design inspired shadows
+        // Material Design
+        // ----------------------------------------------------->
         sm: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
         DEFAULT:
           "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
@@ -622,6 +637,7 @@ module.exports = {
         "2xl": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
 
         // Custom shadows for portfolio
+        // ----------------------------------------------------->
         card: "0 10px 40px rgba(0, 0, 0, 0.1)",
         "card-hover": "0 20px 50px rgba(0, 0, 0, 0.15)",
         navbar: "0 4px 20px rgba(0, 0, 0, 0.08)",
@@ -629,6 +645,7 @@ module.exports = {
         float: "0 20px 40px rgba(0, 0, 0, 0.1)",
 
         // Glow effects
+        // ----------------------------------------------------->
         "glow-sm": "0 0 10px rgba(249, 115, 22, 0.3)",
         "glow-md": "0 0 20px rgba(249, 115, 22, 0.3)",
         "glow-lg": "0 0 40px rgba(249, 115, 22, 0.3)",
@@ -637,21 +654,23 @@ module.exports = {
         "glow-accent": "0 0 20px rgba(59, 130, 246, 0.4)",
 
         // Inner shadows
+        // ----------------------------------------------------->
         "inner-sm": "inset 0 2px 4px 0 rgb(0 0 0 / 0.05)",
         "inner-md": "inset 0 4px 6px 0 rgb(0 0 0 / 0.1)",
         "inner-lg": "inset 0 10px 15px 0 rgb(0 0 0 / 0.1)",
       },
 
-      // ========================================
-      // ENHANCED BACKGROUND IMAGES
-      // ========================================
+      // background iamges
+      // ----------------------------------------------------->
       backgroundImage: {
         // Gradient backgrounds
+        // ----------------------------------------------------->
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
 
         // Custom gradients
+        // ----------------------------------------------------->
         "primary-gradient": "linear-gradient(135deg, #f97316 0%, #ea580c 100%)",
         "secondary-gradient":
           "linear-gradient(135deg, #14b8a6 0%, #0d9488 100%)",
@@ -662,6 +681,7 @@ module.exports = {
           "linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)",
 
         // Pattern backgrounds
+        // ----------------------------------------------------->
         "grid-pattern": `linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
                         linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px)`,
         "dot-pattern":
@@ -669,8 +689,9 @@ module.exports = {
         "noise-pattern": `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
       },
 
+      // background sizes
+      // ----------------------------------------------------->
       backgroundSize: {
-        // Extended background sizes
         auto: "auto",
         cover: "cover",
         contain: "contain",
@@ -678,11 +699,11 @@ module.exports = {
         dot: "20px 20px",
       },
 
-      // ========================================
-      // ENHANCED TRANSITIONS
-      // ========================================
+      // Transitions
+      // ----------------------------------------------------->
       transitionProperty: {
-        // Extended transition properties
+        // Transition properties
+        // ----------------------------------------------------->
         none: "none",
         all: "all",
         colors:
@@ -700,7 +721,8 @@ module.exports = {
       },
 
       transitionDuration: {
-        // Extended durations
+        // transition durations
+        // ----------------------------------------------------->
         0: "0ms",
         75: "75ms",
         100: "100ms",
@@ -712,6 +734,7 @@ module.exports = {
         1000: "1000ms",
 
         // Custom durations
+        // ----------------------------------------------------->
         fast: "150ms",
         normal: "300ms",
         slow: "500ms",
@@ -719,24 +742,26 @@ module.exports = {
       },
 
       transitionTimingFunction: {
-        // Extended timing functions
+        // Timing Functions
+        // ----------------------------------------------------->
         linear: "linear",
         in: "cubic-bezier(0.4, 0, 1, 1)",
         out: "cubic-bezier(0, 0, 0.2, 1)",
         "in-out": "cubic-bezier(0.4, 0, 0.2, 1)",
 
-        // Custom timing functions
+        // Custom Timing
+        // ----------------------------------------------------->
         "bounce-out": "cubic-bezier(0.34, 1.56, 0.64, 1)",
         "bounce-in": "cubic-bezier(0.68, -0.55, 0.265, 1.55)",
         smooth: "cubic-bezier(0.4, 0, 0.2, 1)",
         elastic: "cubic-bezier(0.68, -0.6, 0.32, 1.6)",
       },
 
-      // ========================================
-      // ENHANCED Z-INDEX
-      // ========================================
+      // z-index
+      // ----------------------------------------------------->
       zIndex: {
-        // Extended z-index scale
+        // z-index scale
+        // ----------------------------------------------------->
         0: "0",
         10: "10",
         20: "20",
@@ -746,6 +771,7 @@ module.exports = {
         auto: "auto",
 
         // Custom z-index for portfolio
+        // ----------------------------------------------------->
         dropdown: "1000",
         sticky: "1020",
         fixed: "1030",
@@ -757,11 +783,11 @@ module.exports = {
         notification: "1090",
       },
 
-      // ========================================
-      // ENHANCED OPACITY
-      // ========================================
+      // opacity
+      // ----------------------------------------------------->
       opacity: {
-        // Extended opacity scale
+        // opacity scale
+        // ----------------------------------------------------->
         0: "0",
         5: "0.05",
         10: "0.1",
@@ -785,11 +811,10 @@ module.exports = {
         100: "1",
       },
 
-      // ========================================
-      // ENHANCED BLUR
-      // ========================================
+      // blur
+      // ----------------------------------------------------->
       backdropBlur: {
-        // Extended blur scale
+        // blur scale
         none: "0",
         sm: "4px",
         DEFAULT: "8px",
@@ -800,17 +825,15 @@ module.exports = {
         "3xl": "64px",
       },
 
-      // ========================================
-      // ENHANCED SCROLL BEHAVIOR
-      // ========================================
+      // scroll behavior
+      // ----------------------------------------------------->
       scrollBehavior: {
         auto: "auto",
         smooth: "smooth",
       },
 
-      // ========================================
-      // ENHANCED ASPECT RATIO
-      // ========================================
+      // aspect ratio
+      // ----------------------------------------------------->
       aspectRatio: {
         auto: "auto",
         square: "1 / 1",
@@ -821,9 +844,8 @@ module.exports = {
         golden: "1.618 / 1",
       },
 
-      // ========================================
-      // ENHANCED FILL & STROKE
-      // ========================================
+      // fill and stroke
+      // ----------------------------------------------------->
       fill: {
         current: "currentColor",
         primary: "#f97316",
@@ -848,14 +870,15 @@ module.exports = {
     },
   },
 
-  // ========================================
-  // ENHANCED PLUGINS - PROFESSIONAL
-  // ========================================
+  // plugins
+  // ----------------------------------------------------->
   plugins: [
-    // DaisyUI for components and themes
+    // DaisyUI-----> components and themes
+    // ----------------------------------------------------->
     require("daisyui"),
 
-    // Custom plugin for additional utilities
+    // Custom plugin---------> additional utilities
+    // ----------------------------------------------------->
     function ({ addUtilities, addComponents, addBase, theme }) {
       // Add base styles
       addBase({
@@ -878,8 +901,10 @@ module.exports = {
       });
 
       // Add new utilities
+      // ----------------------------------------------------->
       const newUtilities = {
         // Text utilities
+        // ----------------------------------------------------->
         ".text-balance": {
           textWrap: "balance",
         },
@@ -909,6 +934,7 @@ module.exports = {
         },
 
         // Background utilities
+        // ----------------------------------------------------->
         ".bg-glass": {
           backgroundColor: "rgba(255, 255, 255, 0.1)",
           backdropFilter: "blur(10px)",
@@ -926,12 +952,14 @@ module.exports = {
         },
 
         // Border utilities
+        // ----------------------------------------------------->
         ".border-gradient": {
           borderImage:
             "linear-gradient(135deg, var(--primary), var(--secondary)) 1",
         },
 
         // Animation utilities
+        // ----------------------------------------------------->
         ".animate-pause": {
           animationPlayState: "paused",
         },
@@ -940,6 +968,7 @@ module.exports = {
         },
 
         // Scroll utilities
+        // ----------------------------------------------------->
         ".scrollbar-hide": {
           "-ms-overflow-style": "none",
           "scrollbar-width": "none",
@@ -956,6 +985,7 @@ module.exports = {
         },
 
         // Layout utilities
+        // ----------------------------------------------------->
         ".backface-visible": {
           backfaceVisibility: "visible",
         },
@@ -973,8 +1003,10 @@ module.exports = {
       addUtilities(newUtilities, ["responsive", "hover"]);
 
       // Add new components
+      // ----------------------------------------------------->
       const newComponents = {
         // Button components
+        // ----------------------------------------------------->
         ".btn-gradient": {
           background:
             "linear-gradient(135deg, var(--primary), var(--secondary))",
@@ -990,6 +1022,7 @@ module.exports = {
         },
 
         // Card components
+        // ----------------------------------------------------->
         ".card-hover": {
           transition: "all 0.3s ease",
           "&:hover": {
@@ -999,6 +1032,7 @@ module.exports = {
         },
 
         // Glass components
+        // ----------------------------------------------------->
         ".glass-effect": {
           background: "rgba(255, 255, 255, 0.1)",
           backdropFilter: "blur(10px)",
@@ -1006,6 +1040,7 @@ module.exports = {
         },
 
         // Skill bar components
+        // ----------------------------------------------------->
         ".skill-progress": {
           height: "12px",
           backgroundColor: theme("colors.gray.200"),
@@ -1032,6 +1067,7 @@ module.exports = {
         },
 
         // Project card components
+        // ----------------------------------------------------->
         ".project-card": {
           backgroundColor: theme("colors.base.100"),
           borderRadius: "1.5rem",
@@ -1091,6 +1127,7 @@ module.exports = {
         },
 
         // Timeline components
+        // ----------------------------------------------------->
         ".timeline-item": {
           position: "relative",
           "&::before": {
@@ -1111,19 +1148,20 @@ module.exports = {
       addComponents(newComponents);
     },
 
-    // Forms plugin (optional)
+    // Forms plugin-----------> optional
     // require('@tailwindcss/forms'),
+    // ----------------------------------------------------->
 
-    // Typography plugin (optional)
+    // Typography plugin-------> optional
     // require('@tailwindcss/typography'),
   ],
 
-  // ========================================
-  // ENHANCED DAISYUI CONFIG - 5 PROFESSIONAL THEMES
-  // ========================================
+  // daisyUI config
+  // ----------------------------------------------------->
   daisyui: {
     themes: [
-      // Light Theme (Default)
+      // Light Theme---------> Default
+      // ----------------------------------------------------->
       {
         light: {
           primary: "#f97316",
@@ -1151,6 +1189,7 @@ module.exports = {
       },
 
       // Dark Theme
+      // ----------------------------------------------------->
       {
         dark: {
           primary: "#f97316",
@@ -1178,6 +1217,7 @@ module.exports = {
       },
 
       // Cupcake Theme
+      // ----------------------------------------------------->
       {
         cupcake: {
           primary: "#65c3c8",
@@ -1205,6 +1245,7 @@ module.exports = {
       },
 
       // Forest Theme
+      // ----------------------------------------------------->
       {
         forest: {
           primary: "#1d4ed8",
@@ -1232,6 +1273,7 @@ module.exports = {
       },
 
       // Luxury Theme
+      // ----------------------------------------------------->
       {
         luxury: {
           primary: "#fbbf24",
@@ -1267,3 +1309,5 @@ module.exports = {
     themeRoot: ":root",
   },
 };
+// -----------------end tailwind config js file------------->
+// ----------------------------------------------------------------------->
