@@ -76,7 +76,7 @@ This makes it easy to present the full auth UI without duplicating markup or scr
 
 ---
 
-## Run Locally (Quick)
+### Run Locally (Quick)
 
 Because this is a static site, you can run it with any static HTTP server. Example using Python (works on Windows PowerShell):
 
@@ -106,7 +106,7 @@ Notes: open `index.html` directly from the file system (file:///) will mostly wo
 
 ---
 
-## Customization & Theming
+## Customization and Theming
 
 - Tailwind utilities are used heavily; edit `tailwind.config` (inlined via CDN config in HTML) to change fonts/colors
 - Theme palettes are managed by DaisyUI (data-theme attribute). `js/script.js` persists theme to `localStorage` under key `portfolio-theme`.
@@ -146,7 +146,7 @@ When deploying make sure the branch and domain settings are correct and the `ind
 
 ---
 
-## Changelog (Highlights)
+### Changelog (Highlights)
 
 - v2.0.0 — Major UI upgrade, performance improvements, theme system, iframe auth integration
 - v1.x — Earlier versions with baseline portfolio content and project listings
