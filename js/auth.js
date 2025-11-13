@@ -1,10 +1,3 @@
-/**
- * ========================================
- * AUTHENTICATION SYSTEM - WORLD CLASS
- * Enhanced: Professional auth handling
- * ========================================
- */
-
 class AuthSystem {
   constructor() {
     this.isAuthenticated = false;
@@ -132,7 +125,7 @@ class AuthSystem {
   async registerUser(userData) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        // Simulate API call
+        // Simulate API Call
         Math.random() > 0.1
           ? resolve()
           : reject(new Error("Registration failed"));
@@ -164,8 +157,8 @@ class AuthSystem {
     });
   }
 
+  // Remove Existing Messages
   showAuthMessage(message, type) {
-    // Remove existing messages
     const existingMsg = document.querySelector(".auth-message");
     if (existingMsg) {
       existingMsg.remove();
@@ -183,7 +176,7 @@ class AuthSystem {
       authContainer.insertBefore(messageEl, authContainer.firstChild);
     }
 
-    // Auto remove after 5 seconds
+    // Auto remove After 5 Seconds
     setTimeout(() => {
       if (messageEl.parentNode) {
         messageEl.remove();
@@ -216,7 +209,6 @@ class AuthSystem {
       }
     }
 
-    // Re-bind events for the new switch links
     this.bindAuthEvents();
   }
 
@@ -265,7 +257,6 @@ class AuthSystem {
   }
 
   getClientId(provider) {
-    // In production, these should be environment variables
     const clientIds = {
       google: "YOUR_GOOGLE_CLIENT_ID",
       github: "YOUR_GITHUB_CLIENT_ID",
@@ -297,7 +288,7 @@ class AuthSystem {
       return;
     }
 
-    // Check for popup closure or completion
+    // Popup Closure
     const checkInterval = setInterval(() => {
       if (popup.closed) {
         clearInterval(checkInterval);
@@ -307,8 +298,6 @@ class AuthSystem {
   }
 
   handleSocialAuthCallback(provider) {
-    // This would typically handle the OAuth callback
-    // For demo purposes, we'll simulate success
     this.showAuthMessage(`Successfully connected with ${provider}!`, "success");
     setTimeout(() => {
       window.location.href = "/";
@@ -332,7 +321,7 @@ class AuthSystem {
   }
 }
 
-// Initialize auth system
 document.addEventListener("DOMContentLoaded", () => {
   window.authSystem = new AuthSystem();
 });
+// -----------------end----------------------->
