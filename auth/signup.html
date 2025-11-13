@@ -3,10 +3,268 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up - Md Abu Kayser</title>
-    <!-- Same head content as index.html -->
+    <title>Sign Up - Md Abu Kayser | Full-Stack Engineer</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Create an account to access Md Abu Kayser's portfolio and get updates on new projects and opportunities."
+    />
+
+    <!-- Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/themes.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: { 500: "#f97316", 600: "#ea580c" },
+              secondary: { 500: "#14b8a6", 600: "#0d9488" },
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+        plugins: [require("daisyui")],
+        daisyui: {
+          themes: ["light", "dark", "cupcake", "forest", "luxury"],
+        },
+      };
+    </script>
   </head>
-  <body class="bg-gray-50 dark:bg-gray-900">
-    <!-- Signup page content with social registration -->
+  <body
+    class="font-poppins bg-base-100 min-h-screen flex items-center justify-center py-8"
+  >
+    <!-- Background Animation -->
+    <div class="fixed inset-0 -z-10">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10"
+      ></div>
+      <div
+        class="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/20 rounded-full blur-3xl animate-pulse"
+      ></div>
+      <div
+        class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-secondary/20 rounded-full blur-3xl animate-pulse"
+      ></div>
+    </div>
+
+    <!-- Signup Container -->
+    <div class="w-full max-w-2xl mx-4">
+      <!-- Header -->
+      <div class="text-center mb-8">
+        <a
+          href="../index.html"
+          class="inline-flex items-center text-2xl font-bold mb-4"
+        >
+          <span
+            class="bg-gradient-to-r from-primary to-secondary text-white p-2 rounded-lg mr-2"
+            >dev</span
+          >
+          <span>Md Abu Kayser</span>
+        </a>
+        <h1 class="text-3xl font-bold text-base-content mb-2">
+          Create Your Account
+        </h1>
+        <p class="text-base-content/70">
+          Join my network and stay updated with latest projects
+        </p>
+      </div>
+
+      <!-- Signup Card -->
+      <div class="card bg-base-200 shadow-2xl border border-base-300">
+        <div class="card-body p-8">
+          <!-- Auth Messages -->
+          <div id="auth-messages"></div>
+
+          <!-- Signup Form -->
+          <form id="signup-form" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-semibold">First Name</span>
+                </label>
+                <input
+                  type="text"
+                  name="firstName"
+                  placeholder="John"
+                  class="input input-bordered w-full focus:input-primary"
+                  required
+                />
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-semibold">Last Name</span>
+                </label>
+                <input
+                  type="text"
+                  name="lastName"
+                  placeholder="Doe"
+                  class="input input-bordered w-full focus:input-primary"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text font-semibold">Email Address</span>
+              </label>
+              <input
+                type="email"
+                name="email"
+                placeholder="your.email@example.com"
+                class="input input-bordered w-full focus:input-primary"
+                required
+              />
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-semibold">Password</span>
+                </label>
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Create password"
+                  class="input input-bordered w-full focus:input-primary"
+                  required
+                  minlength="8"
+                />
+                <label class="label">
+                  <span class="label-text-alt">Minimum 8 characters</span>
+                </label>
+              </div>
+
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-semibold">Confirm Password</span>
+                </label>
+                <input
+                  type="password"
+                  name="confirmPassword"
+                  placeholder="Confirm password"
+                  class="input input-bordered w-full focus:input-primary"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-control">
+              <label class="label cursor-pointer justify-start gap-3">
+                <input
+                  type="checkbox"
+                  name="terms"
+                  class="checkbox checkbox-primary"
+                  required
+                />
+                <span class="label-text">
+                  I agree to the
+                  <a href="#terms" class="link link-primary"
+                    >Terms of Service</a
+                  >
+                  and
+                  <a href="#privacy" class="link link-primary"
+                    >Privacy Policy</a
+                  >
+                </span>
+              </label>
+            </div>
+
+            <div class="form-control">
+              <label class="label cursor-pointer justify-start gap-3">
+                <input
+                  type="checkbox"
+                  name="newsletter"
+                  class="checkbox checkbox-primary"
+                />
+                <span class="label-text"
+                  >Subscribe to newsletter for project updates</span
+                >
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-full">
+              <span>Create Account</span>
+              <i class="fas fa-user-plus ml-2"></i>
+            </button>
+          </form>
+
+          <!-- Divider -->
+          <div class="divider text-base-content/50">OR SIGN UP WITH</div>
+
+          <!-- Social Signup -->
+          <div class="grid grid-cols-2 gap-3">
+            <button
+              class="btn btn-outline social-auth-btn"
+              data-provider="google"
+            >
+              <i class="fab fa-google text-red-500"></i>
+              <span class="hidden sm:inline">Google</span>
+            </button>
+            <button
+              class="btn btn-outline social-auth-btn"
+              data-provider="github"
+            >
+              <i class="fab fa-github"></i>
+              <span class="hidden sm:inline">GitHub</span>
+            </button>
+            <button
+              class="btn btn-outline social-auth-btn"
+              data-provider="linkedin"
+            >
+              <i class="fab fa-linkedin text-blue-600"></i>
+              <span class="hidden sm:inline">LinkedIn</span>
+            </button>
+            <button
+              class="btn btn-outline social-auth-btn"
+              data-provider="twitter"
+            >
+              <i class="fab fa-x-twitter"></i>
+              <span class="hidden sm:inline">Twitter</span>
+            </button>
+          </div>
+
+          <!-- Login Link -->
+          <div class="text-center mt-6">
+            <p class="text-base-content/70">
+              Already have an account?
+              <a href="login.html" class="link link-primary font-semibold"
+                >Sign in here</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back to Home -->
+      <div class="text-center mt-6">
+        <a href="../index.html" class="link link-hover text-base-content/70">
+          <i class="fas fa-arrow-left mr-2"></i>
+          Back to Home
+        </a>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/auth.js"></script>
+    <script src="../js/theme-switcher.js"></script>
   </body>
 </html>
