@@ -96,7 +96,7 @@ This makes it easy to present the full auth UI without duplicating markup or scr
 
 ---
 
-### Customization and Theming
+## Customization and Theming
 
 - Tailwind utilities are used heavily; edit `tailwind.config` (inlined via CDN config in HTML) to change fonts/colors
 - Theme palettes are managed by DaisyUI (data-theme attribute). `js/script.js` persists theme to `localStorage` under key `portfolio-theme`.
