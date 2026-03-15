@@ -8,14 +8,14 @@ Professional, production-ready portfolio site showcasing modern web architecture
 
 **Hosted on GitHub Pages:**
 
-```
+```bash
 https://md-abu-kayser.github.io/web.portfolio/
 
 ```
 
 **Git Clone:**
 
-```
+```bash
 git clone https://github.com/md-abu-kayser/web.portfolio.git
 
 ```
@@ -152,11 +152,11 @@ When deploying make sure the branch and domain settings are correct and the `ind
 
 ### Contact and Maintainer
 
-- **Maintainer:** [md-abu-kayser](https://github.com/md-abu-kayser)
+- **Project:** _web.portfolio_
 - **Name:** Md Abu Kayser - Full-Stack Engineer
+- **Maintainer:** [md-abu-kayser](https://github.com/md-abu-kayser)
 - **GitHub:** [github.com/abu.kayser-official](https://github.com/md-abu-kayser)
 - **Email:** [abu.kayser.official@gmail.com](mailto:abu.kayser.official@gmail.com)
-- **Project:** _web.portfolio_
 
 If you’d like this README tailored for a specific purpose - such as **hiring managers**, **open-source contributors**, or **client deliverables** - feel free to request a custom tone or format.
 
