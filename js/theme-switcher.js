@@ -357,9 +357,9 @@ const themeSelectorCSS = `
 `;
 
 // Inject theme selector
-// -------------------------------------------------------->>>
+// --------------------------------------------------------
 const styleSheet = document.createElement("style");
 styleSheet.textContent = themeSelectorCSS;
 document.head.appendChild(styleSheet);
 
-// ------------------------end---------------------------------------->>>>
+// end

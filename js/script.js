@@ -642,8 +642,7 @@ class PortfolioApp {
           "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
         rating: 5,
       },
-      // When i expand this sector then i will be Add more testimonials to here--------->>>
-      // -------------------------------------------------------------------------------------->
+      // When i expand this sector then i will be Add more testimonials to here--------
     ];
   }
 
@@ -713,5 +712,4 @@ if (typeof module !== "undefined" && module.exports) {
   module.exports = PortfolioApp;
 }
 
-// end main js code
-// ----------------------------------------------->>>
+// main js end

@@ -324,4 +324,4 @@ class AuthSystem {
 document.addEventListener("DOMContentLoaded", () => {
   window.authSystem = new AuthSystem();
 });
-// -----------------end----------------------->
+// end
