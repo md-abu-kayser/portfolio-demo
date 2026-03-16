@@ -1,5 +1,5 @@
 /* main css styles code */
-/* ----------------------------------------------------------------------------- */
+/* ------------------------------------------------------ */
 /* CSS Variables For Theme Consistency */
 :root {
   --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -1150,5 +1150,4 @@ a:focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
-
-/* -----------------end------------------- */
+/* end */
