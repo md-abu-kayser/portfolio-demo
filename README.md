@@ -1,23 +1,20 @@
-# Md Abu Kayser - Full-Stack Engineer (Portfolio)
+# Full-Stack Engineer Portfolio Demo
 
-Professional, production-ready portfolio site showcasing modern web architecture, polished UI, and a collection of real-world projects. This repository contains the static site source (HTML, CSS, JS) used to present my work, skills, and services.
+Professional, production-ready portfolio site showcasing modern web architecture, polished UI, and a collection of real-world projects. This repository contains the static site source (HTML, CSS, and JavaScript) used to present projects, skills, and services.
 
----
 
 ## Live Demo
 
 **Hosted on GitHub Pages:**
 
 ```bash
-https://md-abu-kayser.github.io/web.portfolio/
-
+https://md-abu-kayser.github.io/portfolio-demo/
 ```
 
 **Git Clone:**
 
 ```bash
-git clone https://github.com/md-abu-kayser/web.portfolio.git
-
+git clone https://github.com/md-abu-kayser/portfolio-demo.git
 ```
 
 ## Overview
