@@ -10,7 +10,7 @@
 
 <!-- Project Issues -->
 
-[![Issues](https://img.shields.io/github/issues/md-abu-kayser/your-project-name)](https://github.com/md-abu-kayser/portfolio-demo/issues)
+[![Issues](https://img.shields.io/github/issues/md-abu-kayser/portfolio-demo)](https://github.com/md-abu-kayser/portfolio-demo/issues)
 
 <!-- HTML & CSS -->
 
